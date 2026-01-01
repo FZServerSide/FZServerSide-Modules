@@ -2,16 +2,11 @@
   {
     "name": "Infinite Yield",
     "description": "Universal admin commands",
-    "code": "print('Infinite Yield loaded!')"
+    "code": "print('IY placeholder')"
   },
   {
     "name": "Fly",
     "description": "Simple fly script",
-    "code": "print('Fly script running!')"
-  },
-  {
-    "name": "ESP",
-    "description": "Basic ESP demo",
-    "code": "print('ESP activated!')"
+    "code": "print('Fly placeholder')"
   }
 ]
