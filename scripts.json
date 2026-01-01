@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Infinite Yield",
+    "description": "Universal admin commands",
+    "code": "print('Infinite Yield loaded!')"
+  },
+  {
+    "name": "Fly",
+    "description": "Simple fly script",
+    "code": "print('Fly script running!')"
+  },
+  {
+    "name": "ESP",
+    "description": "Basic ESP demo",
+    "code": "print('ESP activated!')"
+  }
+]
