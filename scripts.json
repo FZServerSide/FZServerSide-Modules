@@ -1,3 +1,4 @@
+
 [
   {
     "name": "HD Admin",
@@ -9,6 +10,12 @@
     "name": "Polaria Hub",
     "description": "Polaria script hub/loader",
     "code": "require(123255432303221):Pload(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "R6 Changer",
+    "description": "R6 animation changer",
+    "code": "require(3436957371):r6(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -82,7 +89,8 @@
     "description": "Goner entity script",
     "code": "require(4513235536).G(\"YourUsername\")",
     "username_placeholder": true
-  },
+  }
+  ,
   {
     "name": "Pee",
     "description": "Pee effect script",
@@ -208,157 +216,5 @@
     "description": "1x1x1x1 script hub",
     "code": "require(6858594080).KrnKidsSus(\"YourUsername\")",
     "username_placeholder": true
-  },
-
-  // ================== NEW SCRIPTS FROM SECOND LIST ==================
-  {
-    "name": "Adrian Mega GUI",
-    "description": "Adrian's Mega GUI",
-    "code": "require(5142574517):mega(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Adrian Good GUI",
-    "description": "Adrian's Good GUI",
-    "code": "require(4934614538):adrian(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Kick Hammer Gun",
-    "description": "Kick hammer weapon",
-    "code": "require(2555964157).doom(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Bete Script",
-    "description": "Bete entity script",
-    "code": "require(5139373601).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Pink Car",
-    "description": "Pink vehicle",
-    "code": "require(4745872847).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Bruh SS",
-    "description": "Bruh server-side script",
-    "code": "require(3309735650).blueexss(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Content Copier",
-    "description": "Content copy script",
-    "code": "require(3722497194).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Kill Self Gun",
-    "description": "Self elimination gun",
-    "code": "require(3023538289).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Hanger",
-    "description": "Hanging tool",
-    "code": "require(3150276424):Fire(\"YourUsername\", \"i baked you a pie\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Pokeball",
-    "description": "Pokeball tool",
-    "code": "require(5010133992):Fire(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UTG Project",
-    "description": "Ultimate Trolling GUI",
-    "code": "require(5160216694).Ass(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Diamond UTG",
-    "description": "Diamond UTG",
-    "code": "require(5001982403).undetected(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Guardian",
-    "description": "Guardian entity",
-    "code": "require(5470457610).Dark(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Purple Guy",
-    "description": "Purple Guy entity",
-    "code": "require(5213051514).G(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Topk3k v4",
-    "description": "Topk3k trolling GUI",
-    "code": "require(4874364435)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Bruh Gun",
-    "description": "Bruh gun tool",
-    "code": "require(4212392954).CLoad(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Gaster v2",
-    "description": "Gaster entity",
-    "code": "require(5350037587).noob(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Chara v4",
-    "description": "Chara boss fight",
-    "code": "require(5555086775).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Jevil",
-    "description": "Jevil boss",
-    "code": "require(5664084960).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Illegal Agent",
-    "description": "Illegal Agent character",
-    "code": "require(5410471602).Load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Among Us Imposter",
-    "description": "Among Us imposter character",
-    "code": "require(5804385396)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "All Seeing Hand",
-    "description": "All Seeing Hand entity",
-    "code": "require(5375399205).Player(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Volt Bike",
-    "description": "Volt bike vehicle",
-    "code": "require(4021975182).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Mario Hammer",
-    "description": "Mario hammer tool (~end key)",
-    "code": "require(5136523565).eliza(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Master Chief",
-    "description": "Halo Master Chief character",
-    "code": "require(5812973403).Halo(\"YourUsername\")",
-    "username_placeholder": true
   }
-]
+  
