@@ -5,6 +5,12 @@
     "code": "print('IY placeholder')"
   },
   {
+    "name": "HD Admin (Auto-Username)",
+    "description": "Loads HD Admin commands for you",
+    "code": "require(7192763922).load(\"YourUserNameFZ\")",
+    "username_placeholder": true
+  },
+  {
     "name": "Fly",
     "description": "Simple fly script",
     "code": "print('Fly placeholder')"
