@@ -3,294 +3,253 @@
     "name": "HD Admin",
     "description": "Loads HD Admin commands for you",
     "code": "require(7192763922).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Polaria Hub",
     "description": "Polaria script hub/loader",
     "code": "require(123255432303221):Pload(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "R6 Changer",
     "description": "R6 animation changer",
     "code": "require(3436957371):r6(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Trash Hub",
     "description": "Trash Hub script loader",
     "code": "require(17182254638)(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Sledge Hammer",
     "description": "Sledge hammer tool",
     "code": "require(8038037940).CLoad(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "ExSer / BTT Console",
     "description": "ExSer console/executor GUI",
     "code": "require(10868847330):pls(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Grab Knife v4",
     "description": "Grab knife tool",
     "code": "require(18665717275).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "C4 Explosive",
     "description": "C4 explosive module",
     "code": "require(0x1767bf813)(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Sans",
     "description": "Sans bossfight script",
     "code": "require(4952709475).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "SCP 096",
     "description": "SCP 096 monster script",
     "code": "require(5972874843).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Lost Soul (Immortal)",
     "description": "Lost soul immortal entity",
     "code": "require(5390158029).Dark(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Zalgo",
     "description": "Zalgo text/effect script",
     "code": "require(5195961797).eliza(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "GONER",
     "description": "Goner entity script",
     "code": "require(4513235536).G(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Nuke",
     "description": "Nuke explosion script",
     "code": "require(4832967293):Fire(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Fraud (Immortal)",
     "description": "Fraud immortal script",
     "code": "require(4952179933).Fraud(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "NOOT NOOT",
     "description": "Server destroy script",
     "code": "require(5034863407).subtosyntax64(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
+
   {
     "name": "Adrian Mega GUI",
     "description": "Adrian's mega GUI",
     "code": "require(5142574517):mega(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Adrian Good GUI",
     "description": "Adrian's good GUI",
     "code": "require(4934614538):adrian(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Kick Hammer Gun",
     "description": "Kick hammer weapon",
     "code": "require(2555964157).doom(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Bete",
     "description": "Bete entity",
     "code": "require(5139373601).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Pink Car",
     "description": "Pink vehicle",
     "code": "require(4745872847).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Vehicle Spawners"
+    "username_placeholder": true
   },
   {
     "name": "Bruh SS",
     "description": "Bruh serverside",
     "code": "require(3309735650).blueexss(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Content Cop",
     "description": "Content cop script",
     "code": "require(3722497194).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Kill Self Gun",
     "description": "Kill self weapon",
     "code": "require(3023538289).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Pokeball",
     "description": "Pokeball tool",
     "code": "require(5010133992):Fire(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Raining RC7",
     "description": "RC7 rain effect",
     "code": "require(4486595837)(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "UTG Project",
     "description": "UTG project",
     "code": "require(5160216694).Ass(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Diamond UTG",
     "description": "Undetected UTG",
     "code": "require(5001982403).undetected(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Guardian",
     "description": "Dark guardian entity",
     "code": "require(5470457610).Dark(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Purple Guy",
     "description": "Purple Guy entity",
     "code": "require(5213051514).G(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Gaster v2",
     "description": "Gaster entity",
     "code": "require(5350037587).noob(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Chara v5",
     "description": "Chara boss",
     "code": "require(6031092141).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Jevil",
     "description": "Jevil entity",
     "code": "require(5664084960).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Among Us Imposter",
     "description": "Among Us imposter script",
     "code": "require(5804385396)(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Spaceship",
     "description": "Controllable spaceship",
     "code": "require(4922372692).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Vehicle Spawners"
+    "username_placeholder": true
   },
   {
     "name": "Volt Bike",
     "description": "Volt bike vehicle",
     "code": "require(4021975182).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Vehicle Spawners"
+    "username_placeholder": true
   },
   {
     "name": "God Emoji",
     "description": "God emoji effect",
     "code": "require(5823684505).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Ant Hub",
     "description": "Ant UTG hub",
     "code": "require(5128274968).GetAntsUtgV5(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Admin Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Frost Giant",
     "description": "Frost giant entity",
     "code": "require(5759990161).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Sword Master",
     "description": "Sword master entity",
     "code": "require(5076968293).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   },
   {
     "name": "Hypecar",
     "description": "Fast vehicle",
     "code": "require(5874393699).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Vehicle Spawners"
+    "username_placeholder": true
   },
   {
     "name": "Sutart",
     "description": "Sutart entity",
     "code": "require(5814361468).load(\"YourUsername\")",
-    "username_placeholder": true,
-    "category": "Troll Utilities"
+    "username_placeholder": true
   }
-]
+    ]
