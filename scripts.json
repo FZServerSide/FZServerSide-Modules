@@ -1,4 +1,3 @@
-
 [
   {
     "name": "HD Admin",
@@ -90,7 +89,7 @@
     "code": "require(4513235536).G(\"YourUsername\")",
     "username_placeholder": true
   }
-  ,
+,
   {
     "name": "Pee",
     "description": "Pee effect script",
@@ -217,4 +216,160 @@
     "code": "require(6858594080).KrnKidsSus(\"YourUsername\")",
     "username_placeholder": true
   }
-  
+  ,
+  {
+    "name": "adrian's mega gui",
+    "description": "Adrian's mega GUI",
+    "code": "require(5142574517):mega(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "adrian's good gui",
+    "description": "Adrian's good GUI",
+    "code": "require(4934614538):adrian(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "kick hammer gun",
+    "description": "Kick hammer gun",
+    "code": "require(2555964157).doom(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "toxic script dont use",
+    "description": "Toxic script (don't use)",
+    "code": "require(5115793531).scare()",
+    "username_placeholder": false
+  },
+  {
+    "name": "fraud that copies users forms",
+    "description": "Fraud that copies users forms",
+    "code": "require(4952179933).Fraud(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "bete script",
+    "description": "Bete script",
+    "code": "require(5139373601).load(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "pink car",
+    "description": "Pink car script",
+    "code": "require(4745872847).load(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "bruh ss",
+    "description": "Bruh SS script",
+    "code": "require(3309735650).blueexss(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "content cop",
+    "description": "Content cop script",
+    "code": "require(3722497194).load(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "kill self gun",
+    "description": "Kill self gun script",
+    "code": "require(3023538289).load(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "hanger",
+    "description": "Hanger script",
+    "code": "require(03150276424):Fire('angrybirdice','i baked you a pie')",
+    "username_placeholder": false
+  },
+  {
+    "name": "pokeball",
+    "description": "Pokeball script",
+    "code": "require(5010133992):Fire(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "arrest script",
+    "description": "Arrest script",
+    "code": "require(2934684058).naenae(\"Target\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "toxic script dont use 2",
+    "description": "Toxic script (don't use, variant)",
+    "code": "require(4124996597).swano()",
+    "username_placeholder": false
+  },
+  {
+    "name": "trolling script",
+    "description": "Trolling script",
+    "code": "require(4564681456).catgirl()",
+    "username_placeholder": false
+  },
+  {
+    "name": "raining rc7",
+    "description": "Raining RC7",
+    "code": "require(4486595837)(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "part 2 raining",
+    "description": "Part 2 of raining RC7",
+    "code": "require(4662289699)(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "utg project",
+    "description": "UTG project script",
+    "code": "require(5160216694).Ass(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "utg with password",
+    "description": "UTG project with password (KaspersRocks)",
+    "code": "require(4898607163).k2(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "dimond utg",
+    "description": "Diamond UTG script",
+    "code": "require(5001982403).undetected(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "utg part 5",
+    "description": "UTG part 5",
+    "code": "require(4937114966):SH(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "guardian",
+    "description": "Guardian script",
+    "code": "require(5470457610).Dark(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "pink utg",
+    "description": "Pink UTG script",
+    "code": "require(5455277230).Trash(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "map detroyer (dont use)",
+    "description": "Map destroyer script (do not use)",
+    "code": "require(5176022761)(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "purple guy",
+    "description": "Purple Guy script",
+    "code": "require(5213051514).G(\"angrybirdice\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "utg gods",
+    "description": "UTG Gods script",
+    "code": "require(5146396793).load(\"Henrique_33br\")",
+    "username_placeholder": false
+  }
