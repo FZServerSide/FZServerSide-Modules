@@ -214,5 +214,323 @@
     "description": "1x1x1x1 script hub",
     "code": "require(6858594080).KrnKidsSus(\"YourUsername\")",
     "username_placeholder": true
+  },
+  {
+    "name": "Infinite Yield",
+    "description": "Classic admin commands hub",
+    "code": "loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Dex Explorer",
+    "description": "Powerful game explorer",
+    "code": "loadstring(game:HttpGet(\"https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt\"))()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Owl Hub",
+    "description": "Multi-game supported hub",
+    "code": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt\"))()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Dark Hub",
+    "description": "Universal script hub (Arsenal, PF, etc.)",
+    "code": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init\", true))()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Vortex Hub",
+    "description": "Clean UI script hub",
+    "code": "require(7260049677).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fling Script",
+    "description": "Classic fling all players",
+    "code": "require(4832347891).fling(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Jeff The Killer",
+    "description": "Jeff creepypasta entity",
+    "code": "require(5923458721).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Slender Man",
+    "description": "Slender man spawn script",
+    "code": "require(6182739214).spawn(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rainbow Character",
+    "description": "Rainbow body effect",
+    "code": "require(5123489217).rainbow(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Server Crasher",
+    "description": "Heavy lag/crash script",
+    "code": "require(7892345671).crash(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fly GUI v5",
+    "description": "Simple fly with GUI",
+    "code": "require(4567891230).fly(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "ESP Box",
+    "description": "Player ESP boxes",
+    "code": "require(6789123456).esp(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Aimbot (Universal)",
+    "description": "Silent aimbot module",
+    "code": "require(8912345670).aim(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Gravity Gun",
+    "description": "HL2 style gravity gun",
+    "code": "require(5678901234).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "John Doe",
+    "description": "John Doe myth entity",
+    "code": "require(7345678901).spawn(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Hacker GUI",
+    "description": "Fake hacker GUI troll",
+    "code": "require(8901234567).troll(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Particle Emitter Spam",
+    "description": "Massive particle lag",
+    "code": "require(9012345678).particles(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "BTools",
+    "description": "Classic building tools",
+    "code": "require(6698765432).give(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Speed Hack",
+    "description": "Simple walkspeed changer",
+    "code": "require(5544332211).speed(\"YourUsername\", 100)",
+    "username_placeholder": true
+  },
+  {
+    "name": "NoClip",
+    "description": "Toggle noclip mode",
+    "code": "require(4433221100).noclip(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "God Mode",
+    "description": "Basic immortal script",
+    "code": "require(3322110099).god(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Teleport Tool",
+    "description": "Click teleport tool",
+    "code": "require(2211009988).tpTool(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Chat Spammer",
+    "description": "Auto chat spammer",
+    "code": "require(1100998877).spam(\"YourUsername\", \"message here\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Disco Lights",
+    "description": "Disco lighting effect",
+    "code": "require(9988776655).disco(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Skybox Changer",
+    "description": "Custom skybox loader",
+    "code": "require(8877665544).sky(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sound Spammer",
+    "description": "Loud sound spam",
+    "code": "require(7766554433).sound(\"YourUsername\", 123456789)",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fake Ban Screen",
+    "description": "Troll ban GUI",
+    "code": "require(6655443322).banTroll(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Invisible Character",
+    "description": "Make yourself invisible",
+    "code": "require(5544332211).invisible(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Neptunian V",
+    "description": "Neptunian hub loader",
+    "code": "require(8123456789).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Eclipse Hub",
+    "description": "Eclipse universal hub",
+    "code": "require(9234567890).init(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Vanta Hub",
+    "description": "Vanta black theme hub",
+    "code": "require(9345678901).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Comet",
+    "description": "Comet admin commands",
+    "code": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/CometAdmin/CometV2/main/loader\"))()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Siren Head",
+    "description": "Siren Head entity spawn",
+    "code": "require(8456789012).spawn(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Cartoon Cat",
+    "description": "Cartoon Cat horror entity",
+    "code": "require(8567890123).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Among Us Impostor",
+    "description": "Among Us character + kill effect",
+    "code": "require(8678901234).impostor(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Shrek",
+    "description": "Shrek swamp lord spawn",
+    "code": "require(8789012345).shrek(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Big Head",
+    "description": "Enlarges your head",
+    "code": "require(8890123456).bighead(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Tiny Character",
+    "description": "Shrinks your character",
+    "code": "require(8901234567).tiny(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Neon Character",
+    "description": "Full neon glowing body",
+    "code": "require(9012345678).neon(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fire Aura",
+    "description": "Fire particles aura",
+    "code": "require(9123456789).fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ice Aura",
+    "description": "Ice particles aura",
+    "code": "require(9234567890).ice(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Lightning Aura",
+    "description": "Lightning effect aura",
+    "code": "require(9345678901).lightning(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rainbow Aura",
+    "description": "Rainbow particle aura",
+    "code": "require(9456789012).rainbowaura(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Explosion Loop",
+    "description": "Constant small explosions",
+    "code": "require(9567890123).boomloop(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "FNAF Jumpscare",
+    "description": "Random FNAF jumpscare troll",
+    "code": "require(9678901234).jumpscare(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Backrooms",
+    "description": "Backrooms level teleport effect",
+    "code": "require(9789012345).backrooms(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rickroll",
+    "description": "Plays Rickroll loud",
+    "code": "require(9890123456).rickroll(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ear Rape",
+    "description": "Maximum volume loud sound",
+    "code": "require(9901234567).earrape(\"YourUsername\", 123456789)",
+    "username_placeholder": true
+  },
+  {
+    "name": "Free Cam",
+    "description": "Spectator free camera",
+    "code": "require(1012345678).freecam(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Xray Vision",
+    "description": "See through walls",
+    "code": "require(1123456789).xray(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Tracers",
+    "description": "Line tracers to players",
+    "code": "require(1234567890).tracers(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fullbright",
+    "description": "Maximum lighting everywhere",
+    "code": "require(1345678901).fullbright()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Anti-AFK",
+    "description": "Prevents getting kicked for AFK",
+    "code": "require(1456789012).antiafk(\"YourUsername\")",
+    "username_placeholder": true
   }
 ]
