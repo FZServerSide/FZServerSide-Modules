@@ -1,3 +1,4 @@
+
 [
   {
     "name": "HD Admin",
@@ -36,8 +37,8 @@
     "username_placeholder": true
   },
   {
-    "name": "Grab Knife",
-    "description": "Grab knife tool v4",
+    "name": "Grab Knife v4",
+    "description": "Grab knife tool",
     "code": "require(18665717275).load(\"YourUsername\")",
     "username_placeholder": true
   },
@@ -60,12 +61,6 @@
     "username_placeholder": true
   },
   {
-    "name": "3rd Dimension",
-    "description": "3rd dimension effect",
-    "code": "require(9254836590)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Lost Soul (Immortal)",
     "description": "Lost soul immortal entity",
     "code": "require(5390158029).Dark(\"YourUsername\")",
@@ -78,34 +73,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Guest 666 (Laggy)",
-    "description": "Guest 666 lag script",
-    "code": "require(5984643716).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "GONER",
     "description": "Goner entity script",
     "code": "require(4513235536).G(\"YourUsername\")",
-    "username_placeholder": true
-  }
-,
-  {
-    "name": "Pee",
-    "description": "Pee effect script",
-    "code": "require(2972136307).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Rick and Morty Portal",
-    "description": "Rick and Morty portal (kinda broken)",
-    "code": "require(2944367975).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Void Guardian",
-    "description": "Void guardian entity",
-    "code": "require(6375614282).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -115,261 +85,172 @@
     "username_placeholder": true
   },
   {
-    "name": "Fraud (ID FR, Immortal)",
+    "name": "Fraud (Immortal)",
     "description": "Fraud immortal script",
     "code": "require(4952179933).Fraud(\"YourUsername\")",
     "username_placeholder": true
   },
   {
-    "name": "Sin Unleashed",
-    "description": "Sin unleashed boss",
-    "code": "require(2787132106):Run(\"YourUsername\", 'I baked you a pie')",
-    "username_placeholder": true
-  },
-  {
-    "name": "NOOT NOOT (Server Destroy)",
-    "description": "NOOT NOOT server crash",
+    "name": "NOOT NOOT",
+    "description": "Server destroy script",
     "code": "require(5034863407).subtosyntax64(\"YourUsername\")",
     "username_placeholder": true
   },
+
   {
-    "name": "Neurotic",
-    "description": "Neurotic entity",
-    "code": "require(5617600468).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Chara Boss",
-    "description": "Chara bossfight",
-    "code": "require(4106669917).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Instant Nuke",
-    "description": "Instant nuke effect",
-    "code": "require(4178274460).Nuke(Vector3.new(0,50,0),1000)",
-    "username_placeholder": false
-  },
-  {
-    "name": "Aqua Hub",
-    "description": "Aqua script hub",
-    "code": "require(5099140412).Aqua(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Roz Hub",
-    "description": "Roz Hub (cant move it)",
-    "code": "require(5702333343).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Super Cool Banisher",
-    "description": "Banisher tool",
-    "code": "require(5226367856).rk(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Aureas",
-    "description": "Aureas GUI hub (really good)",
-    "code": "require(6036737823).CrackedByIncreaseron(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Snake Banisher v3",
-    "description": "Snake banisher v3",
-    "code": "require(4967804765).SBV3(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Phantom Forces Guns",
-    "description": "Gives Phantom Forces guns",
-    "code": "require(0xA8526D5D).giveGuns(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Shadow Kars",
-    "description": "Shadow Kars entity",
-    "code": "require(6058159336).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "The Defiant",
-    "description": "The Defiant entity",
-    "code": "require(6168743245).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Dimensiona",
-    "description": "Dimensiona effect",
-    "code": "require(6058166660).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Baseball Bat",
-    "description": "Baseplate bat tool",
-    "code": "require(4559977647).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "1x1x1x1 Hub",
-    "description": "1x1x1x1 script hub",
-    "code": "require(6858594080).KrnKidsSus(\"YourUsername\")",
-    "username_placeholder": true
-  }
-  ,
-  {
-    "name": "adrian's mega gui",
+    "name": "Adrian Mega GUI",
     "description": "Adrian's mega GUI",
-    "code": "require(5142574517):mega(\"angrybirdice\")",
-    "username_placeholder": false
+    "code": "require(5142574517):mega(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "adrian's good gui",
+    "name": "Adrian Good GUI",
     "description": "Adrian's good GUI",
-    "code": "require(4934614538):adrian(\"angrybirdice\")",
-    "username_placeholder": false
+    "code": "require(4934614538):adrian(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "kick hammer gun",
-    "description": "Kick hammer gun",
-    "code": "require(2555964157).doom(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Kick Hammer Gun",
+    "description": "Kick hammer weapon",
+    "code": "require(2555964157).doom(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "toxic script dont use",
-    "description": "Toxic script (don't use)",
-    "code": "require(5115793531).scare()",
-    "username_placeholder": false
+    "name": "Bete",
+    "description": "Bete entity",
+    "code": "require(5139373601).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "fraud that copies users forms",
-    "description": "Fraud that copies users forms",
-    "code": "require(4952179933).Fraud(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Pink Car",
+    "description": "Pink vehicle",
+    "code": "require(4745872847).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "bete script",
-    "description": "Bete script",
-    "code": "require(5139373601).load(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Bruh SS",
+    "description": "Bruh serverside",
+    "code": "require(3309735650).blueexss(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "pink car",
-    "description": "Pink car script",
-    "code": "require(4745872847).load(\"angrybirdice\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "bruh ss",
-    "description": "Bruh SS script",
-    "code": "require(3309735650).blueexss(\"angrybirdice\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "content cop",
+    "name": "Content Cop",
     "description": "Content cop script",
-    "code": "require(3722497194).load(\"angrybirdice\")",
-    "username_placeholder": false
+    "code": "require(3722497194).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "kill self gun",
-    "description": "Kill self gun script",
-    "code": "require(3023538289).load(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Kill Self Gun",
+    "description": "Kill self weapon",
+    "code": "require(3023538289).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "hanger",
-    "description": "Hanger script",
-    "code": "require(03150276424):Fire('angrybirdice','i baked you a pie')",
-    "username_placeholder": false
+    "name": "Pokeball",
+    "description": "Pokeball tool",
+    "code": "require(5010133992):Fire(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "pokeball",
-    "description": "Pokeball script",
-    "code": "require(5010133992):Fire(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Raining RC7",
+    "description": "RC7 rain effect",
+    "code": "require(4486595837)(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "arrest script",
-    "description": "Arrest script",
-    "code": "require(2934684058).naenae(\"Target\")",
-    "username_placeholder": false
+    "name": "UTG Project",
+    "description": "UTG project",
+    "code": "require(5160216694).Ass(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "toxic script dont use 2",
-    "description": "Toxic script (don't use, variant)",
-    "code": "require(4124996597).swano()",
-    "username_placeholder": false
+    "name": "Diamond UTG",
+    "description": "Undetected UTG",
+    "code": "require(5001982403).undetected(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "trolling script",
-    "description": "Trolling script",
-    "code": "require(4564681456).catgirl()",
-    "username_placeholder": false
+    "name": "Guardian",
+    "description": "Dark guardian entity",
+    "code": "require(5470457610).Dark(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "raining rc7",
-    "description": "Raining RC7",
-    "code": "require(4486595837)(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Purple Guy",
+    "description": "Purple Guy entity",
+    "code": "require(5213051514).G(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "part 2 raining",
-    "description": "Part 2 of raining RC7",
-    "code": "require(4662289699)(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Gaster v2",
+    "description": "Gaster entity",
+    "code": "require(5350037587).noob(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "utg project",
-    "description": "UTG project script",
-    "code": "require(5160216694).Ass(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Chara v5",
+    "description": "Chara boss",
+    "code": "require(6031092141).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "utg with password",
-    "description": "UTG project with password (KaspersRocks)",
-    "code": "require(4898607163).k2(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Jevil",
+    "description": "Jevil entity",
+    "code": "require(5664084960).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "dimond utg",
-    "description": "Diamond UTG script",
-    "code": "require(5001982403).undetected(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Among Us Imposter",
+    "description": "Among Us imposter script",
+    "code": "require(5804385396)(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "utg part 5",
-    "description": "UTG part 5",
-    "code": "require(4937114966):SH(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Spaceship",
+    "description": "Controllable spaceship",
+    "code": "require(4922372692).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "guardian",
-    "description": "Guardian script",
-    "code": "require(5470457610).Dark(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Volt Bike",
+    "description": "Volt bike vehicle",
+    "code": "require(4021975182).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "pink utg",
-    "description": "Pink UTG script",
-    "code": "require(5455277230).Trash(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "God Emoji",
+    "description": "God emoji effect",
+    "code": "require(5823684505).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "map detroyer (dont use)",
-    "description": "Map destroyer script (do not use)",
-    "code": "require(5176022761)(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Ant Hub",
+    "description": "Ant UTG hub",
+    "code": "require(5128274968).GetAntsUtgV5(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "purple guy",
-    "description": "Purple Guy script",
-    "code": "require(5213051514).G(\"angrybirdice\")",
-    "username_placeholder": false
+    "name": "Frost Giant",
+    "description": "Frost giant entity",
+    "code": "require(5759990161).load(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
-    "name": "utg gods",
-    "description": "UTG Gods script",
-    "code": "require(5146396793).load(\"Henrique_33br\")",
-    "username_placeholder": false
+    "name": "Sword Master",
+    "description": "Sword master entity",
+    "code": "require(5076968293).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Hypecar",
+    "description": "Fast vehicle",
+    "code": "require(5874393699).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sutart",
+    "description": "Sutart entity",
+    "code": "require(5814361468).load(\"YourUsername\")",
+    "username_placeholder": true
   }
+    ]
