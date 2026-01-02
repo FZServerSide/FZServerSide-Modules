@@ -1,18 +1,218 @@
 [
   {
-    "name": "Infinite Yield",
-    "description": "Universal admin commands",
-    "code": "print('IY placeholder')"
-  },
-  {
-    "name": "HD Admin (Auto-Username)",
+    "name": "HD Admin",
     "description": "Loads HD Admin commands for you",
-    "code": "require(7192763922).load(\"YourUserNameFZ\")",
+    "code": "require(7192763922).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
-    "name": "Fly",
-    "description": "Simple fly script",
-    "code": "print('Fly placeholder')"
+    "name": "Polaria Hub",
+    "description": "Polaria script hub/loader",
+    "code": "require(123255432303221):Pload(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "R6 Changer",
+    "description": "R6 animation changer",
+    "code": "require(3436957371):r6(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Trash Hub",
+    "description": "Trash Hub script loader",
+    "code": "require(17182254638)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sledge Hammer",
+    "description": "Sledge hammer tool",
+    "code": "require(8038037940).CLoad(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "ExSer / BTT Console",
+    "description": "ExSer console/executor GUI",
+    "code": "require(10868847330):pls(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife",
+    "description": "Grab knife tool v4",
+    "code": "require(18665717275).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "C4 Explosive",
+    "description": "C4 explosive module",
+    "code": "require(0x1767bf813)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sans",
+    "description": "Sans bossfight script",
+    "code": "require(4952709475).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "SCP 096",
+    "description": "SCP 096 monster script",
+    "code": "require(5972874843).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "3rd Dimension",
+    "description": "3rd dimension effect",
+    "code": "require(9254836590)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Lost Soul (Immortal)",
+    "description": "Lost soul immortal entity",
+    "code": "require(5390158029).Dark(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Zalgo",
+    "description": "Zalgo text/effect script",
+    "code": "require(5195961797).eliza(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Guest 666 (Laggy)",
+    "description": "Guest 666 lag script",
+    "code": "require(5984643716).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "GONER",
+    "description": "Goner entity script",
+    "code": "require(4513235536).G(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Pee",
+    "description": "Pee effect script",
+    "code": "require(2972136307).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rick and Morty Portal",
+    "description": "Rick and Morty portal (kinda broken)",
+    "code": "require(2944367975).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Void Guardian",
+    "description": "Void guardian entity",
+    "code": "require(6375614282).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Nuke",
+    "description": "Nuke explosion script",
+    "code": "require(4832967293):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Fraud (ID FR, Immortal)",
+    "description": "Fraud immortal script",
+    "code": "require(4952179933).Fraud(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sin Unleashed",
+    "description": "Sin unleashed boss",
+    "code": "require(2787132106):Run(\"YourUsername\", 'I baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "NOOT NOOT (Server Destroy)",
+    "description": "NOOT NOOT server crash",
+    "code": "require(5034863407).subtosyntax64(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Neurotic",
+    "description": "Neurotic entity",
+    "code": "require(5617600468).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Chara Boss",
+    "description": "Chara bossfight",
+    "code": "require(4106669917).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Instant Nuke",
+    "description": "Instant nuke effect",
+    "code": "require(4178274460).Nuke(Vector3.new(0,50,0),1000)",
+    "username_placeholder": false
+  },
+  {
+    "name": "Aqua Hub",
+    "description": "Aqua script hub",
+    "code": "require(5099140412).Aqua(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Roz Hub",
+    "description": "Roz Hub (cant move it)",
+    "code": "require(5702333343).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Super Cool Banisher",
+    "description": "Banisher tool",
+    "code": "require(5226367856).rk(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Aureas",
+    "description": "Aureas GUI hub (really good)",
+    "code": "require(6036737823).CrackedByIncreaseron(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Snake Banisher v3",
+    "description": "Snake banisher v3",
+    "code": "require(4967804765).SBV3(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Phantom Forces Guns",
+    "description": "Gives Phantom Forces guns",
+    "code": "require(0xA8526D5D).giveGuns(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Shadow Kars",
+    "description": "Shadow Kars entity",
+    "code": "require(6058159336).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "The Defiant",
+    "description": "The Defiant entity",
+    "code": "require(6168743245).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Dimensiona",
+    "description": "Dimensiona effect",
+    "code": "require(6058166660).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Baseball Bat",
+    "description": "Baseplate bat tool",
+    "code": "require(4559977647).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "1x1x1x1 Hub",
+    "description": "1x1x1x1 script hub",
+    "code": "require(6858594080).KrnKidsSus(\"YourUsername\")",
+    "username_placeholder": true
   }
 ]
