@@ -1,4 +1,3 @@
-
 [
   {
     "name": "HD Admin",
@@ -261,49 +260,49 @@
   {
     "name": "Anime",
     "description": "Script loader",
-    "code": "require(78955014767904)(\"YourNameHere\")",
+    "code": "require(78955014767904)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "Smartbone-Noob",
     "description": "Script loader",
-    "code": "require(106375032864143)(\"YourNameHere\")",
+    "code": "require(106375032864143)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "Smartbone-Meliodas",
     "description": "Script loader",
-    "code": "require(91670223262332)(\"YourNameHere\")",
+    "code": "require(91670223262332)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "Peep",
     "description": "Script loader",
-    "code": "require(131379284978697)(\"YourNameHere\")",
+    "code": "require(131379284978697)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "The Executioner",
     "description": "Script loader",
-    "code": "require(89610899083081)(\"YourNameHere\")",
+    "code": "require(89610899083081)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "Immortality Lord V3",
     "description": "Script loader",
-    "code": "require(111342186575245)(\"YourNameHere\")",
+    "code": "require(111342186575245)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "MBv1",
     "description": "Script loader",
-    "code": "require(94287515168773).RAroblox(\"YourNameHere\")",
+    "code": "require(94287515168773).RAroblox(\"YourUsername\")",
     "username_placeholder": true
   },
   {
     "name": "NUCLEAR WARHEAD",
     "description": "Script loader",
-    "code": "require(14298011197).RAroblox(\"YourNameHere\")",
+    "code": "require(14298011197).RAroblox(\"YourUsername\")",
     "username_placeholder": true
   }
-]
+    ]
