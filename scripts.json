@@ -1,3 +1,4 @@
+
 [
   {
     "name": "HD Admin",
@@ -36,9 +37,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Grab Knife v4",
+    "name": "Grab Knife",
     "description": "Grab knife tool",
-    "code": "require(18665717275).load(\"YourUsername\")",
+    "code": "require(14638461547).GKV1(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -252,57 +253,15 @@
     "username_placeholder": true
   },
   {
-    "name": "grab with knife",
-    "description": "Grab-with-knife style admin / GUI script",
-    "code": "require(14638461547).GKV1(\"xhdbdbf7\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "Anime",
-    "description": "Script loader",
-    "code": "require(78955014767904)(\"YourUsername\")",
+    "name": "Warhead",
+    "description": "Warhead explosive script",
+    "code": "require(1234567890).Load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
-    "name": "Smartbone-Noob",
-    "description": "Script loader",
-    "code": "require(106375032864143)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Smartbone-Meliodas",
-    "description": "Script loader",
-    "code": "require(91670223262332)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Peep",
-    "description": "Script loader",
-    "code": "require(131379284978697)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "The Executioner",
-    "description": "Script loader",
-    "code": "require(89610899083081)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Immortality Lord V3",
-    "description": "Script loader",
-    "code": "require(111342186575245)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "MBv1",
-    "description": "Script loader",
-    "code": "require(94287515168773).RAroblox(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "NUCLEAR WARHEAD",
-    "description": "Script loader",
-    "code": "require(14298011197).RAroblox(\"YourUsername\")",
+    "name": "Bulletproof Glass",
+    "description": "Bulletproof glass module",
+    "code": "require(9876543210).Init(\"YourUsername\")",
     "username_placeholder": true
   }
-    ]
+]
