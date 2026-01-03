@@ -1,3 +1,4 @@
+
 [
   {
     "name": "HD Admin",
@@ -251,47 +252,58 @@
     "code": "require(5814361468).load(\"YourUsername\")",
     "username_placeholder": true
   },
-
   {
-    "name": "Religious Map",
-    "description": "Loads a religious-themed map",
-    "code": "require(133694189229096):respect()",
+    "name": "grab with knife",
+    "description": "Grab-with-knife style admin / GUI script",
+    "code": "require(14638461547).GKV1(\"xhdbdbf7\")",
     "username_placeholder": false
   },
   {
-    "name": "c00lkidd UI",
-    "description": "Classic c00lkidd-style UI",
-    "code": "require(125136140453912)(\"YourUsername\")",
+    "name": "Anime",
+    "description": "Script loader",
+    "code": "require(78955014767904)(\"YourNameHere\")",
     "username_placeholder": true
   },
   {
-    "name": "GKV1",
-    "description": "GKV1 admin / GUI script",
-    "code": "require(14638461547).GKV1(\"YourUsername\")",
+    "name": "Smartbone-Noob",
+    "description": "Script loader",
+    "code": "require(106375032864143)(\"YourNameHere\")",
     "username_placeholder": true
   },
   {
-    "name": "MML Admin",
-    "description": "MML V3 admin commands",
-    "code": "require(12109440243).MMLV3(\"YourUsername\")",
+    "name": "Smartbone-Meliodas",
+    "description": "Script loader",
+    "code": "require(91670223262332)(\"YourNameHere\")",
     "username_placeholder": true
   },
   {
-    "name": "FE KJ",
-    "description": "FE KJ admin / script",
-    "code": "require(17776365113).kj(\"YourUsername\")",
+    "name": "Peep",
+    "description": "Script loader",
+    "code": "require(131379284978697)(\"YourNameHere\")",
     "username_placeholder": true
   },
   {
-    "name": "N00Z GUI (Cracked)",
-    "description": "Cracked N00Z GUI",
-    "code": "require(95420469368751):N00Zcracked(\"YourUsername\")",
+    "name": "The Executioner",
+    "description": "Script loader",
+    "code": "require(89610899083081)(\"YourNameHere\")",
     "username_placeholder": true
   },
   {
-    "name": "Brubacho's Realm",
-    "description": "Custom realm / map by Brubacho",
-    "code": "require(77178055412284):amogus()",
-    "username_placeholder": false
+    "name": "Immortality Lord V3",
+    "description": "Script loader",
+    "code": "require(111342186575245)(\"YourNameHere\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "MBv1",
+    "description": "Script loader",
+    "code": "require(94287515168773).RAroblox(\"YourNameHere\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "NUCLEAR WARHEAD",
+    "description": "Script loader",
+    "code": "require(14298011197).RAroblox(\"YourNameHere\")",
+    "username_placeholder": true
   }
-    ]
+]
