@@ -1,5 +1,881 @@
 [
   {
+    "name": "Retro",
+    "description": "Retro public build",
+    "code": "require(6213364054).publicbuild(\"YourUsername\", \"Retro\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "UTG Classic",
+    "description": "Classic Ultimate Trolling GUI",
+    "code": "require(4937823608).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "UTG V2",
+    "description": "UTG version 2",
+    "code": "require(4799156637).Lmao(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Nuke (Old)",
+    "description": "Old nuke explosion script",
+    "code": "require(6335063396).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife V4 (Old)",
+    "description": "Classic Grab Knife version 4",
+    "code": "require(2919954597).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Topkek V4 Leaked",
+    "description": "Topkek version 4 (leaked)",
+    "code": "require(4253460888).die(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Lost Dead Astronaut",
+    "description": "Lost Dead Astronaut entity",
+    "code": "require(5014286842):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ruby Golem",
+    "description": "Ruby Golem entity",
+    "code": "require(5014302712):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rainbow Infinite",
+    "description": "Rainbow Infinite effect",
+    "code": "require(4972128286)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Creeper",
+    "description": "Creeper entity",
+    "code": "require(4708818072).Oaeh(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "SexyGurl Weird Script",
+    "description": "Weird but good script",
+    "code": "require(5076898851).SexyGurl(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Azure Hub New User",
+    "description": "Azure hub loader",
+    "code": "require(4983864325).azure(\"YourUsername\",\"azure hub new user\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Cradles v2",
+    "description": "Cradles version 2",
+    "code": "require(4679874662)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Homecoming Spiderman",
+    "description": "Homecoming Spiderman suit",
+    "code": "require(5010081614):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Neko",
+    "description": "Neko cat girl script",
+    "code": "require(4955353422).Neko(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Proteus",
+    "description": "Proteus entity",
+    "code": "require(5014338926):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "S Thomas",
+    "description": "S Thomas entity",
+    "code": "require(5014354119):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "AXR Piercer",
+    "description": "AXR Piercer tool",
+    "code": "require(5014529750):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Magma Blade",
+    "description": "Magma Blade tool",
+    "code": "require(5014563257):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "RII",
+    "description": "RII entity",
+    "code": "require(5018042393):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "NGR",
+    "description": "NGR entity",
+    "code": "require(5018122799):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Eqichrist",
+    "description": "Eqichrist entity",
+    "code": "require(5018130341):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Pulse",
+    "description": "Pulse effect",
+    "code": "require(5018304703)(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Axiomette",
+    "description": "Axiomette entity",
+    "code": "require(5018330008):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Nightmare",
+    "description": "Nightmare entity",
+    "code": "require(5018366301):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "German Soldier",
+    "description": "German soldier model",
+    "code": "require(5013444395).peepee(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Remote Control",
+    "description": "Remote control tool (many keybinds)",
+    "code": "require(5013557796).peepee(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Obama",
+    "description": "Obama model",
+    "code": "require(5013567134).peepee(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "500 Pound Ball",
+    "description": "500 pound ball drop",
+    "code": "require(5018462111):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Toxic",
+    "description": "Toxic entity",
+    "code": "require(5017948773):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Lava Map",
+    "description": "Lava map changer",
+    "code": "require(4957673377).bossbruh(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Indrish Zrestik",
+    "description": "Indrish Zrestik entity",
+    "code": "require(5019013695):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Godcat v2",
+    "description": "Godcat version 2",
+    "code": "require(4820579551).bscr(\"YourUsername\",\"0xFF\",\"h@!0\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Reviz Admin",
+    "description": "Reviz admin hub (classic)",
+    "code": "require(5007571660).reviz(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Murderer",
+    "description": "Murderer tool",
+    "code": "require(3709746847).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Dark Lord's Edge",
+    "description": "Dark Lord's Edge sword",
+    "code": "require(2639606206).Player(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Siren Head",
+    "description": "Siren Head entity (old)",
+    "code": "require(4638648334).siren(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Chaos Trickisher",
+    "description": "Chaos Trickisher entity",
+    "code": "require(4997069294).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "SBGR",
+    "description": "SBGR script",
+    "code": "require(4899806418).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Server Admin Glitcher",
+    "description": "Server admin glitcher",
+    "code": "require(4919294800).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Script Logger",
+    "description": "Script logger tool",
+    "code": "require(5022995638).load(\"YourUsername\", \"ooferlers\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "More Guns",
+    "description": "Additional guns pack",
+    "code": "require(4741518800).Guns(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Tea",
+    "description": "Tea tool",
+    "code": "require(3543575474).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "John Doe Module",
+    "description": "Classic John Doe troll module",
+    "code": "require(2841156534):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Sin Unleashed",
+    "description": "Sin Unleashed powers",
+    "code": "require(2787132106):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Dualecider",
+    "description": "Dualecider tool",
+    "code": "require(2790149731):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Unexpected Item",
+    "description": "Unexpected Item in bagging area",
+    "code": "require(2796959576).Run()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Voodoo Child",
+    "description": "Voodoo Child script",
+    "code": "require(2797271382):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Kermit Gui",
+    "description": "Kermit GUI",
+    "code": "require(2797382794):Kermit(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "IS GONE!!",
+    "description": "IS GONE troll script",
+    "code": "require(2800498919):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Country Roads Admin",
+    "description": "Country Roads admin commands",
+    "code": "require(2808676257):hack\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "Gun Giver",
+    "description": "Gun giver tool",
+    "code": "require(2823974237).giveGuns\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "School Shooter",
+    "description": "School shooter script",
+    "code": "require(2826823504):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife V1",
+    "description": "Grab Knife version 1",
+    "code": "require(2836693511):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife V2",
+    "description": "Grab Knife version 2",
+    "code": "require(2845941230):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife V3",
+    "description": "Grab Knife version 3",
+    "code": "require(2829943043):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Grab Knife V4 Classic",
+    "description": "Classic Grab Knife V4 with pie",
+    "code": "require(2845928453):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Boom X4",
+    "description": "Boom X4 explosion",
+    "code": "require(2830670878):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Darkage Wristbands",
+    "description": "Darkage wristbands",
+    "code": "require(2841203226):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Hell's Door",
+    "description": "Hell's Door effect",
+    "code": "require(2841174713):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Quantom Rewritten",
+    "description": "Quantom Rewritten admin",
+    "code": "require(2848219801):Fire('kermitwashere,ok',\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Doki Doki DIE",
+    "description": "Doki Doki DIE script",
+    "code": "require(2849585171):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Deadeye",
+    "description": "Deadeye tool",
+    "code": "require(2849593796):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Angel",
+    "description": "Angel wings/effect",
+    "code": "require(2849601715):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Uganda Knuckles",
+    "description": "Uganda Knuckles meme",
+    "code": "require(2849713774):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Da Warden",
+    "description": "Da Warden entity",
+    "code": "require(2849623031):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Meme Jevil",
+    "description": "Meme Jevil chaos",
+    "code": "require(2855997192):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Vaporgun",
+    "description": "Vaporgun weapon",
+    "code": "require(2856028839):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Voodoo Child Meme",
+    "description": "Voodoo Child meme version",
+    "code": "require(2858514503):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Trap Rifle",
+    "description": "Trap Rifle weapon",
+    "code": "require(2858526948):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Star Glitcher Spectrum",
+    "description": "Star Glitcher spectrum edition",
+    "code": "require(2930987220).load('mathman')",
+    "username_placeholder": false
+  },
+  {
+    "name": "Spectrum Glitcher Working",
+    "description": "Spectrum glitcher working version",
+    "code": "require(2844773931).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Nebula Star Glitcher Bypass",
+    "description": "Nebula Star glitcher bypass",
+    "code": "require(2860424822)(\"mathman\",\"nebulastar\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "Memes Animations",
+    "description": "Memes animation pack",
+    "code": "require(2860424822)(\"YourUsername\",\"memes\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Koolaid Man",
+    "description": "Koolaid Man entity",
+    "code": "require(2923173766):Kermit(\"YourUsername\",game.JobId)",
+    "username_placeholder": true
+  },
+  {
+    "name": "Xester",
+    "description": "Xester card guy",
+    "code": "require(2918747265).load(\"mathman\")",
+    "username_placeholder": false
+  },
+  {
+    "name": "Insanity Powers",
+    "description": "Insanity powers pack",
+    "code": "require(2787111216):Run(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Krystal Dance V2",
+    "description": "Krystal Dance version 2",
+    "code": "require(2881162369):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Memeus V3",
+    "description": "Memeus version 3",
+    "code": "require(2881262129):Fire(\"YourUsername\",'i baked you a pie')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Kermit Chathax",
+    "description": "Kermit chat hax",
+    "code": "require(2906086283):Fire(\"YourUsername\",'PsevQrhKhxNxNcf')",
+    "username_placeholder": true
+  },
+  {
+    "name": "Cart",
+    "description": "Shopping cart tool",
+    "code": "require(2945393344).load\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rick And Morty Remote",
+    "description": "Rick and Morty remote",
+    "code": "require(2944367975).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Pen",
+    "description": "Pen tool",
+    "code": "require(2913342850).load\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "Pokeball",
+    "description": "Pokeball tool",
+    "code": "require(2945268608).load\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "Cop",
+    "description": "Cop model",
+    "code": "require(2874956884):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "SCP 106",
+    "description": "SCP-106 entity",
+    "code": "require(2913616665).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Eyo-Zen",
+    "description": "Eyo-Zen entity",
+    "code": "require(2965943657):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Agent Agony",
+    "description": "Agent Agony tool",
+    "code": "require(2877501109):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rifle",
+    "description": "Rifle weapon",
+    "code": "require(2908373119):Fire(\"YourUsername\",\"i baked you a pie\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Golden Spinning Clock",
+    "description": "Golden spinning clock tool",
+    "code": "require(2956258470).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ban Hammer Classic",
+    "description": "Classic ban hammer tool",
+    "code": "require(2953959989).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Reaper V2",
+    "description": "Reaper version 2",
+    "code": "require(2954013343).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Killbot",
+    "description": "Killbot entity",
+    "code": "require(2954028244).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rainbow Sword/Knife",
+    "description": "Rainbow sword or knife",
+    "code": "require(2954081775).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "BloxWatch",
+    "description": "BloxWatch entity",
+    "code": "require(2954138784).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Void Boss",
+    "description": "Void Boss entity",
+    "code": "require(2954172081).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Dual Pink Guns",
+    "description": "Dual pink guns",
+    "code": "require(2954190022).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ender",
+    "description": "Ender entity",
+    "code": "require(2966080890):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "RuinEX",
+    "description": "RuinEX entity",
+    "code": "require(2966133043):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Inked Monster",
+    "description": "Inked Monster entity",
+    "code": "require(2966186555):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Chara X (Glitchy)",
+    "description": "Chara X (sometimes glitchy)",
+    "code": "require(2966195744):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Huge Baseplate",
+    "description": "Huge baseplate map",
+    "code": "require(2944212977).loadmap()",
+    "username_placeholder": false
+  },
+  {
+    "name": "Cloud Visualizer",
+    "description": "Cloud music visualizer",
+    "code": "require(2966240496):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Absylum V2",
+    "description": "Absylum version 2",
+    "code": "require(2966286498):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Plague Doctor",
+    "description": "Plague Doctor (SCP-049)",
+    "code": "require(2966334796):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Rocketeer",
+    "description": "Rocketeer tool",
+    "code": "require(2966449101):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Lunar Gauntlet",
+    "description": "Lunar Gauntlet (don't press V)",
+    "code": "require(2966463800):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Aura Katana",
+    "description": "Aura Katana sword",
+    "code": "require(2966514820):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Super Sonic Running",
+    "description": "Super Sonic running animation",
+    "code": "require(2966563614):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Purple Projectile Hands",
+    "description": "Hands shooting purple projectiles",
+    "code": "require(2966580162):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "SCP-999 Ghost",
+    "description": "SCP-999 ghost (can't move)",
+    "code": "require(2966604558):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Jump in the CAAC",
+    "description": "Jump in the caac meme",
+    "code": "require(2966615277):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Bullet Bill",
+    "description": "Bullet Bill (respawn after use)",
+    "code": "require(2966631086):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Heavy",
+    "description": "Heavy (funny but broken)",
+    "code": "require(2966638096):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "OP Air Magic",
+    "description": "OP air magic (won't kill others)",
+    "code": "require(2966766781):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Hokuto Shinken",
+    "description": "Hokuto Shinken moves",
+    "code": "require(2966795270):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "The Box",
+    "description": "The Box tool",
+    "code": "require(2966790795):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Dark Sword & Shield",
+    "description": "Dark sword and shield",
+    "code": "require(2966786815):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Noob",
+    "description": "Noob model",
+    "code": "require(2969429312):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Caducus",
+    "description": "Caducus the Fallen God",
+    "code": "require(2969642892):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Inferno",
+    "description": "Inferno effect",
+    "code": "require(2969919470):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "God Slayer",
+    "description": "God Slayer sword",
+    "code": "require(2969861340):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Agent Whesker",
+    "description": "Agent Whesker model",
+    "code": "require(2969940144):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Video Power",
+    "description": "Video Power effect",
+    "code": "require(2969906143):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Pan",
+    "description": "PUBG Pan ragdoll",
+    "code": "require(2965793312):Fire\"YourUsername\"",
+    "username_placeholder": true
+  },
+  {
+    "name": "Gorrupt Vectorist",
+    "description": "Gorrupt Vectorist entity",
+    "code": "require(2967640429).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Meteor Powers",
+    "description": "Meteor powers",
+    "code": "require(2967655899).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "The Glitch",
+    "description": "The Glitch entity",
+    "code": "require(2967664291).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Baldi",
+    "description": "Baldi (press F)",
+    "code": "require(2967798014).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Skull Kid",
+    "description": "Skull Kid entity",
+    "code": "require(2967848153).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Zamazu",
+    "description": "Zamazu entity",
+    "code": "require(2971448618):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Blue Titan",
+    "description": "Blue Titan entity",
+    "code": "require(2971509487).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Red Titan",
+    "description": "Red Titan entity",
+    "code": "require(2974204001).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Ravenger",
+    "description": "Ravenger entity",
+    "code": "require(2971559360).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Nuclear Gun",
+    "description": "Nuclear gun tool",
+    "code": "require(2974012915).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Golden Gun",
+    "description": "Golden gun tool",
+    "code": "require(2977809408):Fire(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Shinobi Armor",
+    "description": "Shinobi Armor (F/G modes)",
+    "code": "require(2974055072).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Zeus Staff",
+    "description": "Zeus Staff tool",
+    "code": "require(2974181326).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Green Claws",
+    "description": "Green claws tool",
+    "code": "require(2974223397).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Allah Akbar",
+    "description": "Allah Akbar explosion",
+    "code": "require(2974869441).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Bleach",
+    "description": "Bleach sword/tool",
+    "code": "require(2975480225).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "The World Gauntlets",
+    "description": "The World gauntlets",
+    "code": "require(2975213751).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Red Blood Scythe",
+    "description": "Red Blood Scythe",
+    "code": "require(2971800799).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Assassin's Creed Gauntlet",
+    "description": "Assassin's Creed hidden blade",
+    "code": "require(2971859278).load(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Infinite Yield SS (All Versions)",
+    "description": "All known Infinite Yield SS variants included",
+    "code": "require(4851033180)(\"YourUsername\") -- Main updated version",
+    "username_placeholder": true
+  },
+  {
+    "name": "Reviz Admin Full",
+    "description": "All Reviz admin entries",
+    "code": "require(5007571660).reviz(\"YourUsername\")",
+    "username_placeholder": true
+  },
+  {
     "name": "HD Admin",
     "description": "Loads HD Admin commands for you",
     "code": "require(7192763922).load(\"YourUsername\")",
@@ -78,12 +954,6 @@
     "username_placeholder": true
   },
   {
-    "name": "Nuke",
-    "description": "Nuke explosion script",
-    "code": "require(4832967293):Fire(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Fraud (Immortal)",
     "description": "Fraud immortal script",
     "code": "require(4952179933).Fraud(\"YourUsername\")",
@@ -120,18 +990,6 @@
     "username_placeholder": false
   },
   {
-    "name": "Fraud Copies Forms",
-    "description": "Fraud that copies users forms",
-    "code": "require(4952179933).Fraud(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Bete Script",
-    "description": "Bete entity script",
-    "code": "require(5139373601).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Pink Car",
     "description": "Pink controllable car",
     "code": "require(4745872847).load(\"YourUsername\")",
@@ -156,45 +1014,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Hanger (Suicide Rope)",
-    "description": "Hanger/suicide rope tool",
-    "code": "require(03150276424):Fire(\"YourUsername\", \"i baked you a pie\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Pokeball",
-    "description": "Pokeball tool",
-    "code": "require(5010133992):Fire(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Arrest Script",
-    "description": "Arrest/naenae script (target needed)",
-    "code": "require(2934684058).naenae(\"Target\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "Toxic Swan",
-    "description": "Toxic script - don't use (no username)",
-    "code": "require(4124996597).swano()",
-    "username_placeholder": false
-  },
-  {
-    "name": "Catgirl Trolling",
-    "description": "Catgirl trolling script (no username)",
-    "code": "require(4564681456).catgirl()",
-    "username_placeholder": false
-  },
-  {
     "name": "Raining RC7",
     "description": "Raining RC7 effect",
     "code": "require(4486595837)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Raining Part 2",
-    "description": "Raining effect part 2",
-    "code": "require(4662289699)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -204,21 +1026,9 @@
     "username_placeholder": true
   },
   {
-    "name": "UTG KaspersRocks",
-    "description": "UTG with password KaspersRocks",
-    "code": "require(4898607163).k2(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Diamond UTG",
     "description": "Undetected diamond UTG",
     "code": "require(5001982403).undetected(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UTG Part 5",
-    "description": "UTG part 5",
-    "code": "require(4937114966):SH(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -228,27 +1038,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Pink UTG",
-    "description": "Pink trash UTG",
-    "code": "require(5455277230).Trash(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Map Destroyer",
-    "description": "Map destroyer - don't use",
-    "code": "require(5176022761)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Purple Guy",
     "description": "Purple Guy entity",
     "code": "require(5213051514).G(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UTG Gods",
-    "description": "UTG gods loader",
-    "code": "require(5146396793).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -258,33 +1050,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Bruh Gun",
-    "description": "Bruh gun tool",
-    "code": "require(4212392954).CLoad(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Gaster v1",
-    "description": "Gaster blaster v1",
-    "code": "require(4575499347):Fire(\"YourUsername\", \"test\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Gaster v2",
-    "description": "Gaster entity v2",
-    "code": "require(5350037587).noob(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Chara v4",
     "description": "Chara boss v4",
     "code": "require(5555086775).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Anonymous UTG",
-    "description": "Anonymous undetected UTG",
-    "code": "require(5126648745).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -294,63 +1062,15 @@
     "username_placeholder": true
   },
   {
-    "name": "Dancing Script",
-    "description": "Dancing owner script",
-    "code": "require(5603327223).owner(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Illegal Agent",
     "description": "Illegal agent loader",
     "code": "require(5410471602).Load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
-    "name": "Wario Died",
-    "description": "Wario death effect (victim name needed)",
-    "code": "require(5213186100)(\"VictimName\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "Murder",
-    "description": "Murder mystery script",
-    "code": "require(5122876922).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Horror Wario",
-    "description": "Horror Wario entity (victim name needed)",
-    "code": "require(5223007262)(\"VictimName\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "Singer",
-    "description": "Singing entity script",
-    "code": "require(4753224196).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Get Stickbugged",
-    "description": "Stickbug trolling tool (victim name needed)",
+    "description": "Stickbug trolling tool",
     "code": "require(5586197151).stickbug(\"VictimNameHere\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "Cloud Music",
-    "description": "Cloud music player",
-    "code": "require(4824089646):Fire(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Purple Guy Sans",
-    "description": "Purple Guy Sans variant",
-    "code": "require(5390566768).eliza(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Annoying Skids",
-    "description": "Annoying skids loader (target needed)",
-    "code": "require(5185787073).load(\"target\")",
     "username_placeholder": false
   },
   {
@@ -360,39 +1080,9 @@
     "username_placeholder": true
   },
   {
-    "name": "All Seeing Hand",
-    "description": "All seeing hand tool",
-    "code": "require(5375399205).Player(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Spaceship",
     "description": "Controllable spaceship vehicle",
     "code": "require(4922372692).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Bot Control",
-    "description": "Bot control script",
-    "code": "require(4949554933):Fire(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Self Destroy",
-    "description": "Self destroy - warning do not use",
-    "code": "require(4867426485):SD2(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Teapot",
-    "description": "Teapot tool/entity",
-    "code": "require(3543575474).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Music Script",
-    "description": "Basic music player",
-    "code": "require(5011006941)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -402,33 +1092,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Kidnapper",
-    "description": "Kidnapper tool (victim name needed)",
-    "code": "require(5591099977)(\"VictimNameHere\")",
-    "username_placeholder": false
-  },
-  {
-    "name": "God Emoji",
-    "description": "God emoji effect",
-    "code": "require(5823684505).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Mario Hammer",
-    "description": "Mario hammer (key: ~end)",
-    "code": "require(5136523565).eliza(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Master Chief",
     "description": "Master Chief Halo character",
     "code": "require(5812973403).Halo(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Pipe Boy",
-    "description": "Pipe boy entity",
-    "code": "require(4939065623).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -444,30 +1110,6 @@
     "username_placeholder": true
   },
   {
-    "name": "Lost Soul",
-    "description": "Lost soul entity",
-    "code": "require(5312883962).noob(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Kick GUI",
-    "description": "Kick GUI - don't use",
-    "code": "require(4694654493).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Sword Master",
-    "description": "Sword master character",
-    "code": "require(5076968293).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Dodgeball",
-    "description": "Dodgeball game script",
-    "code": "require(4722391208).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Hypecar",
     "description": "Hyper fast car",
     "code": "require(5874393699).load(\"YourUsername\")",
@@ -480,33 +1122,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Sutart",
-    "description": "Sutart entity/character",
-    "code": "require(5814361468).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UT Dreamuur",
-    "description": "Dreamuur UTG variant",
-    "code": "require(5931119929).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "VR (Sometimes Works)",
-    "description": "VR script - inconsistent",
-    "code": "require(5127730212)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Jevil v3",
     "description": "Jevil chaos v3",
     "code": "require(5954521325).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Marx",
-    "description": "Marx entity",
-    "code": "require(5813723371).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -516,45 +1134,9 @@
     "username_placeholder": true
   },
   {
-    "name": "Rainbow Spear",
-    "description": "Rainbow spear tool",
-    "code": "require(3452949113).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Whacking Stick",
-    "description": "Whacking stick tool",
-    "code": "require(5813743814).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Ban Hammer",
-    "description": "Ban hammer tool",
-    "code": "require(5448035802).Hammer(\"YourUsername\", \"BanHammer\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Minos Prime",
-    "description": "Minos Prime console script",
-    "code": "require(13770496456)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "Infinite Yield SS",
     "description": "Infinite Yield serverside",
     "code": "require(7634392335)(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Caua Hub",
-    "description": "Caua Hub (key required)",
-    "code": "require(6174615549).CauaHub(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Sensation Hub",
-    "description": "Sensation hub loader",
-    "code": "require(100263845596551)(\"YourUsername\")",
     "username_placeholder": true
   },
   {
