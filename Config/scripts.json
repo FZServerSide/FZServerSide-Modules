@@ -1,32 +1,9 @@
+
 [
   {
     "name": "Retro",
     "description": "Retro public build",
     "code": "require(6213364054).publicbuild(\"YourUsername\", \"Retro\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UTG Classic",
-    "description": "Classic Ultimate Trolling GUI",
-    "code": "require(4937823608).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "UTG V2",
-    "description": "UTG version 2",
-    "code": "require(4799156637).Lmao(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Nuke (Old)",
-    "description": "Old nuke explosion script",
-    "code": "require(6335063396).load(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Grab Knife V4 (Old)",
-    "description": "Classic Grab Knife version 4",
-    "code": "require(2919954597).load(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -319,26 +296,8 @@
   },
   {
     "name": "Grab Knife V1",
-    "description": "Grab Knife version 1",
+    "description": "Grab Knife version 1 (kept as classic)",
     "code": "require(2836693511):Fire(\"YourUsername\",'i baked you a pie')",
-    "username_placeholder": true
-  },
-  {
-    "name": "Grab Knife V2",
-    "description": "Grab Knife version 2",
-    "code": "require(2845941230):Fire(\"YourUsername\",'i baked you a pie')",
-    "username_placeholder": true
-  },
-  {
-    "name": "Grab Knife V3",
-    "description": "Grab Knife version 3",
-    "code": "require(2829943043):Run(\"YourUsername\",'i baked you a pie')",
-    "username_placeholder": true
-  },
-  {
-    "name": "Grab Knife V4 Classic",
-    "description": "Classic Grab Knife V4 with pie",
-    "code": "require(2845928453):Fire(\"YourUsername\",'i baked you a pie')",
     "username_placeholder": true
   },
   {
@@ -864,18 +823,6 @@
     "username_placeholder": true
   },
   {
-    "name": "Infinite Yield SS (All Versions)",
-    "description": "All known Infinite Yield SS variants included",
-    "code": "require(4851033180)(\"YourUsername\") -- Main updated version",
-    "username_placeholder": true
-  },
-  {
-    "name": "Reviz Admin Full",
-    "description": "All Reviz admin entries",
-    "code": "require(5007571660).reviz(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
     "name": "HD Admin",
     "description": "Loads HD Admin commands for you",
     "code": "require(7192763922).load(\"YourUsername\")",
@@ -909,12 +856,6 @@
     "name": "ExSer / BTT Console",
     "description": "ExSer console/executor GUI",
     "code": "require(10868847330):pls(\"YourUsername\")",
-    "username_placeholder": true
-  },
-  {
-    "name": "Grab Knife",
-    "description": "Grab knife tool",
-    "code": "require(14638461547).GKV1(\"YourUsername\")",
     "username_placeholder": true
   },
   {
@@ -1161,6 +1102,12 @@
     "name": "Forsaken",
     "description": "Forsaken script",
     "code": "require(89847131483512).Forsaken(\"YourUsername\", \"Mafioso\")",
+    "username_placeholder": true
+  },
+  {
+    "name": "Tubers93",
+    "description": "Classic Tubers93 backdoor (very old, likely patched)",
+    "code": "require(0x6b02f8e17f50)(\"YourUsername\")",
     "username_placeholder": true
   }
     ]
