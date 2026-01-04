@@ -1,117 +1,118 @@
+
 [
   {
     "name": "HD Admin",
     "description": "Loads HD Admin commands for you",
-    "code": "require(7192763922).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(7192763922).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Polaria Hub",
     "description": "Polaria script hub/loader",
-    "code": "require(123255432303221):Pload(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(123255432303221):Pload(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "R6 Changer",
     "description": "R6 animation changer",
-    "code": "require(3436957371):r6(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3436957371):r6(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Trash Hub",
     "description": "Trash Hub script loader",
-    "code": "require(17182254638)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(17182254638)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Sledge Hammer",
     "description": "Sledge hammer tool",
-    "code": "require(8038037940).CLoad(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(8038037940).CLoad(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "ExSer / BTT Console",
     "description": "ExSer console/executor GUI",
-    "code": "require(10868847330):pls(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(10868847330):pls(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Grab Knife",
     "description": "Grab knife tool",
-    "code": "require(14638461547).GKV1(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(14638461547).GKV1(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "C4 Explosive",
     "description": "C4 explosive module",
-    "code": "require(0x1767bf813)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(0x1767bf813)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Sans",
     "description": "Sans bossfight script",
-    "code": "require(4952709475).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4952709475).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "SCP 096",
     "description": "SCP 096 monster script",
-    "code": "require(5972874843).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5972874843).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Lost Soul (Immortal)",
     "description": "Lost soul immortal entity",
-    "code": "require(5390158029).Dark(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5390158029).Dark(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Zalgo",
     "description": "Zalgo text/effect script",
-    "code": "require(5195961797).eliza(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5195961797).eliza(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "GONER",
     "description": "Goner entity script",
-    "code": "require(4513235536).G(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4513235536).G(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Nuke",
     "description": "Nuke explosion script",
-    "code": "require(4832967293):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4832967293):Fire(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Fraud (Immortal)",
     "description": "Fraud immortal script",
-    "code": "require(4952179933).Fraud(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4952179933).Fraud(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "NOOT NOOT",
     "description": "Server destroy script",
-    "code": "require(5034863407).subtosyntax64(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5034863407).subtosyntax64(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Adrian Mega GUI",
     "description": "Adrian's mega GUI",
-    "code": "require(5142574517):mega(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5142574517):mega(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Adrian Good GUI",
     "description": "Adrian's good GUI",
-    "code": "require(4934614538):adrian(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4934614538):adrian(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Kick Hammer Gun",
     "description": "Kick hammer weapon",
-    "code": "require(2555964157).doom(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(2555964157).doom(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Toxic Script (Scare)",
@@ -122,50 +123,50 @@
   {
     "name": "Fraud Copies Forms",
     "description": "Fraud that copies users forms",
-    "code": "require(4952179933).Fraud(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4952179933).Fraud(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Bete Script",
     "description": "Bete entity script",
-    "code": "require(5139373601).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5139373601).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Pink Car",
     "description": "Pink controllable car",
-    "code": "require(4745872847).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4745872847).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Bruh SS",
     "description": "Bruh serverside executor",
-    "code": "require(3309735650).blueexss(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3309735650).blueexss(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Content Cop",
     "description": "Content cop script",
-    "code": "require(3722497194).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3722497194).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Kill Self Gun",
     "description": "Self-kill gun tool",
-    "code": "require(3023538289).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3023538289).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Hanger (Suicide Rope)",
-    "description": "Hanger/suicide rope tool (target username + message)",
-    "code": "require(03150276424):Fire(\"YourUsername\",\"i baked you a pie\")",
-    "username_placeholder": true
+    "description": "Hanger/suicide rope tool",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(03150276424):Fire(plr.Name, \"i baked you a pie\")",
+    "username_placeholder": false
   },
   {
     "name": "Pokeball",
     "description": "Pokeball tool",
-    "code": "require(5010133992):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5010133992):Fire(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Arrest Script",
@@ -188,122 +189,122 @@
   {
     "name": "Raining RC7",
     "description": "Raining RC7 effect",
-    "code": "require(4486595837)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4486595837)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Raining Part 2",
     "description": "Raining effect part 2",
-    "code": "require(4662289699)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4662289699)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "UTG Project",
     "description": "Ultimate Trolling GUI project",
-    "code": "require(5160216694).Ass(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5160216694).Ass(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "UTG KaspersRocks",
     "description": "UTG with password KaspersRocks",
-    "code": "require(4898607163).k2(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4898607163).k2(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Diamond UTG",
     "description": "Undetected diamond UTG",
-    "code": "require(5001982403).undetected(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5001982403).undetected(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "UTG Part 5",
     "description": "UTG part 5",
-    "code": "require(4937114966):SH(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4937114966):SH(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Guardian",
     "description": "Dark guardian entity",
-    "code": "require(5470457610).Dark(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5470457610).Dark(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Pink UTG",
     "description": "Pink trash UTG",
-    "code": "require(5455277230).Trash(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5455277230).Trash(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Map Destroyer",
     "description": "Map destroyer - don't use",
-    "code": "require(5176022761)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5176022761)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Purple Guy",
     "description": "Purple Guy entity",
-    "code": "require(5213051514).G(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5213051514).G(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "UTG Gods",
-    "description": "UTG gods loader (fixed username)",
-    "code": "require(5146396793).load(\"Henrique_33br\")",
+    "description": "UTG gods loader",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5146396793).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Topk3k v4",
     "description": "Topk3k hub v4",
-    "code": "require(4874364435)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4874364435)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Bruh Gun",
     "description": "Bruh gun tool",
-    "code": "require(4212392954).CLoad(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4212392954).CLoad(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Gaster v1",
     "description": "Gaster blaster v1",
-    "code": "require(4575499347):Fire(\"YourUsername\",\"test\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4575499347):Fire(plr.Name, \"test\")",
+    "username_placeholder": false
   },
   {
     "name": "Gaster v2",
     "description": "Gaster entity v2",
-    "code": "require(5350037587).noob(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5350037587).noob(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Chara v4",
     "description": "Chara boss v4",
-    "code": "require(5555086775).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5555086775).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Anonymous UTG",
     "description": "Anonymous undetected UTG",
-    "code": "require(5126648745).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5126648745).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Jevil",
     "description": "Jevil chaos entity",
-    "code": "require(5664084960).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5664084960).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Dancing Script",
     "description": "Dancing owner script",
-    "code": "require(5603327223).owner(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5603327223).owner(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Illegal Agent",
     "description": "Illegal agent loader",
-    "code": "require(5410471602).Load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5410471602).Load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Wario Died",
@@ -314,8 +315,8 @@
   {
     "name": "Murder",
     "description": "Murder mystery script",
-    "code": "require(5122876922).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5122876922).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Horror Wario",
@@ -326,8 +327,8 @@
   {
     "name": "Singer",
     "description": "Singing entity script",
-    "code": "require(4753224196).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4753224196).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Get Stickbugged",
@@ -338,13 +339,13 @@
   {
     "name": "Cloud Music",
     "description": "Cloud music player",
-    "code": "require(4824089646):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4824089646):Fire(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Purple Guy Sans",
-    "description": "Purple Guy Sans variant (fixed username)",
-    "code": "require(5390566768).eliza(\"shrekxual_2\")",
+    "description": "Purple Guy Sans variant",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5390566768).eliza(plr.Name)",
     "username_placeholder": false
   },
   {
@@ -356,50 +357,50 @@
   {
     "name": "Among Us Imposter",
     "description": "Among Us imposter role script",
-    "code": "require(5804385396)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5804385396)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "All Seeing Hand",
     "description": "All seeing hand tool",
-    "code": "require(5375399205).Player(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5375399205).Player(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Spaceship",
     "description": "Controllable spaceship vehicle",
-    "code": "require(4922372692).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4922372692).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Bot Control",
     "description": "Bot control script",
-    "code": "require(4949554933):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4949554933):Fire(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Self Destroy",
     "description": "Self destroy - warning do not use",
-    "code": "require(4867426485):SD2(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4867426485):SD2(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Teapot",
     "description": "Teapot tool/entity",
-    "code": "require(3543575474).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3543575474).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Music Script",
     "description": "Basic music player",
-    "code": "require(5011006941)(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5011006941)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Volt Bike",
     "description": "Fast volt bike vehicle",
-    "code": "require(4021975182).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4021975182).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Kidnapper",
@@ -410,175 +411,175 @@
   {
     "name": "God Emoji",
     "description": "God emoji effect",
-    "code": "require(5823684505).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5823684505).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Mario Hammer",
     "description": "Mario hammer (key: ~end)",
-    "code": "require(5136523565).eliza(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5136523565).eliza(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Master Chief",
     "description": "Master Chief Halo character",
-    "code": "require(5812973403).Halo(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5812973403).Halo(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Pipe Boy",
     "description": "Pipe boy entity",
-    "code": "require(4939065623).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4939065623).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Ant Hub",
     "description": "Ant Hub UTG V5",
-    "code": "require(5128274968).GetAntsUtgV5(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5128274968).GetAntsUtgV5(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Frost Giant",
     "description": "Frost giant entity",
-    "code": "require(5759990161).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5759990161).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Lost Soul",
     "description": "Lost soul entity",
-    "code": "require(5312883962).noob(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5312883962).noob(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Kick GUI",
     "description": "Kick GUI - don't use",
-    "code": "require(4694654493).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4694654493).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Sword Master",
     "description": "Sword master character",
-    "code": "require(5076968293).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5076968293).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Dodgeball",
     "description": "Dodgeball game script",
-    "code": "require(4722391208).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(4722391208).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Hypecar",
     "description": "Hyper fast car",
-    "code": "require(5874393699).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5874393699).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Chara v5",
     "description": "Chara boss v5",
-    "code": "require(6031092141).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(6031092141).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Sutart",
     "description": "Sutart entity/character",
-    "code": "require(5814361468).load(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5814361468).load(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "UT Dreamuur",
-    "description": "Dreamuur UTG variant (fixed username)",
-    "code": "require(5931119929).load(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Dreamuur UTG variant",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5931119929).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "VR (Sometimes Works)",
-    "description": "VR script - inconsistent (fixed username)",
-    "code": "require(5127730212)(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "VR script - inconsistent",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5127730212)(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Jevil v3",
-    "description": "Jevil chaos v3 (fixed username)",
-    "code": "require(5954521325).load(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Jevil chaos v3",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5954521325).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Marx",
-    "description": "Marx entity (fixed username)",
-    "code": "require(5813723371).load(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Marx entity",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5813723371).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Ethereal",
-    "description": "Ethereal entity (fixed username)",
-    "code": "require(5887966886).EH(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Ethereal entity",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5887966886).EH(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Rainbow Spear",
-    "description": "Rainbow spear tool (fixed username)",
-    "code": "require(3452949113).load(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Rainbow spear tool",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(3452949113).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Whacking Stick",
-    "description": "Whacking stick tool (fixed username)",
-    "code": "require(5813743814).load(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Whacking stick tool",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5813743814).load(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Ban Hammer",
-    "description": "Ban hammer tool (fixed args)",
-    "code": "require(5448035802).Hammer(\"jjhrgnjdjfnjremnnsd\",\"BanHammer\")",
+    "description": "Ban hammer tool",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(5448035802).Hammer(plr.Name, \"BanHammer\")",
     "username_placeholder": false
   },
   {
     "name": "Minos Prime",
-    "description": "Minos Prime console script (fixed username)",
-    "code": "require(13770496456)('jjhrgnjdjfnjremnnsd')",
+    "description": "Minos Prime console script",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(13770496456)(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Infinite Yield SS",
-    "description": "Infinite Yield serverside (username placeholder)",
-    "code": "require(7634392335)(\"YourUsername\")",
-    "username_placeholder": true
+    "description": "Infinite Yield serverside",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(7634392335)(plr.Name)",
+    "username_placeholder": false
   },
   {
     "name": "Caua Hub",
-    "description": "Caua Hub (key required, fixed username)",
-    "code": "require(6174615549).CauaHub(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Caua Hub (key required)",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(6174615549).CauaHub(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Sensation Hub",
-    "description": "Sensation hub loader (fixed username)",
-    "code": "require(100263845596551)(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Sensation hub loader",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(100263845596551)(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Lightning Cannon",
-    "description": "Lightning cannon - use as last resort (reversed string)",
-    "code": "require(5705720748).Lightning(string.reverse(\"jjhrgnjdjfnjremnnsd\"))",
+    "description": "Lightning cannon - use as last resort",
+    "code": "local plr = game.Players.LocalPlayer\nlocal reversed = string.reverse(plr.Name)\nrequire(5705720748).Lightning(reversed)",
     "username_placeholder": false
   },
   {
     "name": "Juggernaut",
-    "description": "Juggernaut script (fixed username)",
-    "code": "require(7486656912).Juggernaut(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Juggernaut script",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(7486656912).Juggernaut(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Fist (RAroblox)",
-    "description": "Powerful fist tool (fixed username)",
-    "code": "require(15627085040).RAroblox(\"jjhrgnjdjfnjremnnsd\")",
+    "description": "Powerful fist tool",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(15627085040).RAroblox(plr.Name)",
     "username_placeholder": false
   },
   {
     "name": "Forsaken",
-    "description": "Forsaken script (fixed args)",
-    "code": "require(89847131483512).Forsaken(\"jjhrgnjdjfnjremnnsd\", \"Mafioso\")",
+    "description": "Forsaken script",
+    "code": "local plr = game.Players.LocalPlayer\nrequire(89847131483512).Forsaken(plr.Name, \"Mafioso\")",
     "username_placeholder": false
   }
     ]
