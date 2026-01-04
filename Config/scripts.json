@@ -115,7 +115,7 @@
   },
   {
     "name": "Toxic Script (Scare)",
-    "description": "Toxic script - don't use",
+    "description": "Toxic script - don't use (no username needed)",
     "code": "require(5115793531).scare()",
     "username_placeholder": false
   },
@@ -157,8 +157,8 @@
   },
   {
     "name": "Hanger (Suicide Rope)",
-    "description": "Hanger/suicide rope tool",
-    "code": "require(03150276424):Fire('YourUsername','i baked you a pie')",
+    "description": "Hanger/suicide rope tool (target username + message)",
+    "code": "require(03150276424):Fire(\"YourUsername\",\"i baked you a pie\")",
     "username_placeholder": true
   },
   {
@@ -169,19 +169,19 @@
   },
   {
     "name": "Arrest Script",
-    "description": "Arrest/naenae script",
+    "description": "Arrest/naenae script (target needed)",
     "code": "require(2934684058).naenae(\"Target\")",
     "username_placeholder": false
   },
   {
     "name": "Toxic Swan",
-    "description": "Toxic script - don't use",
+    "description": "Toxic script - don't use (no username)",
     "code": "require(4124996597).swano()",
     "username_placeholder": false
   },
   {
     "name": "Catgirl Trolling",
-    "description": "Catgirl trolling script",
+    "description": "Catgirl trolling script (no username)",
     "code": "require(4564681456).catgirl()",
     "username_placeholder": false
   },
@@ -247,7 +247,7 @@
   },
   {
     "name": "UTG Gods",
-    "description": "UTG gods loader",
+    "description": "UTG gods loader (fixed username)",
     "code": "require(5146396793).load(\"Henrique_33br\")",
     "username_placeholder": false
   },
@@ -266,7 +266,7 @@
   {
     "name": "Gaster v1",
     "description": "Gaster blaster v1",
-    "code": "require(4575499347):Fire('YourUsername','test')",
+    "code": "require(4575499347):Fire(\"YourUsername\",\"test\")",
     "username_placeholder": true
   },
   {
@@ -307,7 +307,7 @@
   },
   {
     "name": "Wario Died",
-    "description": "Wario death effect",
+    "description": "Wario death effect (victim name needed)",
     "code": "require(5213186100)(\"VictimName\")",
     "username_placeholder": false
   },
@@ -319,7 +319,7 @@
   },
   {
     "name": "Horror Wario",
-    "description": "Horror Wario entity",
+    "description": "Horror Wario entity (victim name needed)",
     "code": "require(5223007262)(\"VictimName\")",
     "username_placeholder": false
   },
@@ -331,7 +331,7 @@
   },
   {
     "name": "Get Stickbugged",
-    "description": "Stickbug trolling tool",
+    "description": "Stickbug trolling tool (victim name needed)",
     "code": "require(5586197151).stickbug(\"VictimNameHere\")",
     "username_placeholder": false
   },
@@ -343,13 +343,13 @@
   },
   {
     "name": "Purple Guy Sans",
-    "description": "Purple Guy Sans variant",
+    "description": "Purple Guy Sans variant (fixed username)",
     "code": "require(5390566768).eliza(\"shrekxual_2\")",
     "username_placeholder": false
   },
   {
     "name": "Annoying Skids",
-    "description": "Annoying skids loader",
+    "description": "Annoying skids loader (target needed)",
     "code": "require(5185787073).load(\"target\")",
     "username_placeholder": false
   },
@@ -403,7 +403,7 @@
   },
   {
     "name": "Kidnapper",
-    "description": "Kidnapper tool",
+    "description": "Kidnapper tool (victim name needed)",
     "code": "require(5591099977)(\"VictimNameHere\")",
     "username_placeholder": false
   },
@@ -487,98 +487,98 @@
   },
   {
     "name": "UT Dreamuur",
-    "description": "Dreamuur UTG variant",
+    "description": "Dreamuur UTG variant (fixed username)",
     "code": "require(5931119929).load(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "VR (Sometimes Works)",
-    "description": "VR script - inconsistent",
+    "description": "VR script - inconsistent (fixed username)",
     "code": "require(5127730212)(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Jevil v3",
-    "description": "Jevil chaos v3",
+    "description": "Jevil chaos v3 (fixed username)",
     "code": "require(5954521325).load(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Marx",
-    "description": "Marx entity",
+    "description": "Marx entity (fixed username)",
     "code": "require(5813723371).load(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Ethereal",
-    "description": "Ethereal entity",
+    "description": "Ethereal entity (fixed username)",
     "code": "require(5887966886).EH(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Rainbow Spear",
-    "description": "Rainbow spear tool",
+    "description": "Rainbow spear tool (fixed username)",
     "code": "require(3452949113).load(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Whacking Stick",
-    "description": "Whacking stick tool",
+    "description": "Whacking stick tool (fixed username)",
     "code": "require(5813743814).load(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Ban Hammer",
-    "description": "Ban hammer tool",
+    "description": "Ban hammer tool (fixed args)",
     "code": "require(5448035802).Hammer(\"jjhrgnjdjfnjremnnsd\",\"BanHammer\")",
     "username_placeholder": false
   },
   {
     "name": "Minos Prime",
-    "description": "Minos Prime console script",
+    "description": "Minos Prime console script (fixed username)",
     "code": "require(13770496456)('jjhrgnjdjfnjremnnsd')",
     "username_placeholder": false
   },
   {
     "name": "Infinite Yield SS",
-    "description": "Infinite Yield serverside",
-    "code": "require(7634392335)(\"usernamehere\")",
-    "username_placeholder": false
+    "description": "Infinite Yield serverside (username placeholder)",
+    "code": "require(7634392335)(\"YourUsername\")",
+    "username_placeholder": true
   },
   {
     "name": "Caua Hub",
-    "description": "Caua Hub (key required)",
+    "description": "Caua Hub (key required, fixed username)",
     "code": "require(6174615549).CauaHub(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Sensation Hub",
-    "description": "Sensation hub loader",
+    "description": "Sensation hub loader (fixed username)",
     "code": "require(100263845596551)(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Lightning Cannon",
-    "description": "Lightning cannon - use as last resort",
+    "description": "Lightning cannon - use as last resort (reversed string)",
     "code": "require(5705720748).Lightning(string.reverse(\"jjhrgnjdjfnjremnnsd\"))",
     "username_placeholder": false
   },
   {
     "name": "Juggernaut",
-    "description": "Juggernaut script",
+    "description": "Juggernaut script (fixed username)",
     "code": "require(7486656912).Juggernaut(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Fist (RAroblox)",
-    "description": "Powerful fist tool",
+    "description": "Powerful fist tool (fixed username)",
     "code": "require(15627085040).RAroblox(\"jjhrgnjdjfnjremnnsd\")",
     "username_placeholder": false
   },
   {
     "name": "Forsaken",
-    "description": "Forsaken script",
+    "description": "Forsaken script (fixed args)",
     "code": "require(89847131483512).Forsaken(\"jjhrgnjdjfnjremnnsd\", \"Mafioso\")",
     "username_placeholder": false
   }
-]
+    ]
