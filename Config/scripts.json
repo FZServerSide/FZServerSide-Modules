@@ -1,267 +1,913 @@
-
 [
   {
-    "name": "HD Admin",
-    "description": "Loads HD Admin commands for you",
-    "code": "require(7192763922).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Gunjourer",
+    "code": "require(3117546674):Fire(\"YourUserNameFZ\")",
+    "description": "Gun + melee character"
   },
   {
-    "name": "Polaria Hub",
-    "description": "Polaria script hub/loader",
-    "code": "require(123255432303221):Pload(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Magic Power",
+    "code": "require(3117564747):Fire(\"YourUserNameFZ\")",
+    "description": "Magic abilities"
   },
   {
-    "name": "R6 Changer",
-    "description": "R6 animation changer",
-    "code": "require(3436957371):r6(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Dual Ultima",
+    "code": "require(3117661544):Fire(\"YourUserNameFZ\")",
+    "description": "Dual swords"
   },
   {
-    "name": "Trash Hub",
-    "description": "Trash Hub script loader",
-    "code": "require(17182254638)(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Titan",
+    "code": "require(3117669110):Fire(\"YourUserNameFZ\")",
+    "description": "Giant Titan character"
   },
   {
-    "name": "Sledge Hammer",
-    "description": "Sledge hammer tool",
-    "code": "require(8038037940).CLoad(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "God and Bad Cop",
+    "code": "require(3117679218):Fire(\"YourUserNameFZ\")",
+    "description": "God powers + Bad Cop"
   },
   {
-    "name": "ExSer / BTT Console",
-    "description": "ExSer console/executor GUI",
-    "code": "require(10868847330):pls(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Glitch Master",
+    "code": "require(3117682928):Fire(\"YourUserNameFZ\")",
+    "description": "Glitch effects and tools"
   },
   {
-    "name": "Grab Knife",
-    "description": "Grab knife tool",
-    "code": "require(14638461547).GKV1(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Brutal Overlord",
+    "code": "require(3117687124):Fire(\"YourUserNameFZ\")",
+    "description": "Overpowered character"
   },
   {
-    "name": "C4 Explosive",
-    "description": "C4 explosive module",
-    "code": "require(0x1767bf813)(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Nebula",
+    "code": "require(3117706978):Fire(\"YourUserNameFZ\")",
+    "description": "Nebula powers"
   },
   {
-    "name": "Sans",
-    "description": "Sans bossfight script",
-    "code": "require(4952709475).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "John Wik",
+    "code": "require(3117717032):Fire(\"YourUserNameFZ\")",
+    "description": "John Wik character"
   },
   {
-    "name": "SCP 096",
-    "description": "SCP 096 monster script",
-    "code": "require(5972874843).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Karmapange",
+    "code": "require(3117721105):Fire(\"YourUserNameFZ\")",
+    "description": "Karmapange powers"
   },
   {
-    "name": "Lost Soul (Immortal)",
-    "description": "Lost soul immortal entity",
-    "code": "require(5390158029).Dark(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Grab Knife V4",
+    "code": "require(2681865333):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Latest Grab Knife"
   },
   {
-    "name": "Zalgo",
-    "description": "Zalgo text/effect script",
-    "code": "require(5195961797).eliza(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Grab Knife V1",
+    "code": "require(2836693511):Fire(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Classic Grab Knife"
   },
   {
-    "name": "GONER",
-    "description": "Goner entity script",
-    "code": "require(4513235536).G(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Grab Knife V2",
+    "code": "require(2845941230):Fire(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Improved Grab Knife"
   },
   {
-    "name": "Nuke",
-    "description": "Nuke explosion script",
-    "code": "require(4832967293):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Grab Knife V3",
+    "code": "require(2829943043):Run(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Grab Knife with extra features"
   },
   {
-    "name": "Fraud (Immortal)",
-    "description": "Fraud immortal script",
-    "code": "require(4952179933).Fraud(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "ShotGun",
+    "code": "require(3114598550):Fire(\"YourUserNameFZ\")",
+    "description": "Powerful shotgun"
   },
   {
-    "name": "NOOT NOOT",
-    "description": "Server destroy script",
-    "code": "require(5034863407).subtosyntax64(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Matteo's Gun",
+    "code": "require(3099649438).load(\"YourUserNameFZ\")",
+    "description": "Custom gun by Matteo"
   },
   {
-    "name": "Adrian Mega GUI",
-    "description": "Adrian's mega GUI",
-    "code": "require(5142574517):mega(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Rare Sword",
+    "code": "require(3099697999).load(\"YourUserNameFZ\")",
+    "description": "Rare animated sword"
   },
   {
-    "name": "Adrian Good GUI",
-    "description": "Adrian's good GUI",
-    "code": "require(4934614538):adrian(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Rainbow Titan",
+    "code": "require(3099691224).load(\"YourUserNameFZ\")",
+    "description": "Rainbow giant"
   },
   {
-    "name": "Kick Hammer Gun",
-    "description": "Kick hammer weapon",
-    "code": "require(2555964157).doom(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Matteo's Flamethrower",
+    "code": "require(3099659288).load(\"YourUserNameFZ\")",
+    "description": "Flamethrower tool"
   },
   {
-    "name": "Bete",
-    "description": "Bete entity",
-    "code": "require(5139373601).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Eraser",
+    "code": "require(3099667517).load(\"YourUserNameFZ\")",
+    "description": "Eraser effect"
   },
   {
-    "name": "Pink Car",
-    "description": "Pink vehicle",
-    "code": "require(4745872847).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Vape",
+    "code": "require(3099678440).load(\"YourUserNameFZ\")",
+    "description": "Vape animation"
   },
   {
-    "name": "Bruh SS",
-    "description": "Bruh serverside",
-    "code": "require(3309735650).blueexss(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Dualecider",
+    "code": "require(2790149731):Run(\"YourUserNameFZ\")",
+    "description": "Dual swords with effects"
   },
   {
-    "name": "Content Cop",
-    "description": "Content cop script",
-    "code": "require(3722497194).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Scary Ambient",
+    "code": "require(3099579132).load(\"YourUserNameFZ\")",
+    "description": "Horror ambient sounds"
   },
   {
-    "name": "Kill Self Gun",
-    "description": "Kill self weapon",
-    "code": "require(3023538289).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "lOsT hOpE",
+    "code": "require(3098076859).load(\"YourUserNameFZ\")",
+    "description": "Lost Hope character"
   },
   {
-    "name": "Pokeball",
-    "description": "Pokeball tool",
-    "code": "require(5010133992):Fire(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Lost Bye Bye",
+    "code": "require(3099474099).load(\"YourUserNameFZ\")",
+    "description": "Bye Bye animation"
   },
   {
-    "name": "Raining RC7",
-    "description": "RC7 rain effect",
-    "code": "require(4486595837)(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "You Are An Idiot",
+    "code": "require(3095188600).load(\"YourUserNameFZ\")",
+    "description": "Troll virus effect"
   },
   {
-    "name": "UTG Project",
-    "description": "UTG project",
-    "code": "require(5160216694).Ass(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "kys",
+    "code": "require(3095160836).load(\"YourUserNameFZ\")",
+    "description": "Dark troll effect"
   },
   {
-    "name": "Diamond UTG",
-    "description": "Undetected UTG",
-    "code": "require(5001982403).undetected(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Mexican/Russian Doge",
+    "code": "require(3095125182).load(\"YourUserNameFZ\")",
+    "description": "Doge meme character"
   },
   {
-    "name": "Guardian",
-    "description": "Dark guardian entity",
-    "code": "require(5470457610).Dark(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "YOU NEED JESUS",
+    "code": "require(3086965141):executeModule(\"YourUserNameFZ\")",
+    "description": "Religious troll"
+  },
+  {
+    "name": "Mr.Pixels",
+    "code": "require(2995020929):Fire(\"oof\",\"YourUserNameFZ\")",
+    "description": "Pixel character"
+  },
+  {
+    "name": "Pizza Guy",
+    "code": "require(2980464351).load(\"YourUserNameFZ\")",
+    "description": "Pizza delivery character"
+  },
+  {
+    "name": "Moonman",
+    "code": "require(3095022841).load(\"YourUserNameFZ\")",
+    "description": "Meme character"
+  },
+  {
+    "name": "SS GUI",
+    "code": "require(3090163777).load(\"YourUserNameFZ\")",
+    "description": "Simple admin GUI"
+  },
+  {
+    "name": "UTG GUI",
+    "code": "require(2993514878):Fire(\"YourUserNameFZ\")",
+    "description": "Ultimate Trolling GUI"
+  },
+  {
+    "name": "A GUI",
+    "code": "require(3058559294).load(\"YourUserNameFZ\")",
+    "description": "Basic admin GUI"
+  },
+  {
+    "name": "Darth Vader",
+    "code": "require(2980473200).load(\"YourUserNameFZ\")",
+    "description": "Darth Vader character"
+  },
+  {
+    "name": "Drunk Guy",
+    "code": "require(3087849096).load(\"YourUserNameFZ\")",
+    "description": "Drunk animation"
   },
   {
     "name": "Purple Guy",
-    "description": "Purple Guy entity",
-    "code": "require(5213051514).G(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "require(3087845888).load(\"YourUserNameFZ\")",
+    "description": "FNAF Purple Guy"
+  },
+  {
+    "name": "Ice Cream",
+    "code": "require(3087708111).load(\"YourUserNameFZ\")",
+    "description": "Ice cream vendor"
+  },
+  {
+    "name": "Elo Blasio",
+    "code": "require(2891645338).sans('undertale',\"YourUserNameFZ\")",
+    "description": "Undertale Sans variant"
+  },
+  {
+    "name": "Jojo Boie",
+    "code": "require(3034302901):Fire(\"YourUserNameFZ\")",
+    "description": "JoJo pose character"
+  },
+  {
+    "name": "WYD",
+    "code": "require(2851043168).load(\"YourUserNameFZ\")",
+    "description": "WYD animation"
+  },
+  {
+    "name": "TopKEK",
+    "code": "require(2609384717).load(\"YourUserNameFZ\")",
+    "description": "TopKEK admin"
+  },
+  {
+    "name": "My Executor",
+    "code": "require(3084491250).load(\"YourUserNameFZ\")",
+    "description": "Executor tool"
+  },
+  {
+    "name": "Unanchor All",
+    "code": "require(3066959022):Fire(\"YourUserNameFZ\")",
+    "description": "Unanchors everything"
+  },
+  {
+    "name": "PUBG Pan",
+    "code": "require(3078332852):Fire(\"YourUserNameFZ\")",
+    "description": "PUBG frying pan"
+  },
+  {
+    "name": "Insanity",
+    "code": "require(2787111216):Run(\"YourUserNameFZ\")",
+    "description": "Insanity powers"
+  },
+  {
+    "name": "SworD OmGG!11",
+    "code": "require(2972237186).load(\"YourUserNameFZ\")",
+    "description": "OP sword"
+  },
+  {
+    "name": "Quantom Rewritten",
+    "code": "require(3048207279):Fire('kermitwashere,ok',\"YourUserNameFZ\")",
+    "description": "Quantum powers"
+  },
+  {
+    "name": "D E S P A C I T O",
+    "code": "require(3047657890).load(\"YourUserNameFZ\")",
+    "description": "Despacito meme"
+  },
+  {
+    "name": "Pumpkin",
+    "code": "require(3049265208).load(\"YourUserNameFZ\")",
+    "description": "Pumpkin character"
+  },
+  {
+    "name": "Ragdoll Pan",
+    "code": "require(2965793312):Fire(\"YourUserNameFZ\")",
+    "description": "Ragdoll pan"
+  },
+  {
+    "name": "Big Smoke",
+    "code": "require(3020580481).load(\"YourUserNameFZ\")",
+    "description": "Big Smoke character"
   },
   {
     "name": "Gaster v2",
-    "description": "Gaster entity",
-    "code": "require(5350037587).noob(\"YourUsername\")",
-    "username_placeholder": true
+    "code": "require(3055189528):Fire('magic', \"YourUserNameFZ\")",
+    "description": "Gaster blaster"
   },
   {
-    "name": "Chara v5",
-    "description": "Chara boss",
-    "code": "require(6031092141).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Glitchtale Sans",
+    "code": "require(3055204441):Fire('magic', \"YourUserNameFZ\")",
+    "description": "Glitchtale Sans"
   },
   {
-    "name": "Jevil",
-    "description": "Jevil entity",
-    "code": "require(5664084960).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Ali",
+    "code": "require(3058494498):Fire('wowbitch', \"YourUserNameFZ\")",
+    "description": "Ali character"
   },
   {
-    "name": "Among Us Imposter",
-    "description": "Among Us imposter script",
-    "code": "require(5804385396)(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Lustris V2 Sword",
+    "code": "require(3043920983).load(\"YourUserNameFZ\")",
+    "description": "Lustris sword"
   },
   {
-    "name": "Spaceship",
-    "description": "Controllable spaceship",
-    "code": "require(4922372692).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Edited Clock",
+    "code": "require(3044614752).isabean(\"YourUserNameFZ\")",
+    "description": "Clock tool"
   },
   {
-    "name": "Volt Bike",
-    "description": "Volt bike vehicle",
-    "code": "require(4021975182).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Pharaoh",
+    "code": "require(3040190745):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Pharaoh character"
   },
   {
-    "name": "God Emoji",
-    "description": "God emoji effect",
-    "code": "require(5823684505).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Force Choke",
+    "code": "require(3040161634).load(\"YourUserNameFZ\")",
+    "description": "Force choke ability"
   },
   {
-    "name": "Ant Hub",
-    "description": "Ant UTG hub",
-    "code": "require(5128274968).GetAntsUtgV5(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Banisher Gun",
+    "code": "require(3036310824):Fire(\"YourUserNameFZ\")",
+    "description": "Banisher gun"
   },
   {
-    "name": "Frost Giant",
-    "description": "Frost giant entity",
-    "code": "require(5759990161).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Adventure Gun",
+    "code": "require(3040142902).load(\"YourUserNameFZ\")",
+    "description": "Adventure gun"
   },
   {
-    "name": "Sword Master",
-    "description": "Sword master entity",
-    "code": "require(5076968293).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Ravager From Another World",
+    "code": "require(3040216295):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Ravager powers"
   },
   {
-    "name": "Hypecar",
-    "description": "Fast vehicle",
-    "code": "require(5874393699).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Twin Beast",
+    "code": "require(3044605468).load(\"YourUserNameFZ\")",
+    "description": "Twin beast"
   },
   {
-    "name": "Sutart",
-    "description": "Sutart entity",
-    "code": "require(5814361468).load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Anti Virus",
+    "code": "require(3014436659):Fire(\"YourUserNameFZ\")",
+    "description": "Anti-virus tool"
   },
   {
-    "name": "Warhead",
-    "description": "Warhead explosive script",
-    "code": "require(1234567890).Load(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "OP Wings",
+    "code": "require(2974865618).load(\"YourUserNameFZ\")",
+    "description": "Overpowered wings"
   },
   {
-    "name": "Bulletproof Glass",
-    "description": "Bulletproof glass module",
-    "code": "require(9876543210).Init(\"YourUsername\")",
-    "username_placeholder": true
+    "name": "Wind",
+    "code": "require(3049279453).load(\"YourUserNameFZ\")",
+    "description": "Wind powers"
+  },
+  {
+    "name": "Deathspace Gun",
+    "code": "require(3044932459).load(\"YourUserNameFZ\")",
+    "description": "Deathspace gun"
+  },
+  {
+    "name": "Big Ban",
+    "code": "require(2594357090).bban(\"YourUserNameFZ\")",
+    "description": "Big ban hammer"
+  },
+  {
+    "name": "Tornado",
+    "code": "require(3090451296).load(\"YourUserNameFZ\",\"ok\")",
+    "description": "Tornado effect"
+  },
+  {
+    "name": "Dual Rainbow Swords",
+    "code": "require(3049247133).load(\"YourUserNameFZ\")",
+    "description": "Rainbow swords"
+  },
+  {
+    "name": "Gun (No Damage)",
+    "code": "require(3047570984).load(\"YourUserNameFZ\")",
+    "description": "Visual gun"
+  },
+  {
+    "name": "Galaxy Titan",
+    "code": "require(3044815598).load(\"YourUserNameFZ\")",
+    "description": "Galaxy giant"
+  },
+  {
+    "name": "c00l kids mml admin",
+    "code": "require(3043952668).MMLHax(\"YourUserNameFZ\",\"mmlhax\")",
+    "description": "MML admin"
+  },
+  {
+    "name": "Mr.byebye",
+    "code": "require(2595582545).mbye(\"YourUserNameFZ\")",
+    "description": "Bye bye tool"
+  },
+  {
+    "name": "Nel Sword",
+    "code": "require(3036813100):Fire('ok',\"YourUserNameFZ\")",
+    "description": "Nel sword"
+  },
+  {
+    "name": "Cop",
+    "code": "require(2965948588):Fire(\"YourUserNameFZ\")",
+    "description": "Cop character"
+  },
+  {
+    "name": "ahhh fresh meat",
+    "code": "require(3033793706):Fire(\"YourUserNameFZ\")",
+    "description": "Fresh meat animation"
+  },
+  {
+    "name": "OP Sword v2",
+    "code": "require(2972237186).load(\"YourUserNameFZ\")",
+    "description": "OP sword"
+  },
+  {
+    "name": "Pee",
+    "code": "require(2972136307).load(\"YourUserNameFZ\")",
+    "description": "Pee effect"
+  },
+  {
+    "name": "Lenny",
+    "code": "require(2972140055).load(\"YourUserNameFZ\")",
+    "description": "Lenny face"
+  },
+  {
+    "name": "Frostmaestro",
+    "code": "require(3029184882):Fire(\"YourUserNameFZ\")",
+    "description": "Frost powers"
+  },
+  {
+    "name": "OP Sword",
+    "code": "require(2974887540).load(\"YourUserNameFZ\")",
+    "description": "Overpowered sword"
+  },
+  {
+    "name": "Mustard Gas",
+    "code": "require(3034350356):Fire(\"YourUserNameFZ\")",
+    "description": "Gas effect"
+  },
+  {
+    "name": "Blight",
+    "code": "require(3032553216):Ayy(\"YourUserNameFZ\",YoFatAss)",
+    "description": "Blight effect"
+  },
+  {
+    "name": "Cream",
+    "code": "require(3029623677):Fire(\"YourUserNameFZ\")",
+    "description": "Cream effect"
+  },
+  {
+    "name": "Jihad",
+    "code": "require(3009637137):Fire(\"YourUserNameFZ\")",
+    "description": "Explosive effect"
+  },
+  {
+    "name": "Smite",
+    "code": "require(3032530303):Ayy(\"YourUserNameFZ\",YoFatAss)",
+    "description": "Smite lightning"
+  },
+  {
+    "name": "Smite Green",
+    "code": "require(3032545610):Ayy(\"YourUserNameFZ\",YoFatAss)",
+    "description": "Green smite"
+  },
+  {
+    "name": "Vuxul Forest",
+    "code": "require(2999259749):Fire(\"YourUserNameFZ\")",
+    "description": "Forest effect"
+  },
+  {
+    "name": "galaxy titan",
+    "code": "require(2996640215):Fire(\"YourUserNameFZ\")",
+    "description": "Galaxy titan"
+  },
+  {
+    "name": "Super Hungry McNoobington",
+    "code": "require(2972165308).load(\"YourUserNameFZ\")",
+    "description": "Hungry noob"
+  },
+  {
+    "name": "GhossDeeri Titan",
+    "code": "require(2996649066):Fire(\"YourUserNameFZ\")",
+    "description": "Ghost deer titan"
+  },
+  {
+    "name": "Sans meme titan",
+    "code": "require(2996631394):Fire(\"YourUserNameFZ\")",
+    "description": "Sans titan"
+  },
+  {
+    "name": "Orange Titan",
+    "code": "require(2996616591):Fire(\"YourUserNameFZ\")",
+    "description": "Orange giant"
+  },
+  {
+    "name": "Shacklusters's Knife",
+    "code": "require(2976158688):Fire(\"YourUserNameFZ\")",
+    "description": "Shackluster knife"
+  },
+  {
+    "name": "Galaxy Glitcher",
+    "code": "require(3032833847):Fire(\"YourUserNameFZ\")",
+    "description": "Galaxy glitch"
+  },
+  {
+    "name": "Duel Ultima",
+    "code": "require(3037197815):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Duel ultima"
+  },
+  {
+    "name": "World Eater",
+    "code": "require(3030699117):Ayy(\"YourUserNameFZ\",YoFatAss)",
+    "description": "World eater"
+  },
+  {
+    "name": "Golden Gun",
+    "code": "require(2999251492):Fire(\"YourUserNameFZ\")",
+    "description": "Golden gun"
+  },
+  {
+    "name": "Van",
+    "code": "require(2973851516).load(\"YourUserNameFZ\")",
+    "description": "Van vehicle"
+  },
+  {
+    "name": "Shedletsky",
+    "code": "require(2985469082):Fire(\"YourUserNameFZ\")",
+    "description": "Shedletsky character"
+  },
+  {
+    "name": "Baby nelf",
+    "code": "require(2982788874):Fire(\"YourUserNameFZ\")",
+    "description": "Baby character"
+  },
+  {
+    "name": "Giga Vanta",
+    "code": "require(2982754216):Fire(\"YourUserNameFZ\")",
+    "description": "Giga character"
+  },
+  {
+    "name": "Chain Magician",
+    "code": "require(2999312168):Fire(\"YourUserNameFZ\")",
+    "description": "Chain magician"
+  },
+  {
+    "name": "Dex Explorer",
+    "code": "require(3032468625):Fire(\"YourUserNameFZ\")",
+    "description": "Dex explorer"
+  },
+  {
+    "name": "Buster XTerminators",
+    "code": "require(2990100969):Fire(\"YourUserNameFZ\")",
+    "description": "Buster weapon"
+  },
+  {
+    "name": "Noob Bat",
+    "code": "require(3037388211).load(\"YourUserNameFZ\")",
+    "description": "Noob bat"
+  },
+  {
+    "name": "Neptunian V",
+    "code": "require(3036869449):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Neptunian powers"
+  },
+  {
+    "name": "Powerfull Circle Ground Breaker Gauntlet",
+    "code": "require(3033019849):Fire(\"YourUserNameFZ\")",
+    "description": "Ground breaker gauntlet"
+  },
+  {
+    "name": "Dark Eccentric",
+    "code": "require(2982823714):Fire(\"YourUserNameFZ\")",
+    "description": "Dark character"
+  },
+  {
+    "name": "Kaerin",
+    "code": "require(2985585381):Fire(\"YourUserNameFZ\")",
+    "description": "Kaerin character"
+  },
+  {
+    "name": "Scythe",
+    "code": "require(2976955177):Fire(\"YourUserNameFZ\")",
+    "description": "Scythe weapon"
+  },
+  {
+    "name": "bong pong",
+    "code": "require(2976165861):Fire(\"YourUserNameFZ\")",
+    "description": "Bong pong effect"
+  },
+  {
+    "name": "Rare MML admin",
+    "code": "require(2808676257):hack(\"YourUserNameFZ\")",
+    "description": "Rare MML admin"
+  },
+  {
+    "name": "op sw0rd",
+    "code": "require(3036820492):Fire('ok', \"YourUserNameFZ\")",
+    "description": "OP sword"
+  },
+  {
+    "name": "Suicide gun",
+    "code": "require(3023538289).load(\"YourUserNameFZ\")",
+    "description": "Suicide gun"
+  },
+  {
+    "name": "Memeus v2.5",
+    "code": "require(2861672947):Fire(\"YourUserNameFZ\")",
+    "description": "Memeus character"
+  },
+  {
+    "name": "ink monster",
+    "code": "require(2861694480):Fire(\"YourUserNameFZ\")",
+    "description": "Ink monster"
+  },
+  {
+    "name": "WAOV2",
+    "code": "require(2861723416):Fire(\"YourUserNameFZ\")",
+    "description": "WAOV2 character"
+  },
+  {
+    "name": "studio",
+    "code": "require(2861780653):Fire(\"YourUserNameFZ\")",
+    "description": "Studio dummy"
+  },
+  {
+    "name": "big boi",
+    "code": "require(2861818882):Fire(\"YourUserNameFZ\")",
+    "description": "Big character"
+  },
+  {
+    "name": "some gun kid",
+    "code": "require(2861843468):Fire(\"YourUserNameFZ\")",
+    "description": "Gun kid character"
+  },
+  {
+    "name": "Super mario",
+    "code": "require(2883841783):Fire(\"YourUserNameFZ\")",
+    "description": "Mario character"
+  },
+  {
+    "name": "Reaper",
+    "code": "require(2884020362):Fire(\"YourUserNameFZ\")",
+    "description": "Reaper character"
+  },
+  {
+    "name": "Gomu Powers",
+    "code": "require(2884027944):Fire(\"YourUserNameFZ\")",
+    "description": "Gomu gomu powers"
+  },
+  {
+    "name": "Creterisk Banhammer",
+    "code": "require(2884046764):Fire(\"YourUserNameFZ\")",
+    "description": "Ban hammer"
+  },
+  {
+    "name": "Scanning Device",
+    "code": "require(2884064708):Fire(\"YourUserNameFZ\")",
+    "description": "Scanner"
+  },
+  {
+    "name": "Star Platinum",
+    "code": "require(2884102879):Fire(\"YourUserNameFZ\")",
+    "description": "Stand"
+  },
+  {
+    "name": "Nirite",
+    "code": "require(2884125095):Fire(\"YourUserNameFZ\")",
+    "description": "Nirite character"
+  },
+  {
+    "name": "Gale Fighter",
+    "code": "require(2884157093):Fire(\"YourUserNameFZ\")",
+    "description": "Wind fighter"
+  },
+  {
+    "name": "Parkour",
+    "code": "require(2884164311):Fire(\"YourUserNameFZ\")",
+    "description": "Parkour ability"
+  },
+  {
+    "name": "Shedletsky Rage",
+    "code": "require(2884173673):Fire(\"YourUserNameFZ\")",
+    "description": "Rage animation"
+  },
+  {
+    "name": "Maddox",
+    "code": "require(2884182226):Fire(\"YourUserNameFZ\")",
+    "description": "Maddox character"
+  },
+  {
+    "name": "Video powers",
+    "code": "require(2884189262):Fire(\"YourUserNameFZ\")",
+    "description": "Video effects"
+  },
+  {
+    "name": "Infinite",
+    "code": "require(2884196270):Fire(\"YourUserNameFZ\")",
+    "description": "Infinite power"
+  },
+  {
+    "name": "big daddy",
+    "code": "require(2884206218):Fire(\"YourUserNameFZ\")",
+    "description": "Big daddy character"
+  },
+  {
+    "name": "Noob Switcher V2",
+    "code": "require(3099386833).load(\"YourUserNameFZ\")",
+    "description": "Noob switcher"
+  },
+  {
+    "name": "True Hero Ultima",
+    "code": "require(3036813100):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Hero ultima"
+  },
+  {
+    "name": "I don't know admin",
+    "code": "require(2848219801):Fire('kermitwashere,ok',\"YourUserNameFZ\")",
+    "description": "Unknown admin"
+  },
+  {
+    "name": "Purple Heart Sword",
+    "code": "require(3036884709):Fire('ok', \"YourUserNameFZ\")",
+    "description": "Purple heart sword"
+  },
+  {
+    "name": "Star glitcher",
+    "code": "require(2930987220).load(\"YourUserNameFZ\")",
+    "description": "Star glitcher"
+  },
+  {
+    "name": "Banisher Gun V.0",
+    "code": "require(3036310824):Fire(\"YourUserNameFZ\")",
+    "description": "Early banisher gun"
+  },
+  {
+    "name": "Hat Kid",
+    "code": "require(3036298160):Fire(\"YourUserNameFZ\")",
+    "description": "Hat Kid character"
+  },
+  {
+    "name": "Xyphon Stone Hammer",
+    "code": "require(3036276038):Fire(\"YourUserNameFZ\")",
+    "description": "Stone hammer"
+  },
+  {
+    "name": "Some random GUI",
+    "code": "require(2904213233):Fire(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Random GUI"
+  },
+  {
+    "name": "Xester",
+    "code": "require(2918747265).load(\"YourUserNameFZ\")",
+    "description": "Xester tool"
+  },
+  {
+    "name": "jump on the C A A C",
+    "code": "require(2966615277):Fire(\"YourUserNameFZ\")",
+    "description": "CAAC meme"
+  },
+  {
+    "name": "Krystal Dance",
+    "code": "require(2881162369):Fire(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Krystal dance"
+  },
+  {
+    "name": "Killbot",
+    "code": "require(2954028244).load(\"YourUserNameFZ\")",
+    "description": "Killbot"
+  },
+  {
+    "name": "Meteor Power",
+    "code": "require(2967655899).load(\"YourUserNameFZ\")",
+    "description": "Meteor attacks"
+  },
+  {
+    "name": "The Glitch",
+    "code": "require(2967664291).load(\"YourUserNameFZ\")",
+    "description": "Glitch character"
+  },
+  {
+    "name": "Kartic",
+    "code": "require(2967687879).load(\"YourUserNameFZ\")",
+    "description": "Kartic character"
+  },
+  {
+    "name": "Shackluster wheelies",
+    "code": "require(2967700018).load(\"YourUserNameFZ\")",
+    "description": "Wheelies"
+  },
+  {
+    "name": "Internal War",
+    "code": "require(2967724627).load(\"YourUserNameFZ\")",
+    "description": "War effects"
+  },
+  {
+    "name": "Dominus Corona",
+    "code": "require(2967742797).load(\"YourUserNameFZ\")",
+    "description": "Dominus corona"
+  },
+  {
+    "name": "CreteriskBan Hammer",
+    "code": "require(3023953976).load(\"YourUserNameFZ\")",
+    "description": "Creterisk ban hammer"
+  },
+  {
+    "name": "ShackLuster's BanHammer",
+    "code": "require(3024044769).load(\"YourUserNameFZ\")",
+    "description": "ShackLuster ban hammer"
+  },
+  {
+    "name": "ToadRoast",
+    "code": "require(3024569233).load(\"YourUserNameFZ\")",
+    "description": "Toad roast"
+  },
+  {
+    "name": "Pandora",
+    "code": "require(3024624301).load(\"YourUserNameFZ\")",
+    "description": "Pandora"
+  },
+  {
+    "name": "Illuminati",
+    "code": "require(3024848196).load(\"YourUserNameFZ\")",
+    "description": "Illuminati"
+  },
+  {
+    "name": "Dual Ultima",
+    "code": "require(3024874104).load(\"YourUserNameFZ\")",
+    "description": "Dual ultima"
+  },
+  {
+    "name": "Draw script",
+    "code": "require(3024941794).load(\"YourUserNameFZ\")",
+    "description": "Drawing tool"
+  },
+  {
+    "name": "God's abandoned daugher",
+    "code": "require(3024959054).load(\"YourUserNameFZ\")",
+    "description": "Character"
+  },
+  {
+    "name": "Gear stuff",
+    "code": "require(3024043748):Start(\"YourUserNameFZ\",\"AAA\")",
+    "description": "Gear tools"
+  },
+  {
+    "name": "RunicTunes",
+    "code": "require(2992183083):Fire(\"YourUserNameFZ\")",
+    "description": "Music tool"
+  },
+  {
+    "name": "TrigorMortis",
+    "code": "require(2992203195):Fire(\"YourUserNameFZ\")",
+    "description": "Character"
+  },
+  {
+    "name": "Horse",
+    "code": "require(2992217896):Fire(\"YourUserNameFZ\")",
+    "description": "Horse"
+  },
+  {
+    "name": "AWM",
+    "code": "require(2992242058):Fire(\"YourUserNameFZ\")",
+    "description": "Sniper rifle"
+  },
+  {
+    "name": "Ban hammer",
+    "code": "require(2992280097):Fire(\"YourUserNameFZ\")",
+    "description": "Ban hammer"
+  },
+  {
+    "name": "Proteus",
+    "code": "require(2992285145):Fire(\"YourUserNameFZ\")",
+    "description": "Proteus"
+  },
+  {
+    "name": "Scp 178",
+    "code": "require(2992289083):Fire(\"YourUserNameFZ\")",
+    "description": "SCP-178"
+  },
+  {
+    "name": "meme dances",
+    "code": "require(2992306347):Fire(\"YourUserNameFZ\")",
+    "description": "Meme dances"
+  },
+  {
+    "name": "Astronaut 13",
+    "code": "require(2992309678):Fire(\"YourUserNameFZ\")",
+    "description": "Astronaut"
+  },
+  {
+    "name": "Kirito blades",
+    "code": "require(2992330335):Fire(\"YourUserNameFZ\")",
+    "description": "Kirito swords"
+  },
+  {
+    "name": "Banisher infinite",
+    "code": "require(2992336852):Fire(\"YourUserNameFZ\")",
+    "description": "Infinite banisher"
+  },
+  {
+    "name": "AK",
+    "code": "require(2992342114):Fire(\"YourUserNameFZ\")",
+    "description": "AK-47"
+  },
+  {
+    "name": "Flaming sythe",
+    "code": "require(2992345670):Fire(\"YourUserNameFZ\")",
+    "description": "Flaming scythe"
+  },
+  {
+    "name": "Nebula Star Glitcher",
+    "code": "require(2910377270).load(\"YourUserNameFZ\")",
+    "description": "Nebula glitcher"
+  },
+  {
+    "name": "F3X Tools",
+    "code": "require(2571067295).load(\"YourUserNameFZ\")",
+    "description": "Building tools"
+  },
+  {
+    "name": "v a p o r w a v e gun",
+    "code": "require(2856028839):Fire(\"YourUserNameFZ\",'i baked you a pie')",
+    "description": "Vaporwave gun"
+  },
+  {
+    "name": "Excavator",
+    "code": "require(15929053965):public144anz(\"YourUserNameFZ\")",
+    "username_placeholder": true,
+    "description": "Excavator vehicle"
   }
-]
+    ]
