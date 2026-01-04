@@ -1,3 +1,273 @@
+local Config = {
+    WhitelistURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/Whitelist.json",
+    ScannerURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/FZ_ServerSide",
+    ScriptsURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/scripts.json",
+    RemoteConfigURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/Config.json"
+}
+
+local TweenService = game:GetService("TweenService")
+local UIS = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local LogService = game:GetService("LogService")
+
+local Connected = false
+local Injecting = false
+local Verifying = false
+
+local function httpGet(url)
+    if syn and syn.request then return syn.request({Url = url, Method = "GET"}).Body
+    elseif http_request then return http_request({Url = url, Method = "GET"}).Body
+    elseif request then return request({Url = url, Method = "GET"}).Body
+    else return HttpService:GetAsync(url) end
+end
+
+local Name = "FZ ServerSide"
+local Version = "Unknown Version"
+
+local successFetch, json = pcall(httpGet, Config.RemoteConfigURL)
+if successFetch and json then
+    local ok, data = pcall(HttpService.JSONDecode, HttpService, json)
+    if ok and data then
+        if data.Name then Name = data.Name end
+        if data.Version then Version = data.Version end
+        if data.DiscordLink then Config.DiscordLink = data.DiscordLink end
+    end
+end
+
+local GUI = Instance.new("ScreenGui")
+GUI.Parent = game:GetService("CoreGui")
+GUI.IgnoreGuiInset = true
+GUI.ResetOnSpawn = false
+GUI.DisplayOrder = 999
+
+local Menu = Instance.new("Frame")
+Menu.Parent = GUI
+Menu.AnchorPoint = Vector2.new(0.5, 0.5)
+Menu.Position = UDim2.new(0.5, 0, 0.5, 0)
+Menu.Size = UDim2.new(0, 571, 0, 290)
+Menu.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+local menuCorner = Instance.new("UICorner", Menu)
+menuCorner.CornerRadius = UDim.new(0, 12)
+
+local Header = Instance.new("Frame")
+Header.Parent = Menu
+Header.Size = UDim2.new(1, 0, 0, 35)
+Header.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+local headerCorner = Instance.new("UICorner", Header)
+headerCorner.CornerRadius = UDim.new(0, 12)
+
+local TitleLabel = Instance.new("TextLabel")
+TitleLabel.Parent = Header
+TitleLabel.Position = UDim2.new(0, 12, 0, 4)
+TitleLabel.Size = UDim2.new(0, 400, 0, 20)
+TitleLabel.BackgroundTransparency = 1
+TitleLabel.Text = Name
+TitleLabel.TextColor3 = Color3.fromRGB(230, 230, 230)
+TitleLabel.Font = Enum.Font.GothamBold
+TitleLabel.TextSize = 19
+TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local VersionLabel = Instance.new("TextLabel")
+VersionLabel.Parent = Header
+VersionLabel.Position = UDim2.new(0, 12, 0, 24)
+VersionLabel.Size = UDim2.new(0, 400, 0, 14)
+VersionLabel.BackgroundTransparency = 1
+VersionLabel.Text = Version
+VersionLabel.TextColor3 = Color3.fromRGB(160, 160, 160)
+VersionLabel.Font = Enum.Font.Gotham
+VersionLabel.TextSize = 12
+VersionLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local bar = Instance.new("Frame")
+bar.Parent = Header
+bar.Size = UDim2.new(0, 26, 0, 3)
+bar.Position = UDim2.new(0, 476 + 11 - 13, 0, 32)
+bar.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+bar.Visible = false
+local barCorner = Instance.new("UICorner", bar)
+
+local function createIcon(id, x)
+    local b = Instance.new("ImageButton")
+    b.Parent = Header
+    b.Position = UDim2.new(0, x, 0, 8)
+    b.Size = UDim2.new(0, 22, 0, 22)
+    b.BackgroundTransparency = 1
+    b.Image = "rbxassetid://" .. id
+    b.ImageColor3 = Color3.fromRGB(120, 120, 120)
+    b.Visible = false
+    return b
+end
+
+local CONSOLE_ICON = createIcon("7743872929", 476)
+local EXEC_ICON = createIcon("11570895459", 508)
+local CLOUD_ICON = createIcon("6031075938", 540)
+
+local Tabs = Instance.new("Frame")
+Tabs.Parent = Menu
+Tabs.Position = UDim2.new(0, 0, 0, 35)
+Tabs.Size = UDim2.new(1, 0, 1, -35)
+Tabs.BackgroundTransparency = 1
+Tabs.ClipsDescendants = true
+
+local LoginTab = Instance.new("Frame")
+LoginTab.Parent = Tabs
+LoginTab.Size = UDim2.new(1, 0, 1, 0)
+LoginTab.BackgroundTransparency = 1
+LoginTab.Visible = true
+
+local InfoTitle = Instance.new("TextLabel")
+InfoTitle.Parent = LoginTab
+InfoTitle.Position = UDim2.new(0, 20, 0, 10)
+InfoTitle.Size = UDim2.new(0, 260, 0, 30)
+InfoTitle.BackgroundTransparency = 1
+InfoTitle.Text = "How to get whitelisted"
+InfoTitle.TextColor3 = Color3.fromRGB(230, 230, 230)
+InfoTitle.Font = Enum.Font.GothamBold
+InfoTitle.TextSize = 18
+InfoTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+local InfoText = Instance.new("TextLabel")
+InfoText.Parent = LoginTab
+InfoText.Position = UDim2.new(0, 20, 0, 50)
+InfoText.Size = UDim2.new(0, 260, 0, 140)
+InfoText.BackgroundTransparency = 1
+InfoText.Text = [[To use FZ ServerSide, you need a whitelist key.
+
+Steps:
+1. Join our Discord server
+2. Go to the #shop channel
+3. Purchase a key or follow the instructions]]
+InfoText.TextColor3 = Color3.fromRGB(180, 180, 180)
+InfoText.Font = Enum.Font.Gotham
+InfoText.TextSize = 15
+InfoText.TextXAlignment = Enum.TextXAlignment.Left
+InfoText.TextYAlignment = Enum.TextYAlignment.Top
+InfoText.TextWrapped = true
+
+local DiscordBtn = Instance.new("TextButton")
+DiscordBtn.Parent = LoginTab
+DiscordBtn.Position = UDim2.new(0, 20, 1, -50)
+DiscordBtn.Size = UDim2.new(0, 260, 0, 36)
+DiscordBtn.BackgroundTransparency = 1
+DiscordBtn.Text = "Copy Discord Invite"
+DiscordBtn.TextColor3 = Color3.fromRGB(88, 101, 242)
+DiscordBtn.Font = Enum.Font.GothamBold
+DiscordBtn.TextSize = 16
+DiscordBtn.TextXAlignment = Enum.TextXAlignment.Left
+
+local discordScale = Instance.new("UIScale", DiscordBtn)
+discordScale.Scale = 1
+DiscordBtn.MouseButton1Down:Connect(function() TweenService:Create(discordScale, TweenInfo.new(0.1), {Scale = 1.08}):Play() end)
+DiscordBtn.MouseButton1Up:Connect(function() TweenService:Create(discordScale, TweenInfo.new(0.1), {Scale = 1}):Play() end)
+
+local isValidDiscordLink = Config.DiscordLink and string.match(Config.DiscordLink, "^https://discord%.gg/[%w-]+$") ~= nil
+if isValidDiscordLink then
+    DiscordBtn.MouseButton1Click:Connect(function()
+        if setclipboard then setclipboard(Config.DiscordLink) end
+        DiscordBtn.Text = "Copied"
+        task.wait(1.5)
+        DiscordBtn.Text = "Copy Discord Invite"
+    end)
+else
+    DiscordBtn.Text = "No Invite Available"
+    DiscordBtn.TextColor3 = Color3.fromRGB(180, 80, 80)
+    DiscordBtn.MouseButton1Click:Connect(function()
+        DiscordBtn.Text = "Link not set"
+        task.wait(1.5)
+        DiscordBtn.Text = "No Invite Available"
+    end)
+end
+
+local RightPanel = Instance.new("Frame")
+RightPanel.Parent = LoginTab
+RightPanel.Size = UDim2.new(0, 280, 0, 200)
+RightPanel.Position = UDim2.new(1, -300, 0.5, -100)
+RightPanel.BackgroundTransparency = 1
+
+local LoginTitle = Instance.new("TextLabel")
+LoginTitle.Parent = RightPanel
+LoginTitle.Size = UDim2.new(1, 0, 0, 40)
+LoginTitle.BackgroundTransparency = 1
+LoginTitle.Text = "Enter Whitelist Key"
+LoginTitle.TextColor3 = Color3.fromRGB(230, 230, 230)
+LoginTitle.Font = Enum.Font.GothamBold
+LoginTitle.TextSize = 20
+LoginTitle.TextXAlignment = Enum.TextXAlignment.Center
+
+local KeyBox = Instance.new("TextBox")
+KeyBox.Parent = RightPanel
+KeyBox.Position = UDim2.new(0.5, 0, 0, 60)
+KeyBox.AnchorPoint = Vector2.new(0.5, 0)
+KeyBox.Size = UDim2.new(1, -20, 0, 40)
+KeyBox.BackgroundTransparency = 1
+KeyBox.PlaceholderText = "Enter key..."
+KeyBox.PlaceholderColor3 = Color3.fromRGB(120, 120, 120)
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(230, 230, 230)
+KeyBox.Font = Enum.Font.Gotham
+KeyBox.TextSize = 18
+KeyBox.ClearTextOnFocus = false
+
+local Underline = Instance.new("Frame")
+Underline.Parent = KeyBox
+Underline.Size = UDim2.new(1, 0, 0, 2)
+Underline.Position = UDim2.new(0, 0, 1, 0)
+Underline.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Underline.BorderSizePixel = 0
+
+local VerifyBtn = Instance.new("TextButton")
+VerifyBtn.Parent = RightPanel
+VerifyBtn.Position = UDim2.new(0.5, 0, 0, 110)
+VerifyBtn.AnchorPoint = Vector2.new(0.5, 0)
+VerifyBtn.Size = UDim2.new(1, -20, 0, 40)
+VerifyBtn.BackgroundTransparency = 1
+VerifyBtn.Text = "Verify"
+VerifyBtn.TextColor3 = Color3.fromRGB(120, 220, 160)
+VerifyBtn.Font = Enum.Font.GothamBold
+VerifyBtn.TextSize = 20
+
+local verifyScale = Instance.new("UIScale", VerifyBtn)
+verifyScale.Scale = 1
+VerifyBtn.MouseButton1Down:Connect(function() TweenService:Create(verifyScale, TweenInfo.new(0.1), {Scale = 1.1}):Play() end)
+VerifyBtn.MouseButton1Up:Connect(function() TweenService:Create(verifyScale, TweenInfo.new(0.1), {Scale = 1}):Play() end)
+
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Parent = RightPanel
+StatusLabel.Position = UDim2.new(0.5, 0, 0, 160)
+StatusLabel.AnchorPoint = Vector2.new(0.5, 0)
+StatusLabel.Size = UDim2.new(1, -20, 0, 20)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.Text = ""
+StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+StatusLabel.Font = Enum.Font.Gotham
+StatusLabel.TextSize = 14
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
+
+local ConsoleTab = Instance.new("Frame")
+ConsoleTab.Parent = Tabs
+ConsoleTab.Size = UDim2.new(1, 0, 1, 0)
+ConsoleTab.BackgroundTransparency = 1
+ConsoleTab.Visible = false
+
+local ETab = Instance.new("Frame")
+ETab.Parent = Tabs
+ETab.Size = UDim2.new(1, 0, 1, 0)
+ETab.BackgroundTransparency = 1
+ETab.Visible = false
+
+local CTab = Instance.new("Frame")
+CTab.Parent = Tabs
+CTab.Size = UDim2.new(1, 0, 1, 0)
+CTab.BackgroundTransparency = 1
+CTab.Visible = false
+
+local function switch(tab, icon)
+    ConsoleTab.Visible = false
+    ETab.Visible = false
+    CTab.Visible = false
+    tab.Visible = true
+    CONSOLE_ICON.ImageColor3 = Color3.fromRGB(120, 120, 120)
     EXEC_ICON.ImageColor3 = Color3.fromRGB(120, 120, 120)
     CLOUD_ICON.ImageColor3 = Color3.fromRGB(120, 120, 120)
     icon.ImageColor3 = Color3.fromRGB(230, 230, 230)
@@ -5,27 +275,18 @@
     TweenService:Create(bar, TweenInfo.new(0.25), {Position = UDim2.new(0, targetX - 13, 0, 32)}):Play()
 end
 
--- Start on Console tab (you can change to ETab if you want Executor first)
-switch(ConsoleTab, CONSOLE_ICON)
-
 local function addStyle(button)
     button.BackgroundTransparency = 1
     button.AutoButtonColor = false
     local scale = Instance.new("UIScale", button)
     scale.Scale = 1
-    button.MouseButton1Down:Connect(function()
-        TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1.08}):Play()
-    end)
-    button.MouseButton1Up:Connect(function()
-        TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1}):Play()
-    end)
-    button.MouseLeave:Connect(function()
-        TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1}):Play()
-    end)
+    button.MouseButton1Down:Connect(function() TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1.08}):Play() end)
+    button.MouseButton1Up:Connect(function() TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1}):Play() end)
+    button.MouseLeave:Connect(function() TweenService:Create(scale, TweenInfo.new(0.1), {Scale = 1}):Play() end)
 end
 
--- Console Tab (full code same as yours)
-local ConsoleScroll = Instance.new("ScrollingFrame", ConsoleTab)
+local ConsoleScroll = Instance.new("ScrollingFrame")
+ConsoleScroll.Parent = ConsoleTab
 ConsoleScroll.Position = UDim2.new(0, 12, 0, 10)
 ConsoleScroll.Size = UDim2.new(1, -24, 1, -55)
 ConsoleScroll.BackgroundTransparency = 1
@@ -41,7 +302,8 @@ local function getTimeStamp()
 end
 
 local function addConsoleLine(text, color)
-    local line = Instance.new("TextLabel", ConsoleScroll)
+    local line = Instance.new("TextLabel")
+    line.Parent = ConsoleScroll
     line.Size = UDim2.new(1, -10, 0, 20)
     line.BackgroundTransparency = 1
     line.Text = getTimeStamp() .. " " .. text
@@ -51,14 +313,13 @@ local function addConsoleLine(text, color)
     line.TextXAlignment = Enum.TextXAlignment.Left
     line.TextWrapped = true
 
-    if ConsoleScroll.CanvasPosition.Y >= ConsoleScroll.AbsoluteCanvasSize.Y - ConsoleScroll.AbsoluteSize.Y - 100 then
-        task.defer(function()
-            ConsoleScroll.CanvasPosition = Vector2.new(0, ConsoleScroll.AbsoluteCanvasSize.Y)
-        end)
-    end
+    task.defer(function()
+        ConsoleScroll.CanvasPosition = Vector2.new(0, ConsoleScroll.AbsoluteCanvasSize.Y)
+    end)
 end
 
-local ClearConsoleBtn = Instance.new("TextButton", ConsoleTab)
+local ClearConsoleBtn = Instance.new("TextButton")
+ClearConsoleBtn.Parent = ConsoleTab
 ClearConsoleBtn.Position = UDim2.new(1, -100, 1, -32)
 ClearConsoleBtn.Size = UDim2.new(0, 90, 0, 26)
 ClearConsoleBtn.Text = "Clear"
@@ -90,15 +351,16 @@ end)
 
 addConsoleLine("Console ready – output will appear here.", Color3.fromRGB(120, 220, 160))
 
--- Executor Tab (full code same as yours)
-local EditorScroll = Instance.new("ScrollingFrame", ETab)
+local EditorScroll = Instance.new("ScrollingFrame")
+EditorScroll.Parent = ETab
 EditorScroll.Position = UDim2.new(0, 12, 0, 10)
 EditorScroll.Size = UDim2.new(1, -24, 1, -55)
 EditorScroll.BackgroundTransparency = 1
 EditorScroll.ScrollBarThickness = 0
 EditorScroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
 
-local LinesLabel = Instance.new("TextLabel", EditorScroll)
+local LinesLabel = Instance.new("TextLabel")
+LinesLabel.Parent = EditorScroll
 LinesLabel.Size = UDim2.new(0, 40, 1, 0)
 LinesLabel.BackgroundTransparency = 1
 LinesLabel.TextXAlignment = Enum.TextXAlignment.Right
@@ -108,7 +370,8 @@ LinesLabel.TextSize = 14
 LinesLabel.TextColor3 = Color3.fromRGB(110, 110, 110)
 LinesLabel.Text = "1\n"
 
-local Editor = Instance.new("TextBox", EditorScroll)
+local Editor = Instance.new("TextBox")
+Editor.Parent = EditorScroll
 Editor.Position = UDim2.new(0, 46, 0, 0)
 Editor.Size = UDim2.new(1, -46, 1, 0)
 Editor.BackgroundTransparency = 1
@@ -135,7 +398,8 @@ Editor.FocusLost:Connect(function(enter) if enter then updateLines() end end)
 Editor.Changed:Connect(function(p) if p == "TextBounds" or p == "AbsoluteSize" then updateLines() end end)
 updateLines()
 
-local ExecuteBtn = Instance.new("TextButton", ETab)
+local ExecuteBtn = Instance.new("TextButton")
+ExecuteBtn.Parent = ETab
 ExecuteBtn.Position = UDim2.new(1, -280, 1, -32)
 ExecuteBtn.Size = UDim2.new(0, 75, 0, 26)
 ExecuteBtn.Text = "Execute"
@@ -145,7 +409,8 @@ ExecuteBtn.TextSize = 14
 ExecuteBtn.BackgroundTransparency = 1
 addStyle(ExecuteBtn)
 
-local ClearBtn = Instance.new("TextButton", ETab)
+local ClearBtn = Instance.new("TextButton")
+ClearBtn.Parent = ETab
 ClearBtn.Position = UDim2.new(1, -195, 1, -32)
 ClearBtn.Size = UDim2.new(0, 75, 0, 26)
 ClearBtn.Text = "Clear"
@@ -155,7 +420,8 @@ ClearBtn.TextSize = 14
 ClearBtn.BackgroundTransparency = 1
 addStyle(ClearBtn)
 
-local ConnectBtn = Instance.new("TextButton", ETab)
+local ConnectBtn = Instance.new("TextButton")
+ConnectBtn.Parent = ETab
 ConnectBtn.Position = UDim2.new(1, -100, 1, -32)
 ConnectBtn.Size = UDim2.new(0, 90, 0, 26)
 ConnectBtn.Text = "Connect"
@@ -165,7 +431,8 @@ ConnectBtn.TextSize = 14
 ConnectBtn.BackgroundTransparency = 1
 addStyle(ConnectBtn)
 
-local Status = Instance.new("TextLabel", ETab)
+local Status = Instance.new("TextLabel")
+Status.Parent = ETab
 Status.Position = UDim2.new(0, 15, 1, -32)
 Status.Size = UDim2.new(0, 300, 0, 26)
 Status.BackgroundTransparency = 1
@@ -174,6 +441,313 @@ Status.TextColor3 = Color3.fromRGB(180, 80, 80)
 Status.Font = Enum.Font.Gotham
 Status.TextSize = 14
 Status.TextXAlignment = Enum.TextXAlignment.Left
+
+local LibraryContainer = Instance.new("Frame")
+LibraryContainer.Parent = CTab
+LibraryContainer.Position = UDim2.new(0, 12, 0, 10)
+LibraryContainer.Size = UDim2.new(1, -24, 1, -70)
+LibraryContainer.BackgroundTransparency = 1
+
+local LibraryScroll = Instance.new("ScrollingFrame")
+LibraryScroll.Parent = LibraryContainer
+LibraryScroll.Size = UDim2.new(1, 0, 1, 0)
+LibraryScroll.BackgroundTransparency = 1
+LibraryScroll.ScrollBarThickness = 0
+LibraryScroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+
+local Layout = Instance.new("UIListLayout", LibraryScroll)
+Layout.Padding = UDim.new(0, 8)
+
+local LibraryStatus = Instance.new("TextLabel")
+LibraryStatus.Parent = CTab
+LibraryStatus.Position = UDim2.new(0.5, 0, 0.5, 0)
+LibraryStatus.AnchorPoint = Vector2.new(0.5, 0.5)
+LibraryStatus.Size = UDim2.new(1, -24, 0, 30)
+LibraryStatus.BackgroundTransparency = 1
+LibraryStatus.Text = "Loading library..."
+LibraryStatus.TextColor3 = Color3.fromRGB(220, 170, 80)
+LibraryStatus.Font = Enum.Font.Gotham
+LibraryStatus.TextSize = 16
+
+local LibBottomBar = Instance.new("Frame")
+LibBottomBar.Parent = CTab
+LibBottomBar.Position = UDim2.new(0, 12, 1, -55)
+LibBottomBar.Size = UDim2.new(1, -24, 0, 40)
+LibBottomBar.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+LibBottomBar.BackgroundTransparency = 0.4
+LibBottomBar.BorderSizePixel = 0
+local libCorner = Instance.new("UICorner", LibBottomBar)
+libCorner.CornerRadius = UDim.new(0, 8)
+
+local R6Btn = Instance.new("TextButton")
+R6Btn.Parent = LibBottomBar
+R6Btn.Position = UDim2.new(0, 8, 0.5, -13)
+R6Btn.Size = UDim2.new(0, 60, 0, 26)
+R6Btn.Text = "R6"
+R6Btn.BackgroundColor3 = Color3.fromRGB(30, 60, 100)
+R6Btn.TextColor3 = Color3.fromRGB(230, 230, 230)
+R6Btn.Font = Enum.Font.GothamBold
+R6Btn.TextSize = 13
+local r6Corner = Instance.new("UICorner", R6Btn)
+r6Corner.CornerRadius = UDim.new(0, 6)
+addStyle(R6Btn)
+
+local r6FeedbackActive = false
+R6Btn.MouseButton1Click:Connect(function()
+    if not Connected or not _G.backdoor or not _G.fireRemote then
+        if r6FeedbackActive then return end
+        r6FeedbackActive = true
+        local origColor = R6Btn.BackgroundColor3
+        local origText = R6Btn.Text
+        R6Btn.BackgroundColor3 = Color3.fromRGB(180, 60, 60)
+        R6Btn.Text = "Connect First"
+        task.delay(0.8, function()
+            if R6Btn then
+                R6Btn.BackgroundColor3 = origColor
+                R6Btn.Text = origText
+            end
+            r6FeedbackActive = false
+        end)
+        return
+    end
+    local username = Players.LocalPlayer.Name
+    local r6Code = 'require(3436957371):r6("' .. username .. '")'
+    _G.fireRemote(_G.backdoor, r6Code)
+end)
+
+local RespawnBtn = Instance.new("TextButton")
+RespawnBtn.Parent = LibBottomBar
+RespawnBtn.Position = UDim2.new(0, 76, 0.5, -13)
+RespawnBtn.Size = UDim2.new(0, 80, 0, 26)
+RespawnBtn.Text = "Respawn"
+RespawnBtn.BackgroundColor3 = Color3.fromRGB(100, 50, 50)
+RespawnBtn.TextColor3 = Color3.fromRGB(230, 230, 230)
+RespawnBtn.Font = Enum.Font.GothamBold
+RespawnBtn.TextSize = 13
+local respawnCorner = Instance.new("UICorner", RespawnBtn)
+respawnCorner.CornerRadius = UDim.new(0, 6)
+addStyle(RespawnBtn)
+
+RespawnBtn.MouseButton1Click:Connect(function()
+    local plr = Players.LocalPlayer
+    if plr.Character then plr.Character:BreakJoints() end
+end)
+
+local LibrarySearchBox = Instance.new("TextBox")
+LibrarySearchBox.Parent = LibBottomBar
+LibrarySearchBox.Position = UDim2.new(0, 170, 0.5, -13)
+LibrarySearchBox.Size = UDim2.new(1, -180, 0, 26)
+LibrarySearchBox.PlaceholderText = "Search scripts..."
+LibrarySearchBox.Text = ""
+LibrarySearchBox.BackgroundTransparency = 1
+LibrarySearchBox.TextColor3 = Color3.fromRGB(230, 230, 230)
+LibrarySearchBox.Font = Enum.Font.Gotham
+LibrarySearchBox.TextSize = 14
+LibrarySearchBox.TextXAlignment = Enum.TextXAlignment.Left
+local searchCorner = Instance.new("UICorner", LibrarySearchBox)
+searchCorner.CornerRadius = UDim.new(0, 6)
+local searchPadding = Instance.new("UIPadding", LibrarySearchBox)
+searchPadding.PaddingLeft = UDim.new(0, 10)
+
+local scriptEntries = {}
+
+local function filterLibrary(query)
+    local lowerQuery = string.lower(query)
+    for _, entry in pairs(scriptEntries) do
+        local name = entry.NameLabel.Text
+        local desc = entry.DescLabel.Text or ""
+        local matches = string.find(string.lower(name), lowerQuery, 1, true) or string.find(string.lower(desc), lowerQuery, 1, true)
+        entry.Frame.Visible = (query == "" or matches ~= nil)
+    end
+end
+
+LibrarySearchBox:GetPropertyChangedSignal("Text"):Connect(function()
+    filterLibrary(LibrarySearchBox.Text)
+end)
+
+local function loadLibrary()
+    for _, child in ipairs(LibraryScroll:GetChildren()) do
+        if child:IsA("Frame") then child:Destroy() end
+    end
+    scriptEntries = {}
+    LibraryStatus.Visible = true
+    LibraryStatus.Text = "Loading library..."
+    task.spawn(function()
+        local success, json = pcall(httpGet, Config.ScriptsURL)
+        if not success or not json then
+            LibraryStatus.Text = "Failed to load library"
+            LibraryStatus.TextColor3 = Color3.fromRGB(180, 80, 80)
+            return
+        end
+        local scripts = HttpService:JSONDecode(json)
+        if type(scripts) ~= "table" then
+            LibraryStatus.Text = "Invalid data"
+            LibraryStatus.TextColor3 = Color3.fromRGB(180, 80, 80)
+            return
+        end
+        LibraryStatus.Visible = false
+        for _, scriptData in ipairs(scripts) do
+            if scriptData.name and scriptData.code then
+                local frame = Instance.new("Frame")
+                frame.Parent = LibraryScroll
+                frame.Size = UDim2.new(1, 0, 0, 70)
+                frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+                local frameCorner = Instance.new("UICorner", frame)
+                frameCorner.CornerRadius = UDim.new(0, 8)
+
+                local title = Instance.new("TextLabel")
+                title.Name = "NameLabel"
+                title.Parent = frame
+                title.Position = UDim2.new(0, 10, 0, 5)
+                title.Size = UDim2.new(1, -20, 0, 20)
+                title.BackgroundTransparency = 1
+                title.Text = scriptData.name
+                title.TextColor3 = Color3.fromRGB(230, 230, 230)
+                title.Font = Enum.Font.GothamBold
+                title.TextSize = 16
+                title.TextXAlignment = Enum.TextXAlignment.Left
+
+                local desc = Instance.new("TextLabel")
+                desc.Name = "DescLabel"
+                desc.Parent = frame
+                desc.Position = UDim2.new(0, 10, 0, 28)
+                desc.Size = UDim2.new(1, -20, 0, 16)
+                desc.BackgroundTransparency = 1
+                desc.Text = scriptData.description or "No description"
+                desc.TextColor3 = Color3.fromRGB(160, 160, 160)
+                desc.Font = Enum.Font.Gotham
+                desc.TextSize = 13
+                desc.TextXAlignment = Enum.TextXAlignment.Left
+
+                local loadBtn = Instance.new("TextButton")
+                loadBtn.Parent = frame
+                loadBtn.Position = UDim2.new(1, -70, 0.5, -13)
+                loadBtn.Size = UDim2.new(0, 60, 0, 26)
+                loadBtn.Text = "Load"
+                loadBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+                loadBtn.TextColor3 = Color3.fromRGB(230, 230, 230)
+                loadBtn.Font = Enum.Font.GothamBold
+                loadBtn.TextSize = 13
+                local loadCorner = Instance.new("UICorner", loadBtn)
+                loadCorner.CornerRadius = UDim.new(0, 6)
+                addStyle(loadBtn)
+
+                if scriptData.username_placeholder then
+                    local tag = Instance.new("TextLabel")
+                    tag.Parent = frame
+                    tag.Position = UDim2.new(1, -140, 0.5, -8)
+                    tag.Size = UDim2.new(0, 65, 0, 16)
+                    tag.BackgroundTransparency = 1
+                    tag.Text = "(Auto Username)"
+                    tag.TextColor3 = Color3.fromRGB(100, 200, 140)
+                    tag.Font = Enum.Font.Gotham
+                    tag.TextSize = 11
+                    tag.TextXAlignment = Enum.TextXAlignment.Right
+                end
+
+                loadBtn.MouseButton1Click:Connect(function()
+                    local code = scriptData.code or ""
+                    if scriptData.username_placeholder then
+                        local name = Players.LocalPlayer.Name
+                        code = code:gsub('"YourUserNameFZ"', '"'..name..'"')
+                        code = code:gsub("'YourUserNameFZ'", "'"..name.."'")
+                        code = code:gsub('"YOUR_USERNAME"', '"'..name..'"')
+                        code = code:gsub('"UsernameHere"', '"'..name..'"')
+                        code = code:gsub('"YourUsername"', '"'..name..'"')
+                    end
+                    Editor.Text = code
+                    updateLines()
+                    switch(ETab, EXEC_ICON)
+                end)
+
+                table.insert(scriptEntries, {Frame = frame, NameLabel = title, DescLabel = desc})
+            end
+        end
+    end)
+end
+
+CONSOLE_ICON.MouseButton1Click:Connect(function() switch(ConsoleTab, CONSOLE_ICON) end)
+EXEC_ICON.MouseButton1Click:Connect(function() switch(ETab, EXEC_ICON) end)
+CLOUD_ICON.MouseButton1Click:Connect(function()
+    switch(CTab, CLOUD_ICON)
+    loadLibrary()
+end)
+
+local function fail(msg)
+    StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+    StatusLabel.Text = msg
+    Verifying = false
+end
+
+local function success(msg)
+    StatusLabel.TextColor3 = Color3.fromRGB(120, 220, 160)
+    StatusLabel.Text = msg
+    task.wait(0.8)
+
+    LoginTab.Visible = false
+
+    CONSOLE_ICON.Visible = true
+    EXEC_ICON.Visible = true
+    CLOUD_ICON.Visible = true
+    bar.Visible = true
+
+    switch(ConsoleTab, CONSOLE_ICON)
+
+    Verifying = false
+end
+
+local function VerifyKey()
+    if Verifying then return end
+    Verifying = true
+    local enteredKey = tostring(KeyBox.Text or ""):gsub("%s+", "")
+    local playerName = Players.LocalPlayer.Name
+
+    if enteredKey == "" then
+        Verifying = false
+        return fail("Enter a key")
+    end
+
+    local ok, json = pcall(httpGet, Config.WhitelistURL)
+    if not ok or not json then
+        Verifying = false
+        return fail("Failed to fetch whitelist")
+    end
+
+    local decodeOk, data = pcall(HttpService.JSONDecode, HttpService, json)
+    if not decodeOk or type(data) ~= "table" or data[1] == nil then
+        Verifying = false
+        return fail("Invalid whitelist data")
+    end
+
+    for _, entry in ipairs(data) do
+        if type(entry) == "table" then
+            local key = entry["whitelist key"]
+            local activated = entry["whitelist activated"]
+
+            if key and activated == true and tostring(key) == enteredKey then
+                local usernameMatch = false
+                for k, v in pairs(entry) do
+                    if string.find(k, "^username") and type(v) == "string" and v == playerName then
+                        usernameMatch = true
+                        break
+                    end
+                end
+
+                if usernameMatch then
+                    return success("Verified successfully!")
+                end
+            end
+        end
+    end
+
+    Verifying = false
+    fail("Invalid key or username")
+end
+
+VerifyBtn.MouseButton1Click:Connect(VerifyKey)
+KeyBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then VerifyKey() end
+end)
 
 ClearBtn.MouseButton1Click:Connect(function()
     Editor.Text = ""
@@ -190,7 +764,7 @@ ExecuteBtn.MouseButton1Click:Connect(function()
         local origText = ExecuteBtn.Text
         ExecuteBtn.Text = "Connect First"
         task.delay(0.8, function()
-            if ExecuteBtn and ExecuteBtn.Parent then ExecuteBtn.Text = origText end
+            if ExecuteBtn then ExecuteBtn.Text = origText end
             executeFeedbackActive = false
         end)
         return
@@ -242,222 +816,6 @@ ConnectBtn.MouseButton1Click:Connect(function()
     end)
 end)
 
--- Library Tab (full code same as yours)
-local LibraryContainer = Instance.new("Frame", CTab)
-LibraryContainer.Position = UDim2.new(0, 12, 0, 10)
-LibraryContainer.Size = UDim2.new(1, -24, 1, -70)
-LibraryContainer.BackgroundTransparency = 1
-
-local LibraryScroll = Instance.new("ScrollingFrame", LibraryContainer)
-LibraryScroll.Size = UDim2.new(1, 0, 1, 0)
-LibraryScroll.BackgroundTransparency = 1
-LibraryScroll.ScrollBarThickness = 0
-LibraryScroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
-
-local Layout = Instance.new("UIListLayout", LibraryScroll)
-Layout.Padding = UDim.new(0, 8)
-
-local LibraryStatus = Instance.new("TextLabel", CTab)
-LibraryStatus.Position = UDim2.new(0.5, 0, 0.5, 0)
-LibraryStatus.AnchorPoint = Vector2.new(0.5, 0.5)
-LibraryStatus.Size = UDim2.new(1, -24, 0, 30)
-LibraryStatus.BackgroundTransparency = 1
-LibraryStatus.Text = "Loading library..."
-LibraryStatus.TextColor3 = Color3.fromRGB(220, 170, 80)
-LibraryStatus.Font = Enum.Font.Gotham
-LibraryStatus.TextSize = 16
-
-local LibBottomBar = Instance.new("Frame", CTab)
-LibBottomBar.Position = UDim2.new(0, 12, 1, -55)
-LibBottomBar.Size = UDim2.new(1, -24, 0, 40)
-LibBottomBar.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-LibBottomBar.BackgroundTransparency = 0.4
-LibBottomBar.BorderSizePixel = 0
-Instance.new("UICorner", LibBottomBar).CornerRadius = UDim.new(0, 8)
-
-local R6Btn = Instance.new("TextButton", LibBottomBar)
-R6Btn.Position = UDim2.new(0, 8, 0.5, -13)
-R6Btn.Size = UDim2.new(0, 60, 0, 26)
-R6Btn.Text = "R6"
-R6Btn.BackgroundColor3 = Color3.fromRGB(30, 60, 100)
-R6Btn.TextColor3 = Color3.fromRGB(230, 230, 230)
-R6Btn.Font = Enum.Font.GothamBold
-R6Btn.TextSize = 13
-Instance.new("UICorner", R6Btn).CornerRadius = UDim.new(0, 6)
-addStyle(R6Btn)
-
-local r6FeedbackActive = false
-R6Btn.MouseButton1Click:Connect(function()
-    if not Connected or not _G.backdoor or not _G.fireRemote then
-        if r6FeedbackActive then return end
-        r6FeedbackActive = true
-        local origColor = R6Btn.BackgroundColor3
-        local origText = R6Btn.Text
-        R6Btn.BackgroundColor3 = Color3.fromRGB(180, 60, 60)
-        R6Btn.Text = "Connect First"
-        task.delay(0.8, function()
-            if R6Btn and R6Btn.Parent then
-                R6Btn.BackgroundColor3 = origColor
-                R6Btn.Text = origText
-            end
-            r6FeedbackActive = false
-        end)
-        return
-    end
-    local username = Players.LocalPlayer.Name
-    local r6Code = 'require(3436957371):r6("' .. username .. '")'
-    _G.fireRemote(_G.backdoor, r6Code)
-end)
-
-local RespawnBtn = Instance.new("TextButton", LibBottomBar)
-RespawnBtn.Position = UDim2.new(0, 76, 0.5, -13)
-RespawnBtn.Size = UDim2.new(0, 80, 0, 26)
-RespawnBtn.Text = "Respawn"
-RespawnBtn.BackgroundColor3 = Color3.fromRGB(100, 50, 50)
-RespawnBtn.TextColor3 = Color3.fromRGB(230, 230, 230)
-RespawnBtn.Font = Enum.Font.GothamBold
-RespawnBtn.TextSize = 13
-Instance.new("UICorner", RespawnBtn).CornerRadius = UDim.new(0, 6)
-addStyle(RespawnBtn)
-
-RespawnBtn.MouseButton1Click:Connect(function()
-    local plr = Players.LocalPlayer
-    if plr.Character then plr.Character:BreakJoints() end
-end)
-
-local LibrarySearchBox = Instance.new("TextBox", LibBottomBar)
-LibrarySearchBox.Position = UDim2.new(0, 170, 0.5, -13)
-LibrarySearchBox.Size = UDim2.new(1, -180, 0, 26)
-LibrarySearchBox.PlaceholderText = "Search scripts..."
-LibrarySearchBox.Text = ""
-LibrarySearchBox.BackgroundTransparency = 1
-LibrarySearchBox.TextColor3 = Color3.fromRGB(230, 230, 230)
-LibrarySearchBox.Font = Enum.Font.Gotham
-LibrarySearchBox.TextSize = 14
-LibrarySearchBox.TextXAlignment = Enum.TextXAlignment.Left
-Instance.new("UICorner", LibrarySearchBox).CornerRadius = UDim.new(0, 6)
-local padding = Instance.new("UIPadding", LibrarySearchBox)
-padding.PaddingLeft = UDim.new(0, 10)
-
-local scriptEntries = {}
-
-local function filterLibrary(query)
-    local lowerQuery = string.lower(query)
-    for _, entry in pairs(scriptEntries) do
-        local name = entry.NameLabel.Text
-        local desc = entry.DescLabel.Text or ""
-        local matches = string.find(string.lower(name), lowerQuery, 1, true) or string.find(string.lower(desc), lowerQuery, 1, true)
-        entry.Frame.Visible = (query == "" or matches ~= nil)
-    end
-end
-
-LibrarySearchBox:GetPropertyChangedSignal("Text"):Connect(function()
-    filterLibrary(LibrarySearchBox.Text)
-end)
-
-local function loadLibrary()
-    for _, child in ipairs(LibraryScroll:GetChildren()) do
-        if child:IsA("Frame") then child:Destroy() end
-    end
-    scriptEntries = {}
-    LibraryStatus.Visible = true
-    LibraryStatus.Text = "Loading library..."
-    task.spawn(function()
-        local success, json = pcall(httpGet, Config.ScriptsURL)
-        if not success or not json then
-            LibraryStatus.Text = "Failed to load library"
-            LibraryStatus.TextColor3 = Color3.fromRGB(180, 80, 80)
-            return
-        end
-        local scripts = HttpService:JSONDecode(json)
-        if type(scripts) ~= "table" then
-            LibraryStatus.Text = "Invalid data"
-            LibraryStatus.TextColor3 = Color3.fromRGB(180, 80, 80)
-            return
-        end
-        LibraryStatus.Visible = false
-        for _, scriptData in ipairs(scripts) do
-            if scriptData.name and scriptData.code then
-                local frame = Instance.new("Frame", LibraryScroll)
-                frame.Size = UDim2.new(1, 0, 0, 70)
-                frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-                Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
-
-                local title = Instance.new("TextLabel", frame)
-                title.Name = "NameLabel"
-                title.Position = UDim2.new(0, 10, 0, 5)
-                title.Size = UDim2.new(1, -20, 0, 20)
-                title.BackgroundTransparency = 1
-                title.Text = scriptData.name
-                title.TextColor3 = Color3.fromRGB(230, 230, 230)
-                title.Font = Enum.Font.GothamBold
-                title.TextSize = 16
-                title.TextXAlignment = Enum.TextXAlignment.Left
-
-                local desc = Instance.new("TextLabel", frame)
-                desc.Name = "DescLabel"
-                desc.Position = UDim2.new(0, 10, 0, 28)
-                desc.Size = UDim2.new(1, -20, 0, 16)
-                desc.BackgroundTransparency = 1
-                desc.Text = scriptData.description or "No description"
-                desc.TextColor3 = Color3.fromRGB(160, 160, 160)
-                desc.Font = Enum.Font.Gotham
-                desc.TextSize = 13
-                desc.TextXAlignment = Enum.TextXAlignment.Left
-
-                local loadBtn = Instance.new("TextButton", frame)
-                loadBtn.Position = UDim2.new(1, -70, 0.5, -13)
-                loadBtn.Size = UDim2.new(0, 60, 0, 26)
-                loadBtn.Text = "Load"
-                loadBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-                loadBtn.TextColor3 = Color3.fromRGB(230, 230, 230)
-                loadBtn.Font = Enum.Font.GothamBold
-                loadBtn.TextSize = 13
-                Instance.new("UICorner", loadBtn).CornerRadius = UDim.new(0, 6)
-                addStyle(loadBtn)
-
-                if scriptData.username_placeholder then
-                    local tag = Instance.new("TextLabel", frame)
-                    tag.Position = UDim2.new(1, -140, 0.5, -8)
-                    tag.Size = UDim2.new(0, 65, 0, 16)
-                    tag.BackgroundTransparency = 1
-                    tag.Text = "(Auto Username)"
-                    tag.TextColor3 = Color3.fromRGB(100, 200, 140)
-                    tag.Font = Enum.Font.Gotham
-                    tag.TextSize = 11
-                    tag.TextXAlignment = Enum.TextXAlignment.Right
-                end
-
-                loadBtn.MouseButton1Click:Connect(function()
-                    local code = scriptData.code or ""
-                    if scriptData.username_placeholder then
-                        local name = Players.LocalPlayer.Name
-                        code = code:gsub('"YourUserNameFZ"', '"'..name..'"')
-                        code = code:gsub("'YourUserNameFZ'", "'"..name.."'")
-                        code = code:gsub('"YOUR_USERNAME"', '"'..name..'"')
-                        code = code:gsub('"UsernameHere"', '"'..name..'"')
-                        code = code:gsub('"YourUsername"', '"'..name..'"')
-                    end
-                    Editor.Text = code
-                    updateLines()
-                    switch(ETab, EXEC_ICON)
-                end)
-
-                table.insert(scriptEntries, {Frame = frame, NameLabel = title, DescLabel = desc})
-            end
-        end
-    end)
-end
-
--- Tab Connections
-CONSOLE_ICON.MouseButton1Click:Connect(function() switch(ConsoleTab, CONSOLE_ICON) end)
-EXEC_ICON.MouseButton1Click:Connect(function() switch(ETab, EXEC_ICON) end)
-CLOUD_ICON.MouseButton1Click:Connect(function()
-    switch(CTab, CLOUD_ICON)
-    loadLibrary()
-end)
-
--- Dragging (smooth & fixed)
 do
     local dragging = false
     local dragStart = nil
@@ -484,3 +842,5 @@ do
         end
     end)
 end
+
+addConsoleLine("Loaded " .. Version .. " " .. Name, Color3.fromRGB(120, 220, 160))
