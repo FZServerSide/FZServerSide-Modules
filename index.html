@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+    <title>FZ ServerSide - Roblox Server-Side Executor</title>
+    <meta name="description" content="FZ ServerSide - A powerful Roblox server-side executor with backdoor scanning, script library, and console.">
     <style>
-        /* Reset and basic styling */
         * {
             margin: 0;
             padding: 0;
@@ -13,270 +14,252 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
+            background: linear-gradient(to bottom, #1a1a1a, #101010);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 3.5rem;
             font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #a0a0a0;
+        }
+
+        .version {
+            font-size: 1rem;
+            color: #60c080;
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            background: #151515;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e0e0e0;
             text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
+            margin: 0 1.5rem;
             font-weight: 500;
             transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: #a29bfe;
+        nav a:hover {
+            color: #88ffaa;
         }
 
         .hero {
-            height: 100vh;
+            background: url('https://via.placeholder.com/1920x800/111111/222222?text=FZ+ServerSide+GUI+Background') center/cover no-repeat;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
-            padding: 0 2rem;
+            position: relative;
         }
 
-        .hero-content h1 {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
         }
 
-        .hero-content p {
-            font-size: 1.5rem;
+        .hero p {
+            font-size: 1.6rem;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.3s both;
         }
 
         .btn {
             display: inline-block;
-            background: #fff;
-            color: #667eea;
-            padding: 12px 30px;
-            border-radius: 50px;
+            background: #20c060;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
             text-decoration: none;
+            font-size: 1.2rem;
             font-weight: bold;
-            transition: all 0.3s;
-            animation: fadeInUp 1s ease 0.6s both;
+            transition: background 0.3s;
         }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: #18a050;
         }
 
         section {
-            padding: 100px 0;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 2rem;
         }
 
-        #about {
-            background: white;
-            color: #333;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
+        h2 {
             text-align: center;
+            font-size: 2.8rem;
             margin-bottom: 3rem;
-            position: relative;
+            color: #ffffff;
         }
 
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: #667eea;
-            display: block;
-            margin: 20px auto;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        #services {
-            background: #f8f9fa;
-        }
-
-        .services-grid {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
-            background: white;
+        .feature-card {
+            background: #1a1a1a;
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             transition: transform 0.3s;
         }
 
-        .service-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
         }
 
-        .service-icon {
-            font-size: 3rem;
+        .feature-icon {
+            font-size: 4rem;
             margin-bottom: 1rem;
         }
 
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .screenshots img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
         footer {
-            background: #222;
-            color: white;
+            background: #101010;
             text-align: center;
             padding: 3rem 0;
+            margin-top: 4rem;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .discord-btn {
+            display: inline-block;
+            background: #5865F2;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 1rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .nav-links {
-                display: none; /* You can add a mobile menu later */
-            }
+            .hero h1 { font-size: 2.8rem; }
+            .screenshots { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <nav>
-            <a href="#" class="logo">MyWebsite</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo">FZ ServerSide</div>
+        <div class="tagline">Advanced Roblox Server-Side Executor</div>
+        <div class="version">Version v0.0.1</div>
     </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#discord">Discord</a>
+    </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to My Awesome Website</h1>
-            <p>Building beautiful, modern, and responsive websites with passion</p>
-            <a href="#about" class="btn">Learn More</a>
+            <h1>Unlock Full Server Control</h1>
+            <p>Scan for backdoors, execute scripts server-side, and dominate compatible games with ease.</p>
+            <a href="#discord" class="btn">Join Discord for Key</a>
         </div>
     </section>
 
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Hello! I'm a Web Developer</h3>
-                <p>I create stunning, fast, and user-friendly websites that help businesses and individuals establish a strong online presence. With expertise in modern web technologies, I turn ideas into reality.</p>
-                <br>
-                <p>Whether you need a personal portfolio, business website, or an online store – I've got you covered with clean code and beautiful design.</p>
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Backdoor Scanner</h3>
+                <p>Automatically detects vulnerable remotes in games for true server-side execution.</p>
             </div>
-            <div class="about-image">
-                <img src="https://via.placeholder.com/500x400" alt="About Me">
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>Script Library</h3>
+                <p>100+ pre-loaded scripts including admins, trolls, animations, and more.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2 class="section-title">My Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Web Design</h3>
-                <p>Beautiful, modern designs tailored to your brand and audience.</p>
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3>Console & Editor</h3>
+                <p>Live console logging and powerful script editor with line numbers.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">💻</div>
-                <h3>Web Development</h3>
-                <p>Clean, responsive code using the latest technologies.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>Responsive Layouts</h3>
-                <p>Websites that look perfect on desktop, tablet, and mobile.</p>
+            <div class="feature-card">
+                <div class="feature-icon">🔑</div>
+                <h3>Whitelist System</h3>
+                <p>Secure key-based access tied to your username.</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <p>&copy; 2026 My Awesome Website. All rights reserved.</p>
-        <p>Made with ❤️ using HTML & CSS</p>
+    <section id="screenshots" style="background: #151515;">
+        <h2>GUI Screenshots</h2>
+        <div class="screenshots">
+            <!-- Example similar SSE GUIs (since exact FZ screenshots are rare) -->
+            <img src="https://i.redd.it/e9jga8i72kta1.jpg" alt="Dark theme executor UI example">
+            <img src="https://i.ytimg.com/vi/McvDKiuOGBY/hq720.jpg" alt="Server-side executor in action">
+            <img src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/5X/a/3/a/1/a3a18f555ab70fa783ee4151970ee1d7a845c46b_2_690x407.png" alt="Roblox executor GUI">
+            <img src="https://i.ytimg.com/vi/Un9LjG1o9bk/maxresdefault.jpg" alt="Server-side executor review">
+            <img src="https://v0.app/chat/api/og/2NpY1uR59ek" alt="Modern Roblox executor UI design">
+            <img src="https://i.ytimg.com/vi/C3J7BCWouwU/hq720.jpg" alt="2025 Server-side executor showcase">
+        </div>
+    </section>
+
+    <section id="discord">
+        <h2>Get Your Key</h2>
+        <p style="text-align:center; font-size:1.3rem;">Join the official Discord server to purchase a whitelist key and get support.</p>
+        <div style="text-align:center;">
+            <a href="https://discord.gg/youractualinvite" class="discord-btn" target="_blank">Join Discord</a>
+        </div>
+        <p style="text-align:center; margin-top:2rem; color:#aaa;">Note: Replace the Discord link with your real invite when uploading.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FZ ServerSide. All rights reserved.</p>
+        <p>Use responsibly. Exploiting violates Roblox ToS.</p>
     </footer>
+
 </body>
 </html>
