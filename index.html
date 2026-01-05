@@ -1,158 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FZ ServerSide</title>
-<style>
-  /* ====== Global Styles ====== */
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: 'Montserrat', sans-serif; background-color: #121212; color: #e6e6e6; line-height:1.6; }
-  a { color:#78c8ff; text-decoration:none; }
-  a:hover { text-decoration: underline; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* ====== Smooth Scroll ====== */
-  html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-  /* ====== Header ====== */
-  header {
-    position: fixed; top:0; left:0; width:100%;
-    background: #151515;
-    padding: 20px 50px;
-    display:flex; justify-content:space-between; align-items:center;
-    border-bottom:2px solid #3b5bdb;
-    z-index: 1000;
-    transition: background 0.3s;
-  }
-  header h1 { color:#78c8ff; font-weight:700; font-size:1.8em; }
-  nav a { margin-left:30px; font-weight:600; transition: color 0.2s; }
-  nav a:hover { color:#5876f2; }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
 
-  /* ====== Hero Section ====== */
-  .hero {
-    height:100vh;
-    display:flex; flex-direction:column; justify-content:center; align-items:center;
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-    text-align:center;
-    padding:0 20px;
-  }
-  .hero h1 { font-size:3em; margin-bottom:20px; animation: fadeInDown 1s ease-out; }
-  .hero p { font-size:1.2em; color:#c0c0c0; margin-bottom:40px; max-width:700px; animation: fadeIn 2s ease-out; }
-  .hero .cta {
-    background:#5876f2; color:#fff; font-weight:700;
-    padding:15px 30px; border:none; border-radius:8px;
-    cursor:pointer; transition: transform 0.2s, background 0.2s;
-  }
-  .hero .cta:hover { background:#78c8ff; transform: scale(1.05); }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
 
-  @keyframes fadeInDown { from {opacity:0; transform: translateY(-30px);} to {opacity:1; transform: translateY(0);} }
-  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
 
-  /* ====== Sections ====== */
-  section { padding:100px 20px; max-width:1100px; margin:auto; }
-  section h2 { font-size:2em; margin-bottom:20px; color:#78c8ff; text-align:center; }
-  section p { text-align:center; max-width:800px; margin:0 auto; color:#c0c0c0; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
 
-  /* ====== Features Grid ====== */
-  .features { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:50px; }
-  .feature-card {
-    background:#151515; padding:30px; border-radius:12px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .feature-card:hover { transform: translateY(-10px); box-shadow:0 10px 30px rgba(0,0,0,0.7); }
-  .feature-card h3 { margin-bottom:10px; color:#78c8ff; font-size:1.3em; }
-  .feature-card p { color:#c0c0c0; font-size:0.95em; }
+        .nav-links li {
+            margin-left: 2rem;
+        }
 
-  /* ====== Discord Section ====== */
-  .discord { text-align:center; background:#151515; padding:80px 20px; border-top:2px solid #3b5bdb; border-bottom:2px solid #3b5bdb; }
-  .discord a { display:inline-block; background:#5876f2; color:#fff; font-weight:700; padding:15px 30px; border-radius:8px; transition: background 0.3s, transform 0.3s; }
-  .discord a:hover { background:#78c8ff; transform: scale(1.05); }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-  /* ====== Footer ====== */
-  footer { text-align:center; padding:30px 20px; color:#a0a0a0; border-top:2px solid #3b5bdb; }
+        .nav-links a:hover {
+            color: #a29bfe;
+        }
 
-  /* ====== Animations on scroll ====== */
-  .fade-up { opacity:0; transform:translateY(30px); transition: all 0.8s ease-out; }
-  .fade-up.show { opacity:1; transform:translateY(0); }
-</style>
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 100px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 2rem;
+        }
+
+        #about {
+            background: white;
+            color: #333;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #667eea;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        #services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none; /* You can add a mobile menu later */
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <h1>FZ ServerSide</h1>
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#features">Features</a>
-    <a href="#discord">Community</a>
-  </nav>
-</header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Awesome Website</h1>
+            <p>Building beautiful, modern, and responsive websites with passion</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
 
-<section class="hero" id="hero">
-  <h1>FZ ServerSide</h1>
-  <p>Secure, verified, and server-side Roblox scripts. Take full control of your game with advanced modules and real-time scanning.</p>
-  <button class="cta" onclick="document.getElementById('discord').scrollIntoView({behavior:'smooth'})">Join Discord</button>
-</section>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Hello! I'm a Web Developer</h3>
+                <p>I create stunning, fast, and user-friendly websites that help businesses and individuals establish a strong online presence. With expertise in modern web technologies, I turn ideas into reality.</p>
+                <br>
+                <p>Whether you need a personal portfolio, business website, or an online store – I've got you covered with clean code and beautiful design.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/500x400" alt="About Me">
+            </div>
+        </div>
+    </section>
 
-<section id="features">
-  <h2>What We Do</h2>
-  <div class="features">
-    <div class="feature-card fade-up">
-      <h3>Whitelist Verification</h3>
-      <p>Only verified users can access your scripts. Secure key verification ensures your modules stay safe from leaks.</p>
-    </div>
-    <div class="feature-card fade-up">
-      <h3>Server-Side Scanner</h3>
-      <p>Advanced server-side scanning ensures scripts are injected safely, protecting your game and its players.</p>
-    </div>
-    <div class="feature-card fade-up">
-      <h3>Script Library</h3>
-      <p>A collection of pre-built modules like R6 tools, respawn functions, and admin utilities, ready to use in your game.</p>
-    </div>
-    <div class="feature-card fade-up">
-      <h3>Live Console & Execution</h3>
-      <p>Monitor logs and execute commands in real-time with our built-in console interface, just like your in-game GUI.</p>
-    </div>
-  </div>
-</section>
+    <section id="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Web Design</h3>
+                <p>Beautiful, modern designs tailored to your brand and audience.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Clean, responsive code using the latest technologies.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Responsive Layouts</h3>
+                <p>Websites that look perfect on desktop, tablet, and mobile.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="discord" id="discord">
-  <h2>Join Our Community</h2>
-  <a href="#" id="discord-link" target="_blank">Loading Discord...</a>
-  <p style="margin-top:15px; color:#c0c0c0;">Get updates, support, and exclusive modules by joining our Discord server.</p>
-</section>
-
-<footer>
-  <p>© 2026 FZ ServerSide. All rights reserved.</p>
-</footer>
-
-<script>
-  // ====== Fetch remote config ======
-  const REMOTE_CONFIG_URL = "https://raw.githubusercontent.com/BAKAVC/Modules/Modules/Config/Config.json";
-  async function loadConfig(){
-    try{
-      const res = await fetch(REMOTE_CONFIG_URL);
-      const config = await res.json();
-      document.querySelector("header h1").innerText = config.Name || "FZ ServerSide";
-      document.querySelector("#discord-link").href = config.DiscordLink || "#";
-      document.querySelector("#discord-link").innerText = config.DiscordLink ? "Join our Discord" : "No invite available";
-    }catch(e){
-      console.error("Failed to load config:", e);
-      document.querySelector("#discord-link").innerText = "Discord unavailable";
-    }
-  }
-  loadConfig();
-
-  // ====== Scroll animations ======
-  const faders = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){ entry.target.classList.add('show'); }
-    });
-  }, { threshold: 0.3 });
-  faders.forEach(f=>observer.observe(f));
-</script>
-
+    <footer id="contact">
+        <p>&copy; 2026 My Awesome Website. All rights reserved.</p>
+        <p>Made with ❤️ using HTML & CSS</p>
+    </footer>
 </body>
 </html>
