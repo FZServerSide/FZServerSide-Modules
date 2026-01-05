@@ -1,8 +1,9 @@
+
 local Config = {
-    WhitelistURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/Whitelist.json",
-    ScannerURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/FZ_ServerSide",
-    ScriptsURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/scripts.json",
-    RemoteConfigURL = "https://raw.githubusercontent.com/FZServerSide/Modules/refs/heads/Modules/Config/Config.json"
+    WhitelistURL = "https://raw.githubusercontent.com/BAKAVC/Modules/refs/heads/Modules/Config/Whitelist.json",
+    ScannerURL   = "https://raw.githubusercontent.com/BAKAVC/Modules/refs/heads/Modules/FZ_ServerSide",
+    ScriptsURL   = "https://raw.githubusercontent.com/BAKAVC/Modules/refs/heads/Modules/Config/scripts.json",
+    RemoteConfigURL = "https://raw.githubusercontent.com/BAKAVC/Modules/refs/heads/Modules/Config/Config.json"
 }
 
 local TweenService = game:GetService("TweenService")
