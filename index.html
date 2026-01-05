@@ -6,143 +6,121 @@
 <title>FZ ServerSide</title>
 <style>
   /* ====== Global Styles ====== */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f0f0f;
-    color: #e6e6e6;
-  }
-  a { text-decoration: none; color: #5876f2; }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Montserrat', sans-serif; background-color: #121212; color: #e6e6e6; line-height:1.6; }
+  a { color:#78c8ff; text-decoration:none; }
   a:hover { text-decoration: underline; }
-  h1, h2, h3 { margin: 0; }
-  h1 { font-size: 2em; }
-  .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+  /* ====== Smooth Scroll ====== */
+  html { scroll-behavior: smooth; }
 
   /* ====== Header ====== */
   header {
-    background-color: #0a0a0a;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #3b5bdb;
+    position: fixed; top:0; left:0; width:100%;
+    background: #151515;
+    padding: 20px 50px;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:2px solid #3b5bdb;
+    z-index: 1000;
+    transition: background 0.3s;
   }
-  header h1 { color: #78c8ff; }
-  header .version { color: #a0a0a0; font-size: 0.9em; }
-
-  /* ====== Navigation ====== */
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #3b5bdb;
-  }
-  nav a {
-    margin: 0 15px;
-    font-weight: bold;
-    padding: 12px 0;
-    display: block;
-    color: #fff;
-  }
-  nav a:hover { color: #78c8ff; }
+  header h1 { color:#78c8ff; font-weight:700; font-size:1.8em; }
+  nav a { margin-left:30px; font-weight:600; transition: color 0.2s; }
+  nav a:hover { color:#5876f2; }
 
   /* ====== Hero Section ====== */
   .hero {
-    background-color: #151515;
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 2px solid #3b5bdb;
+    height:100vh;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    text-align:center;
+    padding:0 20px;
   }
-  .hero p {
-    font-size: 1.2em;
-    color: #c0c0c0;
-    max-width: 700px;
-    margin: 10px auto 0 auto;
+  .hero h1 { font-size:3em; margin-bottom:20px; animation: fadeInDown 1s ease-out; }
+  .hero p { font-size:1.2em; color:#c0c0c0; margin-bottom:40px; max-width:700px; animation: fadeIn 2s ease-out; }
+  .hero .cta {
+    background:#5876f2; color:#fff; font-weight:700;
+    padding:15px 30px; border:none; border-radius:8px;
+    cursor:pointer; transition: transform 0.2s, background 0.2s;
   }
+  .hero .cta:hover { background:#78c8ff; transform: scale(1.05); }
 
-  /* ====== Scripts Grid ====== */
-  .scripts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-    gap: 20px;
-    margin-top: 40px;
+  @keyframes fadeInDown { from {opacity:0; transform: translateY(-30px);} to {opacity:1; transform: translateY(0);} }
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+  /* ====== Sections ====== */
+  section { padding:100px 20px; max-width:1100px; margin:auto; }
+  section h2 { font-size:2em; margin-bottom:20px; color:#78c8ff; text-align:center; }
+  section p { text-align:center; max-width:800px; margin:0 auto; color:#c0c0c0; }
+
+  /* ====== Features Grid ====== */
+  .features { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:50px; }
+  .feature-card {
+    background:#151515; padding:30px; border-radius:12px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-  .script-card {
-    background-color: #121212;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .script-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  }
-  .script-card h3 { color: #78c8ff; margin-bottom: 5px; }
-  .script-card p { font-size: 0.95em; color: #c0c0c0; }
-  .script-card button {
-    margin-top: 10px;
-    background-color: #5876f2;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  .script-card button:hover { background-color: #78c8ff; }
+  .feature-card:hover { transform: translateY(-10px); box-shadow:0 10px 30px rgba(0,0,0,0.7); }
+  .feature-card h3 { margin-bottom:10px; color:#78c8ff; font-size:1.3em; }
+  .feature-card p { color:#c0c0c0; font-size:0.95em; }
+
+  /* ====== Discord Section ====== */
+  .discord { text-align:center; background:#151515; padding:80px 20px; border-top:2px solid #3b5bdb; border-bottom:2px solid #3b5bdb; }
+  .discord a { display:inline-block; background:#5876f2; color:#fff; font-weight:700; padding:15px 30px; border-radius:8px; transition: background 0.3s, transform 0.3s; }
+  .discord a:hover { background:#78c8ff; transform: scale(1.05); }
 
   /* ====== Footer ====== */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0a0a0a;
-    color: #a0a0a0;
-    border-top: 2px solid #3b5bdb;
-    margin-top: 50px;
-  }
+  footer { text-align:center; padding:30px 20px; color:#a0a0a0; border-top:2px solid #3b5bdb; }
 
-  /* ====== Loading ====== */
-  .loading {
-    text-align: center;
-    font-size: 1.2em;
-    color: #ffb347;
-    margin-top: 40px;
-  }
+  /* ====== Animations on scroll ====== */
+  .fade-up { opacity:0; transform:translateY(30px); transition: all 0.8s ease-out; }
+  .fade-up.show { opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
 
 <header>
-  <h1 id="site-name">FZ ServerSide</h1>
-  <span class="version" id="site-version">v0.0</span>
+  <h1>FZ ServerSide</h1>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#discord">Community</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#hero">Home</a>
-  <a href="#scripts">Scripts</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-
 <section class="hero" id="hero">
-  <h1>Welcome to FZ ServerSide</h1>
-  <p>The ultimate Roblox script manager – whitelist-verified, server-side safe, and built for developers who want full control over their games.</p>
+  <h1>FZ ServerSide</h1>
+  <p>Secure, verified, and server-side Roblox scripts. Take full control of your game with advanced modules and real-time scanning.</p>
+  <button class="cta" onclick="document.getElementById('discord').scrollIntoView({behavior:'smooth'})">Join Discord</button>
 </section>
 
-<section class="container" id="scripts">
-  <h2>Available Scripts</h2>
-  <div class="loading" id="loading">Loading scripts...</div>
-  <div class="scripts-grid" id="scripts-grid"></div>
+<section id="features">
+  <h2>What We Do</h2>
+  <div class="features">
+    <div class="feature-card fade-up">
+      <h3>Whitelist Verification</h3>
+      <p>Only verified users can access your scripts. Secure key verification ensures your modules stay safe from leaks.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <h3>Server-Side Scanner</h3>
+      <p>Advanced server-side scanning ensures scripts are injected safely, protecting your game and its players.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <h3>Script Library</h3>
+      <p>A collection of pre-built modules like R6 tools, respawn functions, and admin utilities, ready to use in your game.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <h3>Live Console & Execution</h3>
+      <p>Monitor logs and execute commands in real-time with our built-in console interface, just like your in-game GUI.</p>
+    </div>
+  </div>
 </section>
 
-<section class="container" id="about">
-  <h2>About FZ ServerSide</h2>
-  <p>FZ ServerSide is a suite of Roblox scripts designed for game developers who want reliable tools and dynamic server-side modules. Every script is fetchable via GitHub and updated instantly.</p>
-</section>
-
-<section class="container" id="contact">
-  <h2>Contact & Join</h2>
-  <p>Join our Discord for support, updates, and special features: <a href="#" id="discord-link">Loading...</a></p>
+<section class="discord" id="discord">
+  <h2>Join Our Community</h2>
+  <a href="#" id="discord-link" target="_blank">Loading Discord...</a>
+  <p style="margin-top:15px; color:#c0c0c0;">Get updates, support, and exclusive modules by joining our Discord server.</p>
 </section>
 
 <footer>
@@ -150,57 +128,30 @@
 </footer>
 
 <script>
+  // ====== Fetch remote config ======
   const REMOTE_CONFIG_URL = "https://raw.githubusercontent.com/BAKAVC/Modules/Modules/Config/Config.json";
-  const SCRIPTS_URL = "https://raw.githubusercontent.com/BAKAVC/Modules/Modules/Config/scripts.json";
-
-  async function fetchJSON(url){
-    const res = await fetch(url);
-    if(!res.ok) throw new Error("Failed to fetch JSON");
-    return await res.json();
-  }
-
-  async function initSite(){
+  async function loadConfig(){
     try{
-      // Fetch site name, version, discord
-      const config = await fetchJSON(REMOTE_CONFIG_URL);
-      document.getElementById("site-name").innerText = config.Name || "FZ ServerSide";
-      document.getElementById("site-version").innerText = config.Version || "v0.0";
-      const discordLink = config.DiscordLink || "#";
-      const discordEl = document.getElementById("discord-link");
-      discordEl.href = discordLink;
-      discordEl.innerText = discordLink.includes("discord.gg") ? "Join our Discord" : "No invite available";
-
-      // Fetch scripts
-      const scripts = await fetchJSON(SCRIPTS_URL);
-      const grid = document.getElementById("scripts-grid");
-      document.getElementById("loading").style.display = "none";
-
-      scripts.forEach(s=>{
-        const card = document.createElement("div");
-        card.className = "script-card";
-
-        const title = document.createElement("h3");
-        title.innerText = s.name;
-        card.appendChild(title);
-
-        const desc = document.createElement("p");
-        desc.innerText = s.description || "No description available";
-        card.appendChild(desc);
-
-        const btn = document.createElement("button");
-        btn.innerText = "View Script";
-        btn.onclick = ()=>window.open(s.url || "#","_blank");
-        card.appendChild(btn);
-
-        grid.appendChild(card);
-      });
-    } catch(e){
-      console.error(e);
-      document.getElementById("loading").innerText = "Failed to load scripts";
+      const res = await fetch(REMOTE_CONFIG_URL);
+      const config = await res.json();
+      document.querySelector("header h1").innerText = config.Name || "FZ ServerSide";
+      document.querySelector("#discord-link").href = config.DiscordLink || "#";
+      document.querySelector("#discord-link").innerText = config.DiscordLink ? "Join our Discord" : "No invite available";
+    }catch(e){
+      console.error("Failed to load config:", e);
+      document.querySelector("#discord-link").innerText = "Discord unavailable";
     }
   }
+  loadConfig();
 
-  initSite();
+  // ====== Scroll animations ======
+  const faders = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('show'); }
+    });
+  }, { threshold: 0.3 });
+  faders.forEach(f=>observer.observe(f));
 </script>
 
 </body>
